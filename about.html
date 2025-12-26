@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Enzo Rossetti</title>
+    <link rel="icon" type="image/svg+xml" href="images/er_icon_2.svg">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: '#D4CCC5',
+                        kraft: '#C9B8A8',
+                        sage: '#A8B5A0',
+                        charcoal: '#2B2B2B',
+                        warmwhite: '#F5F3F0'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome JS (optional, but you had it) -->
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        html { scroll-behavior: smooth; }
+
+        /* Active nav underline */
+        .navlink-active { color: #A8B5A0; position: relative; }
+        .navlink-active:after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -6px;
+            width: 100%; height: 1px;
+            background: rgba(168, 181, 160, .8);
+        }
+
+        /* Room filter active helper */
+        .room-filter-btn.active { background: #2B2B2B; color: #F5F3F0; }
+    </style>
+</head>
+
+<body class="bg-warmwhite font-sans text-charcoal">
+
+<!-- HEADER -->
+<header id="header" class="bg-warmwhite border-b border-stone/30 sticky top-0 z-50">
+    <div class="max-w-[1600px] mx-auto px-8 py-6 flex justify-between items-center">
+        <div class="flex items-center gap-12">
+            <!-- LOGO -> Home -->
+            <a href="index.html" class="flex items-center gap-3" aria-label="Enzo Rossetti Home">
+                <img src="images/er_icon_2.svg" alt="Enzo Rossetti icon" class="w-8 h-8" />
+                <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+            </a>
+
+            <!-- NAV -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm tracking-wider">
+                <a href="collections.html" class="hover:text-sage transition-colors">COLLECTIONS</a>
+                <a href="products.html" class="hover:text-sage transition-colors">PRODUCTS</a>
+                <a href="professionals.html" class="hover:text-sage transition-colors">PROFESSIONALS</a>
+                <a href="inspiration.html" class="hover:text-sage transition-colors">INSPIRATION</a>
+                <a href="about.html" class="navlink-active">ABOUT</a>
+            </nav>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="contact.html" class="hidden sm:inline-flex border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> CONTACT US
+            </a>
+
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" type="button" class="lg:hidden w-11 h-11 border border-charcoal/30 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-stone/30 bg-warmwhite">
+        <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-6 space-y-4 text-sm tracking-wider">
+          <a href="collections.html" class="block hover:text-sage transition-colors">COLLECTIONS</a>
+          <a href="products.html" class="block hover:text-sage transition-colors">PRODUCTS</a>
+          <a href="professionals.html" class="block hover:text-sage transition-colors">PROFESSIONALS</a>
+          <a href="inspiration.html" class="block hover:text-sage transition-colors">INSPIRATION</a>
+          <a href="about.html" class="block hover:text-sage transition-colors">ABOUT</a>
+          <div class="pt-4 flex gap-3">
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">CONTACT US</button>
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">SEARCH</button>
+          </div>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="about-hero" class="relative h-[700px] bg-warmwhite overflow-hidden">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover"
+             src="https://storage.googleapis.com/uxpilot-auth.appspot.com/9b1631b81a-36f2e0ba21eae5b07c46.png"
+             alt="black woman architect reviewing ceramic tile samples in modern design studio, natural lighting, professional workspace, warm neutral tones, editorial photography style" />
+        <div class="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/50 to-charcoal/70"></div>
+    </div>
+
+    <div class="relative h-full max-w-[1600px] mx-auto px-8 flex items-center justify-center">
+        <div class="text-center text-warmwhite max-w-3xl">
+            <div class="bg-charcoal/90 backdrop-blur-sm inline-block px-12 py-10">
+                <h1 class="font-serif text-6xl mb-6 tracking-wide">About Enzo Rossetti</h1>
+                <p class="text-xl font-light leading-relaxed">
+                    Italian-inspired design meets contemporary craftsmanship in every tile we create
+                </p>
+
+                <!-- QUICK ANCHOR LINKS -->
+                <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm tracking-wider">
+                    <a href="#brand-intro" class="border border-warmwhite/40 px-4 py-2 hover:bg-warmwhite hover:text-charcoal transition-all inline-flex items-center gap-2">
+                        <i class="fa-regular fa-bookmark"></i>OUR STORY
+                    </a>
+                    <a href="#design-philosophy" class="border border-warmwhite/40 px-4 py-2 hover:bg-warmwhite hover:text-charcoal transition-all inline-flex items-center gap-2">
+                        <i class="fa-solid fa-compass"></i>PHILOSOPHY
+                    </a>
+                    <a href="#sustainability-commitment" class="border border-warmwhite/40 px-4 py-2 hover:bg-warmwhite hover:text-charcoal transition-all inline-flex items-center gap-2">
+                        <i class="fa-solid fa-leaf"></i>SUSTAINABILITY
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OUR STORY -->
+<section id="brand-intro" class="bg-warmwhite py-24">
+    <div class="max-w-[1200px] mx-auto px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-12">
+                <h2 class="font-serif text-3xl tracking-wide">OUR STORY</h2>
+            </div>
+            <div class="space-y-8 text-lg leading-relaxed text-charcoal/80">
+                <p>
+                    Enzo Rossetti was founded on a simple belief: that the surfaces we live with should reflect both timeless design principles and contemporary living needs. Drawing inspiration from Italy's rich architectural heritage and material culture, we create ceramic and porcelain tiles that bring warmth, texture, and sophistication to modern interiors.
+                </p>
+                <p>
+                    Our collections are designed for architects, interior designers, and discerning clients who value authenticity over trends, and quality over quantity. Each series is developed with careful attention to material expression, finish refinement, and practical application—ensuring our tiles work as beautifully in real spaces as they appear in design concepts.
+                </p>
+                <p>
+                    From the earthy textures of Casa Terra to the refined elegance of Casa Rossetti, every product in our range reflects a commitment to design integrity, technical excellence, and lasting value.
+                </p>
+            </div>
+
+            <!-- CTA LINKS -->
+            <div class="mt-12 flex flex-col sm:flex-row gap-4">
+                <a href="collections.html" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-layer-group"></i>
+                    VIEW COLLECTIONS
+                </a>
+                <a href="professionals.html" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-helmet-safety"></i>
+                    PROFESSIONALS
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DESIGN PHILOSOPHY -->
+<section id="design-philosophy" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative h-[600px] overflow-hidden">
+                <img class="w-full h-full object-cover"
+                     src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a4c6c14c4c-244108a8ae03a9e8d258.png"
+                     alt="black interior designer examining textured stone tile in minimalist modern space, soft neutral palette, architectural detail, natural daylight, refined contemporary interior, editorial photography" />
+            </div>
+            <div>
+                <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                    <h2 class="font-serif text-3xl tracking-wide">DESIGN PHILOSOPHY</h2>
+                </div>
+                <h3 class="font-serif text-4xl mb-6 text-charcoal">Italian-Inspired, Modern by Nature</h3>
+                <div class="space-y-6 text-charcoal/80 leading-relaxed">
+                    <p>
+                        Our design approach is rooted in the Italian tradition of material honesty and refined simplicity. We believe that great design doesn't shout—it creates spaces that feel natural, balanced, and effortlessly elegant.
+                    </p>
+                    <p>
+                        Every collection is developed with a clear material narrative. Whether inspired by quarried stone, aged concrete, or classic marble, we focus on capturing the essential character of each surface while ensuring technical performance meets the demands of contemporary architecture.
+                    </p>
+                    <p>
+                        We work closely with architects and designers throughout the development process, ensuring our tiles integrate seamlessly into diverse project types—from residential interiors to hospitality environments, from understated minimalism to bold architectural statements.
+                    </p>
+                </div>
+
+                <div class="mt-12 space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-charcoal flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-pencil-ruler text-warmwhite"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Material Authenticity</h4>
+                            <p class="text-charcoal/70 text-sm">Faithful representation of natural surfaces with refined detailing</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-charcoal flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-compass text-warmwhite"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Timeless Restraint</h4>
+                            <p class="text-charcoal/70 text-sm">Designs that age gracefully and remain relevant beyond trends</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-charcoal flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-drafting-compass text-warmwhite"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Architectural Integration</h4>
+                            <p class="text-charcoal/70 text-sm">Tiles conceived as integral components of spatial design</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <a href="products.html" class="text-sm tracking-wider hover:text-sage transition-colors inline-flex items-center gap-2">
+                        EXPLORE PRODUCTS <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- QUALITY -->
+<section id="quality-craftsmanship" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                    <h2 class="font-serif text-3xl tracking-wide">QUALITY & CRAFTSMANSHIP</h2>
+                </div>
+                <h3 class="font-serif text-4xl mb-6 text-charcoal">Precision in Every Detail</h3>
+                <div class="space-y-6 text-charcoal/80 leading-relaxed">
+                    <p>
+                        Quality begins with material selection and extends through every stage of production. Our ceramic and porcelain tiles are manufactured using advanced technology that ensures dimensional accuracy, surface consistency, and long-term durability.
+                    </p>
+                    <p>
+                        Each collection undergoes rigorous testing to meet international standards for strength, slip resistance, stain resistance, and frost resistance. We work exclusively with production partners who share our commitment to technical excellence and environmental responsibility.
+                    </p>
+                    <p>
+                        From digital inkjet printing that captures intricate surface details to precision rectification that enables minimal joint installation, every technical choice is made to enhance both aesthetic quality and practical performance.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-2 gap-8">
+                    <div class="border-l-2 border-charcoal pl-6">
+                        <p class="font-serif text-4xl text-charcoal mb-2">ISO 13006</p>
+                        <p class="text-sm text-charcoal/60">Certified Quality Standards</p>
+                    </div>
+                    <div class="border-l-2 border-charcoal pl-6">
+                        <p class="font-serif text-4xl text-charcoal mb-2">Class 5</p>
+                        <p class="text-sm text-charcoal/60">Abrasion Resistance</p>
+                    </div>
+                    <div class="border-l-2 border-charcoal pl-6">
+                        <p class="font-serif text-4xl text-charcoal mb-2">R10-R11</p>
+                        <p class="text-sm text-charcoal/60">Slip Resistance Rating</p>
+                    </div>
+                    <div class="border-l-2 border-charcoal pl-6">
+                        <p class="font-serif text-4xl text-charcoal mb-2">±0.2mm</p>
+                        <p class="text-sm text-charcoal/60">Rectification Tolerance</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 flex gap-4 flex-wrap">
+                    <a href="professionals.html#technical-documentation" class="border border-charcoal px-6 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                        <i class="fa-solid fa-file-lines"></i>
+                        TECHNICAL SPECS
+                    </a>
+                    <a href="professionals.html#downloads-section" class="border border-charcoal px-6 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                        <i class="fa-solid fa-download"></i>
+                        DOWNLOADS
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative h-[600px] overflow-hidden">
+                <img class="w-full h-full object-cover"
+                     src="https://storage.googleapis.com/uxpilot-auth.appspot.com/fce967480b-e93e6e6024d6738f4837.png"
+                     alt="black quality control specialist inspecting ceramic tiles in modern production facility, precision manufacturing environment, clean industrial workspace, professional craftsmanship" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROCESS -->
+<section id="manufacturing-process" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-6">
+                <h2 class="font-serif text-3xl tracking-wide">MANUFACTURING PROCESS</h2>
+            </div>
+            <p class="text-charcoal/70 max-w-2xl mx-auto">
+                From raw material selection to final quality inspection, every step is carefully controlled to ensure consistent excellence.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div id="process-1" class="bg-warmwhite p-10 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <span class="font-serif text-3xl text-warmwhite">01</span>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Material Selection</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Premium clay bodies and raw materials selected for their purity and consistency, ensuring optimal strength and surface quality.
+                </p>
+            </div>
+
+            <div id="process-2" class="bg-warmwhite p-10 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <span class="font-serif text-3xl text-warmwhite">02</span>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Digital Printing</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Advanced inkjet technology applies surface graphics with exceptional detail and natural variation, capturing authentic material textures.
+                </p>
+            </div>
+
+            <div id="process-3" class="bg-warmwhite p-10 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <span class="font-serif text-3xl text-warmwhite">03</span>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">High-Temperature Firing</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Controlled kiln firing at temperatures up to 1200°C creates dense, durable porcelain with superior technical performance.
+                </p>
+            </div>
+
+            <div id="process-4" class="bg-warmwhite p-10 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <span class="font-serif text-3xl text-warmwhite">04</span>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Precision Finishing</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Rectification and surface treatment ensure dimensional accuracy and the specified finish—from polished to structured textures.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SUSTAINABILITY -->
+<section id="sustainability-commitment" class="bg-warmwhite py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+            <div class="lg:col-span-2">
+                <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                    <h2 class="font-serif text-3xl tracking-wide">SUSTAINABILITY</h2>
+                </div>
+                <h3 class="font-serif text-4xl mb-6 text-charcoal">Responsible Manufacturing</h3>
+                <div class="space-y-6 text-charcoal/80 leading-relaxed">
+                    <p>
+                        Environmental responsibility is integral to how we work. Our manufacturing partners implement sustainable practices throughout production, from energy-efficient kilns to waste water recycling systems.
+                    </p>
+                    <p>
+                        All Enzo Rossetti tiles meet stringent environmental standards, including LEED certification criteria and low VOC emissions. We prioritize long-lasting products that reduce the need for replacement and contribute to healthier indoor environments.
+                    </p>
+                </div>
+
+                <div class="mt-10">
+                    <a href="professionals.html#downloads-section" class="text-sm tracking-wider hover:text-sage transition-colors inline-flex items-center gap-2">
+                        REQUEST ENVIRONMENTAL DOCS <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-3">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div id="sustainability-1" class="bg-stone/20 p-8">
+                        <i class="fa-solid fa-recycle text-4xl text-charcoal mb-6"></i>
+                        <h4 class="font-serif text-xl mb-3">Recycled Materials</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Up to 40% recycled content in selected products, including reclaimed ceramic waste and post-industrial materials.
+                        </p>
+                    </div>
+                    <div id="sustainability-2" class="bg-stone/20 p-8">
+                        <i class="fa-solid fa-bolt text-4xl text-charcoal mb-6"></i>
+                        <h4 class="font-serif text-xl mb-3">Energy Efficiency</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Modern kiln technology reduces energy consumption by up to 30% compared to traditional firing methods.
+                        </p>
+                    </div>
+                    <div id="sustainability-3" class="bg-stone/20 p-8">
+                        <i class="fa-solid fa-droplet text-4xl text-charcoal mb-6"></i>
+                        <h4 class="font-serif text-xl mb-3">Water Management</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Closed-loop water systems recycle process water, minimizing consumption and eliminating industrial discharge.
+                        </p>
+                    </div>
+                    <div id="sustainability-4" class="bg-stone/20 p-8">
+                        <i class="fa-solid fa-certificate text-4xl text-charcoal mb-6"></i>
+                        <h4 class="font-serif text-xl mb-3">LEED Contribution</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Products contribute to LEED points in multiple categories including Materials & Resources and Indoor Environmental Quality.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ENVIRONMENTAL STANDARDS -->
+<section id="environmental-standards" class="bg-stone/20 py-24">
+    <div class="max-w-[1200px] mx-auto px-8">
+        <div class="text-center mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-6">
+                <h2 class="font-serif text-3xl tracking-wide">ENVIRONMENTAL STANDARDS</h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div id="standard-1" class="text-center">
+                <div class="w-32 h-32 mx-auto mb-6 border-4 border-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-leaf text-5xl text-charcoal"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Low VOC Emissions</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    All products meet or exceed international standards for volatile organic compound emissions, contributing to healthier indoor air quality.
+                </p>
+            </div>
+
+            <div id="standard-2" class="text-center">
+                <div class="w-32 h-32 mx-auto mb-6 border-4 border-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-building text-5xl text-charcoal"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">LEED Certified</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Eligible for LEED certification credits in sustainable building projects, supporting green architecture initiatives worldwide.
+                </p>
+            </div>
+
+            <div id="standard-3" class="text-center">
+                <div class="w-32 h-32 mx-auto mb-6 border-4 border-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-globe text-5xl text-charcoal"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">ISO 14001</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Production facilities maintain ISO 14001 environmental management certification, ensuring systematic environmental responsibility.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- VALUES -->
+<section id="values-principles" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-6">
+                <h2 class="font-serif text-3xl tracking-wide">OUR VALUES</h2>
+            </div>
+            <p class="text-charcoal/70 max-w-2xl mx-auto">
+                The principles that guide every decision we make, from design development to client service.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div id="value-1" class="bg-stone/10 p-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-3 h-3 bg-charcoal"></div>
+                    <h3 class="font-serif text-2xl">Design Integrity</h3>
+                </div>
+                <p class="text-charcoal/70 leading-relaxed">
+                    We believe in honest design that respects materials, embraces simplicity, and serves the needs of real spaces. No unnecessary embellishment, no superficial trends—just thoughtful, enduring surfaces.
+                </p>
+            </div>
+
+            <div id="value-2" class="bg-stone/10 p-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-3 h-3 bg-charcoal"></div>
+                    <h3 class="font-serif text-2xl">Technical Excellence</h3>
+                </div>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Quality is non-negotiable. Every tile must meet rigorous standards for durability, dimensional accuracy, and surface consistency. We invest in the best technology and partner with the most capable manufacturers.
+                </p>
+            </div>
+
+            <div id="value-3" class="bg-stone/10 p-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-3 h-3 bg-charcoal"></div>
+                    <h3 class="font-serif text-2xl">Client Partnership</h3>
+                </div>
+                <p class="text-charcoal/70 leading-relaxed">
+                    We work collaboratively with architects and designers, providing technical support, samples, and project-specific guidance. Your success is our success—we're here to make specification straightforward.
+                </p>
+            </div>
+
+            <div id="value-4" class="bg-stone/10 p-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-3 h-3 bg-charcoal"></div>
+                    <h3 class="font-serif text-2xl">Material Authenticity</h3>
+                </div>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Our tiles are inspired by real materials—stone, marble, concrete, wood. We study how these surfaces age, weather, and develop character, then translate that authenticity into ceramic and porcelain.
+                </p>
+            </div>
+
+            <div id="value-5" class="bg-stone/10 p-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-3 h-3 bg-charcoal"></div>
+                    <h3 class="font-serif text-2xl">Long-Term Thinking</h3>
+                </div>
+                <p class="text-charcoal/70 leading-relaxed">
+                    We design for longevity—products that remain relevant decades after installation. Timeless aesthetics, durable construction, and responsible manufacturing ensure our tiles serve spaces well into the future.
+                </p>
+            </div>
+
+            <div id="value-6" class="bg-stone/10 p-12">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-3 h-3 bg-charcoal"></div>
+                    <h3 class="font-serif text-2xl">Environmental Care</h3>
+                </div>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Sustainability isn't a marketing claim—it's a responsibility. We continuously work to reduce environmental impact through cleaner production, recycled content, and products that contribute to healthier buildings.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TEAM -->
+<section id="team-expertise" class="bg-stone/20 py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative h-[600px] overflow-hidden">
+                <img class="w-full h-full object-cover"
+                     src="https://storage.googleapis.com/uxpilot-auth.appspot.com/eddb928f51-9ea6ed552b6a6d59af42.png"
+                     alt="diverse black design team reviewing material samples and tile boards in professional studio workspace, collaborative environment, architects working together, natural office lighting, modern design office" />
+            </div>
+            <div>
+                <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                    <h2 class="font-serif text-3xl tracking-wide">TEAM & EXPERTISE</h2>
+                </div>
+                <h3 class="font-serif text-4xl mb-6 text-charcoal">Design-Led, Technically Informed</h3>
+                <div class="space-y-6 text-charcoal/80 leading-relaxed">
+                    <p>
+                        Our team brings together expertise in industrial design, material science, architecture, and technical specification. This multidisciplinary approach ensures every collection balances aesthetic refinement with practical performance.
+                    </p>
+                    <p>
+                        We maintain close relationships with leading architects and interior designers, incorporating their feedback into product development and ensuring our collections meet real-world project requirements.
+                    </p>
+                    <p>
+                        Our technical support team includes ceramic engineers and specification consultants who work directly with professionals throughout the design and installation process, providing detailed guidance on product selection, layout planning, and application-specific recommendations.
+                    </p>
+                </div>
+
+                <div class="mt-12 space-y-6">
+                    <div class="flex items-start gap-4 pb-6 border-b border-charcoal/10">
+                        <i class="fa-solid fa-users text-2xl text-charcoal mt-1"></i>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Collaborative Development</h4>
+                            <p class="text-charcoal/70 text-sm">Working with architects and designers to create products that solve real spatial challenges</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 pb-6 border-b border-charcoal/10">
+                        <i class="fa-solid fa-flask text-2xl text-charcoal mt-1"></i>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Technical Expertise</h4>
+                            <p class="text-charcoal/70 text-sm">In-house knowledge of ceramic technology, installation methods, and building standards</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-headset text-2xl text-charcoal mt-1"></i>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Dedicated Support</h4>
+                            <p class="text-charcoal/70 text-sm">Specification assistance, sample coordination, and project-specific consultation services</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10">
+                    <a href="professionals.html#sample-request" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                        <i class="fa-solid fa-box-open"></i>
+                        REQUEST SAMPLES
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GLOBAL PRESENCE -->
+<section id="global-presence" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-6">
+                <h2 class="font-serif text-3xl tracking-wide">GLOBAL PRESENCE</h2>
+            </div>
+            <p class="text-charcoal/70 max-w-2xl mx-auto">
+                Enzo Rossetti tiles are specified and installed in projects across Africa and other parts of the world.
+            </p>
+        </div>
+
+
+        <div class="bg-charcoal text-warmwhite p-12 text-center">
+            <h3 class="font-serif text-3xl mb-6">Interested in Distribution?</h3>
+            <p class="text-warmwhite/80 mb-8 max-w-2xl mx-auto">
+                We work with select distributors who share our commitment to design quality and professional service. Contact us to discuss partnership opportunities in your region.
+            </p>
+            <a href="dealers.html" class="border border-warmwhite text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all inline-flex items-center gap-2">
+                <i class="fa-solid fa-handshake"></i>
+                BECOME A DISTRIBUTOR
+            </a>
+        </div>
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section id="about-closing-cta" class="bg-charcoal text-warmwhite py-32">
+    <div class="max-w-[1000px] mx-auto px-8 text-center">
+        <h2 class="font-serif text-5xl mb-6">Work With Us</h2>
+        <p class="text-xl text-warmwhite/80 mb-12 leading-relaxed max-w-2xl mx-auto">
+            Whether you're specifying tiles for a large-scale commercial project or selecting surfaces for a residential interior, our team is here to provide technical guidance, samples, and project support.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <a href="contact.html" class="bg-warmwhite text-charcoal px-10 py-4 text-sm tracking-wider hover:bg-stone transition-colors inline-flex items-center gap-2">
+                <i class="fa-regular fa-paper-plane"></i>
+                CONTACT OUR TEAM
+            </a>
+            <a href="professionals.html#sample-request" class="border border-warmwhite text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all inline-flex items-center gap-2">
+                <i class="fa-solid fa-box-open"></i>
+                REQUEST SAMPLES
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" class="bg-warmwhite border-t border-stone/30 py-16">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="lg:col-span-2">
+                <a href="index.html" class="flex items-center gap-3 mb-6">
+                    <img 
+                        src="images/er_icon_2.svg" 
+                        alt="Enzo Rossetti logo"
+                        class="w-8 h-8"
+                    />
+                    <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+                </a>
+                <p class="text-charcoal/70 mb-6 max-w-sm leading-relaxed">
+                    Italian-inspired ceramic and porcelain tiles for contemporary architecture and interior design.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Collections</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="casa-terra.html" class="hover:text-charcoal transition-colors">Casa Terra</a></li>
+                    <li><a href="casa-rossetti.html" class="hover:text-charcoal transition-colors">Casa Rossetti</a></li>
+                    <li><a href="products.html" class="hover:text-charcoal transition-colors">All Products</a></li>
+                    <li><a href="collections.html" class="hover:text-charcoal transition-colors">Collections Overview</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Resources</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="professionals.html" class="hover:text-charcoal transition-colors">Professionals</a></li>
+                    <li><a href="inspiration.html" class="hover:text-charcoal transition-colors">Inspiration</a></li>
+                    <li><a href="professionals.html#installation" class="hover:text-charcoal transition-colors">Technical Guides</a></li>
+                    <li><a href="professionals.html#downloads" class="hover:text-charcoal transition-colors">Downloads</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Company</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="about.html" class="hover:text-charcoal transition-colors">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-charcoal transition-colors">Contact</a></li>
+                    <li><a href="showrooms.html" class="hover:text-charcoal transition-colors">Showrooms</a></li>
+                    <li><a href="dealers.html" class="hover:text-charcoal transition-colors">Become a Dealer</a></li>
+                    <li><a href="careers.html" class="hover:text-charcoal transition-colors">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-stone/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-charcoal/60">
+            <p>&copy; 2024 Enzo Rossetti. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy.html" class="hover:text-charcoal transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-charcoal transition-colors">Terms of Use</a>
+                <a href="cookies.html" class="hover:text-charcoal transition-colors">Cookie Settings</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('shadow-soft');
+      else header.classList.remove('shadow-soft');
+    });
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Samples modal
+    const modal = document.getElementById('samplesModal');
+    const closeBtn = document.getElementById('closeSamples');
+    const openers = document.querySelectorAll('[data-open-samples]');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openers.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      const card = modal.querySelector('.bg-warmwhite');
+      if (!card.contains(e.target)) closeModal();
+    });
+
+    // ESC to close
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+</script>
+
+</body>
+</html>

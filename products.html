@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/er_icon_2.svg">
+  <link rel="shortcut icon" href="images/er_icon_2.svg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            stone: '#D4CCC5',
+            kraft: '#C9B8A8',
+            sage: '#A8B5A0',
+            charcoal: '#2B2B2B',
+            warmwhite: '#F5F3F0'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    ::-webkit-scrollbar { display: none; }
+    select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+    .filter-dropdown { display:none; }
+    .filter-dropdown.open { display:block; }
+    html { scroll-behavior: smooth; }
+
+    /* Active nav underline */
+    .navlink-active { color: #A8B5A0; position: relative; }
+    .navlink-active:after {
+        content: "";
+        position: absolute;
+        left: 0; bottom: -6px;
+        width: 100%; height: 1px;
+        background: rgba(168, 181, 160, .8);
+    }
+
+    /* Room filter active helper */
+    .room-filter-btn.active { background: #2B2B2B; color: #F5F3F0; }
+  </style>
+</head>
+
+<body class="bg-warmwhite font-sans text-charcoal">
+
+<header id="header" class="bg-warmwhite border-b border-stone/30">
+  <div class="max-w-[1600px] mx-auto px-8 py-6 flex justify-between items-center">
+    <div class="flex items-center gap-12">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/er_icon_2.svg" alt="Enzo Rossetti icon" class="w-8 h-8" />
+        <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 text-sm tracking-wider">
+        <a href="collections.html" class="hover:text-sage transition-colors">COLLECTIONS</a>
+        <a href="products.html" class="navlink-active">PRODUCTS</a>
+        <a href="professionals.html" class="hover:text-sage transition-colors">PROFESSIONALS</a>
+        <a href="inspiration.html" class="hover:text-sage transition-colors">INSPIRATION</a>
+        <a href="about.html" class="hover:text-sage transition-colors">ABOUT</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-6">
+        <a href="contact.html" class="hidden sm:inline-flex border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+            <i class="fa-solid fa-envelope"></i> CONTACT US
+        </a>
+
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" type="button" class="lg:hidden w-11 h-11 border border-charcoal/30 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" class="lg:hidden hidden border-t border-stone/30 bg-warmwhite">
+    <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-6 space-y-4 text-sm tracking-wider">
+      <a href="collections.html" class="block hover:text-sage transition-colors">COLLECTIONS</a>
+      <a href="products.html" class="block hover:text-sage transition-colors">PRODUCTS</a>
+      <a href="professionals.html" class="block hover:text-sage transition-colors">PROFESSIONALS</a>
+      <a href="inspiration.html" class="block hover:text-sage transition-colors">INSPIRATION</a>
+      <a href="about.html" class="block hover:text-sage transition-colors">ABOUT</a>
+      <div class="pt-4 flex gap-3">
+        <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">CONTACT US</button>
+        <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">SEARCH</button>
+      </div>
+    </div>
+</div>
+</header>
+
+<section id="hero-section" class="relative h-[500px] bg-warmwhite overflow-hidden">
+  <div class="absolute inset-0">
+    <img class="w-full h-full object-cover"
+      src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png"
+      alt="ceramic tiles texture close-up, various surface finishes, architectural materials, editorial photography">
+    <div class="absolute inset-0 bg-gradient-to-b from-charcoal/60 via-charcoal/40 to-charcoal/70"></div>
+  </div>
+  <div class="relative h-full max-w-[1600px] mx-auto px-8 flex flex-col justify-center">
+    <div class="bg-charcoal text-warmwhite p-12 max-w-3xl">
+      <h1 class="font-serif text-5xl mb-4 tracking-wide">PRODUCTS</h1>
+      <p class="text-xl text-warmwhite/90 leading-relaxed">
+        Ceramic and porcelain tiles for floors and walls, designed for modern spaces
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Tabs (no BY COLLECTION) -->
+<section id="browse-navigation" class="bg-stone/20 py-8 sticky top-0 z-40 border-b border-stone/40">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="flex flex-wrap items-center justify-center gap-6 text-sm tracking-wider">
+      <button data-tab="look" class="tab-btn px-8 py-3 rounded border border-stone/40 bg-charcoal text-warmwhite">BY LOOK</button>
+      <button data-tab="room" class="tab-btn px-8 py-3 rounded border border-stone/40 bg-warmwhite hover:bg-warmwhite transition-colors">BY ROOM</button>
+      <button data-tab="format" class="tab-btn px-8 py-3 rounded border border-stone/40 bg-warmwhite hover:bg-warmwhite transition-colors">BY FORMAT</button>
+    </div>
+  </div>
+</section>
+
+<section id="filter-system" class="bg-warmwhite py-12 border-b border-stone/30">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="flex items-center justify-between mb-8">
+      <div class="flex items-center gap-3">
+        <i class="fa-solid fa-filter text-charcoal/60"></i>
+        <span class="text-sm tracking-wider text-charcoal/70">FILTERS</span>
+      </div>
+      <button id="clearAllBtn" class="text-sm tracking-wider text-charcoal/60 hover:text-charcoal transition-colors">
+        CLEAR ALL
+      </button>
+    </div>
+
+    <!-- ONE ROW ON LG -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6">
+      <!-- LOOK -->
+      <div id="filter-look" class="relative">
+        <label class="block text-xs tracking-wider text-charcoal/60 mb-2">LOOK</label>
+        <div class="relative">
+          <select id="lookSelect"
+            class="w-full px-4 py-3 pr-10 bg-warmwhite border border-stone/50 text-sm focus:outline-none focus:ring-0 focus:border-charcoal transition-colors hover:border-charcoal/70">
+            <option value="">All Looks</option>
+            <option value="Stone">Stone</option>
+            <option value="Marble">Marble</option>
+            <option value="Concrete">Concrete</option>
+            <option value="Wood">Wood</option>
+            <option value="Design">Design</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-xs text-charcoal/50 pointer-events-none"></i>
+        </div>
+      </div>
+
+      <!-- ROOM -->
+      <div id="filter-room" class="relative">
+        <label class="block text-xs tracking-wider text-charcoal/60 mb-2">ROOM</label>
+        <div class="relative">
+          <select id="roomSelect"
+            class="w-full px-4 py-3 pr-10 bg-warmwhite border border-stone/50 text-sm focus:outline-none focus:ring-0 focus:border-charcoal transition-colors hover:border-charcoal/70">
+            <option value="">All Rooms</option>
+            <option value="Bathroom">Bathroom</option>
+            <option value="Kitchen">Kitchen</option>
+            <option value="Living Spaces">Living Spaces</option>
+            <option value="Bedroom">Bedroom</option>
+            <option value="Hospitality">Hospitality</option>
+            <option value="Offices">Offices</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-xs text-charcoal/50 pointer-events-none"></i>
+        </div>
+      </div>
+
+      <!-- COLOUR -->
+      <div id="filter-colour" class="relative">
+        <label class="block text-xs tracking-wider text-charcoal/60 mb-2">COLOUR</label>
+        <div class="relative">
+          <select id="colourSelect"
+            class="w-full px-4 py-3 pr-10 bg-warmwhite border border-stone/50 text-sm focus:outline-none focus:ring-0 focus:border-charcoal transition-colors hover:border-charcoal/70">
+            <option value="">All Colours</option>
+            <option value="White / Cream">White / Cream</option>
+            <option value="Grey">Grey</option>
+            <option value="Beige / Taupe">Beige / Taupe</option>
+            <option value="Brown">Brown</option>
+            <option value="Black">Black</option>
+            <option value="Earth Tones">Earth Tones</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-xs text-charcoal/50 pointer-events-none"></i>
+        </div>
+      </div>
+
+      <!-- SIZE / FORMAT -->
+      <div id="filter-format" class="relative">
+        <label class="block text-xs tracking-wider text-charcoal/60 mb-2">SIZE / FORMAT</label>
+        <div class="relative">
+          <select id="formatSelect"
+            class="w-full px-4 py-3 pr-10 bg-warmwhite border border-stone/50 text-sm focus:outline-none focus:ring-0 focus:border-charcoal transition-colors hover:border-charcoal/70">
+            <option value="">All Formats</option>
+            <option value="30×60 cm">30×60 cm</option>
+            <option value="60×60 cm">60×60 cm</option>
+            <option value="60×120 cm">60×120 cm</option>
+            <option value="80×80 cm">80×80 cm</option>
+            <option value="120×120 cm">120×120 cm</option>
+            <option value="120×280 cm">120×280 cm</option>
+          </select>
+          <i class="fa-solid fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-xs text-charcoal/50 pointer-events-none"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="active-filters" class="bg-stone/10 py-6">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="flex items-center gap-4 flex-wrap">
+      <span class="text-xs tracking-wider text-charcoal/60">ACTIVE FILTERS:</span>
+      <div id="activeChips" class="flex items-center gap-2 flex-wrap"></div>
+    </div>
+  </div>
+</section>
+
+<section id="results-header" class="bg-warmwhite py-8 border-b border-stone/30">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="flex items-center justify-between">
+      <div>
+        <h2 id="resultsTitle" class="font-serif text-3xl mb-2">All Tiles</h2>
+        <p id="resultsCount" class="text-charcoal/70">Showing 0 series</p>
+      </div>
+      <div class="flex items-center gap-6">
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-charcoal/60">SORT BY:</span>
+          <select id="sortSelect" class="px-4 py-2 bg-warmwhite border border-stone/40 text-sm focus:outline-none focus:ring-0 focus:border-charcoal transition-colors">
+            <option value="featured">Featured</option>
+            <option value="az">Name A-Z</option>
+            <option value="za">Name Z-A</option>
+            <option value="newest">Newest First</option>
+          </select>
+        </div>
+        <div class="flex gap-2">
+          <button id="gridBtn" class="w-10 h-10 border border-charcoal bg-charcoal text-warmwhite flex items-center justify-center">
+            <i class="fa-solid fa-grid text-sm"></i>
+          </button>
+          <button id="listBtn" class="w-10 h-10 border border-stone/40 hover:border-charcoal flex items-center justify-center transition-colors">
+            <i class="fa-solid fa-list text-sm"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="product-grid" class="bg-warmwhite py-16">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div id="productsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
+
+    <!-- Real pagination (no giant empty block) -->
+    <div id="pagination" class="mt-14 flex items-center justify-center gap-2"></div>
+  </div>
+</section>
+
+<section id="look-description" class="bg-warmwhite py-24">
+  <div class="max-w-[1200px] mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+          <h2 class="font-serif text-3xl tracking-wide">STONE LOOK TILES</h2>
+        </div>
+        <p class="text-lg text-charcoal/80 mb-6 leading-relaxed">
+          Our stone look ceramic and porcelain tiles capture the authentic beauty of natural stone surfaces while offering the practical advantages of modern tile technology.
+        </p>
+        <p class="text-charcoal/70 mb-6 leading-relaxed">
+          From the warm tones of limestone and travertine to the dramatic character of slate and granite, each series is designed to bring natural texture and timeless elegance to contemporary interiors.
+        </p>
+        <p class="text-charcoal/70 leading-relaxed">
+          Suitable for floors, walls, and feature applications in both residential and commercial projects. Available in multiple formats and finishes to suit any design vision.
+        </p>
+      </div>
+      <div class="relative h-[500px] bg-stone/20">
+        <img class="w-full h-full object-cover"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png"
+          alt="stone effect tiles in modern interior, natural texture, architectural detail photography">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="application-showcase" class="bg-stone/20 py-24">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="mb-16 text-center">
+      <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+        <h2 class="font-serif text-3xl tracking-wide">STONE IN APPLICATION</h2>
+      </div>
+      <p class="text-charcoal/70 max-w-2xl mx-auto">
+        See how stone look tiles transform real spaces
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div id="app-bathroom" class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/57eda7a3d6-fad75ee07149b6549baf.png"
+          alt="luxury bathroom with stone tiles, modern design, natural texture">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">BATHROOM</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Spa-Like Serenity</h3>
+          <p class="text-warmwhite/70 text-sm">Pietra Antica in structured matt finish</p>
+        </div>
+      </div>
+
+      <div id="app-kitchen" class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/832c0b0f8e-b0f6b3e35fc7ba3ab1ab.png"
+          alt="modern kitchen with stone effect tiles, minimalist design, natural palette">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">KITCHEN</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Contemporary Warmth</h3>
+          <p class="text-warmwhite/70 text-sm">Arenaria Sand in matt finish</p>
+        </div>
+      </div>
+
+      <div id="app-living" class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e531fbe681-97dfe5927827f1dd0b50.png"
+          alt="contemporary living room with large stone tiles, minimalist furniture, natural light">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">LIVING SPACE</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Refined Living</h3>
+          <p class="text-warmwhite/70 text-sm">Travertino Classico in lappato finish</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="technical-info" class="bg-warmwhite py-24">
+  <div class="max-w-[1400px] mx-auto px-8">
+    <div class="mb-16 text-center">
+      <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+        <h2 class="font-serif text-3xl tracking-wide">TECHNICAL INFORMATION</h2>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div id="tech-formats-stone" class="bg-stone/10 p-8 text-center">
+        <i class="fa-solid fa-ruler-combined text-3xl text-charcoal mb-6"></i>
+        <h3 class="font-serif text-xl mb-4">Available Formats</h3>
+        <ul class="space-y-2 text-charcoal/70 text-sm">
+          <li>30×60 cm</li>
+          <li>60×60 cm</li>
+          <li>60×120 cm</li>
+          <li>80×80 cm</li>
+          <li>120×120 cm</li>
+        </ul>
+      </div>
+
+      <div id="tech-finishes-stone" class="bg-stone/10 p-8 text-center">
+        <i class="fa-solid fa-paint-roller text-3xl text-charcoal mb-6"></i>
+        <h3 class="font-serif text-xl mb-4">Finish Options</h3>
+        <ul class="space-y-2 text-charcoal/70 text-sm">
+          <li>Natural</li>
+          <li>Matt</li>
+          <li>Structured</li>
+          <li>Lappato</li>
+          <li>Polished</li>
+        </ul>
+      </div>
+
+      <div id="tech-thickness-stone" class="bg-stone/10 p-8 text-center">
+        <i class="fa-solid fa-layer-group text-3xl text-charcoal mb-6"></i>
+        <h3 class="font-serif text-xl mb-4">Thickness</h3>
+        <ul class="space-y-2 text-charcoal/70 text-sm">
+          <li>9 mm standard</li>
+          <li>10 mm premium</li>
+          <li>12 mm heavy duty</li>
+          <li>20 mm outdoor</li>
+        </ul>
+      </div>
+
+      <div id="tech-applications-stone" class="bg-stone/10 p-8 text-center">
+        <i class="fa-solid fa-check-circle text-3xl text-charcoal mb-6"></i>
+        <h3 class="font-serif text-xl mb-4">Applications</h3>
+        <ul class="space-y-2 text-charcoal/70 text-sm">
+          <li>Internal floors</li>
+          <li>Internal walls</li>
+          <li>External floors</li>
+          <li>Wet rooms</li>
+          <li>Commercial spaces</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="related-looks" class="bg-stone/20 py-24">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="mb-16">
+      <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+        <h2 class="font-serif text-3xl tracking-wide">EXPLORE OTHER LOOKS</h2>
+      </div>
+      <p class="text-charcoal/70 mt-6 max-w-2xl">
+        Discover more aesthetic options from our collections
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <a href="products.html" id="related-marble" class="group relative h-[320px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7f1675ffa2-94eccbd442f80ce24c18.png"
+          alt="white marble texture tiles, elegant veining, luxury surface">
+        <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/60 transition-colors"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
+          <h3 class="font-serif text-2xl mb-2">Marble</h3>
+          <p class="text-sm opacity-80 mb-3">12 series</p>
+          <i class="fa-solid fa-arrow-right text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+        </div>
+      </a>
+
+      <a href="products.html" id="related-concrete" class="group relative h-[320px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7bf0a58c0e-37f0be09167d66fe10c2.png"
+          alt="concrete texture porcelain tiles, industrial modern surface">
+        <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/60 transition-colors"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
+          <h3 class="font-serif text-2xl mb-2">Concrete</h3>
+          <p class="text-sm opacity-80 mb-3">8 series</p>
+          <i class="fa-solid fa-arrow-right text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+        </div>
+      </a>
+
+      <a href="products.html" id="related-wood" class="group relative h-[320px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4ed516e55c-43b519be9db59c66f22d.png"
+          alt="wood effect ceramic tiles, natural oak texture, warm timber finish">
+        <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/60 transition-colors"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
+          <h3 class="font-serif text-2xl mb-2">Wood</h3>
+          <p class="text-sm opacity-80 mb-3">10 series</p>
+          <i class="fa-solid fa-arrow-right text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+        </div>
+      </a>
+
+      <a href="products.html" id="related-design" class="group relative h-[320px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/933595d2e8-b9ec178951f77d6392db.png"
+          alt="contemporary geometric tiles, modern pattern design, unconventional surface">
+        <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/60 transition-colors"></div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
+          <h3 class="font-serif text-2xl mb-2">Design</h3>
+          <p class="text-sm opacity-80 mb-3">6 series</p>
+          <i class="fa-solid fa-arrow-right text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="samples-cta" class="bg-charcoal text-warmwhite py-24">
+  <div class="max-w-[1000px] mx-auto px-8 text-center">
+    <h2 class="font-serif text-4xl mb-6">Request Physical Samples</h2>
+    <p class="text-xl text-warmwhite/80 mb-12 leading-relaxed max-w-2xl mx-auto">
+      Experience the texture, finish, and quality of our stone look tiles firsthand. Order samples for your project.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+      <a href="contact.html" class="bg-warmwhite text-charcoal px-10 py-4 text-sm tracking-wider hover:bg-stone transition-colors">
+        ORDER SAMPLES
+      </a>
+      <a href="downloads.html" class="border border-warmwhite text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all">
+        DOWNLOAD CATALOG
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="support-section" class="bg-warmwhite py-24">
+  <div class="max-w-[1400px] mx-auto px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div id="support-technical" class="text-center">
+        <div class="w-16 h-16 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+          <i class="fa-solid fa-file-lines text-warmwhite text-2xl"></i>
+        </div>
+        <h3 class="font-serif text-xl mb-4">Technical Data</h3>
+        <p class="text-charcoal/70 mb-6 leading-relaxed">
+          Access detailed technical specifications, CAD files, and installation guidelines for all series.
+        </p>
+        <a href="resources.html" class="text-sm tracking-wider border-b border-charcoal pb-1 hover:text-sage transition-colors">
+          VIEW RESOURCES
+        </a>
+      </div>
+
+      <div id="support-consultation" class="text-center">
+        <div class="w-16 h-16 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+          <i class="fa-solid fa-comments text-warmwhite text-2xl"></i>
+        </div>
+        <h3 class="font-serif text-xl mb-4">Project Consultation</h3>
+        <p class="text-charcoal/70 mb-6 leading-relaxed">
+          Speak with our specification team for guidance on selecting the right tiles for your project.
+        </p>
+        <a href="contact.html" class="text-sm tracking-wider border-b border-charcoal pb-1 hover:text-sage transition-colors">
+          CONTACT US
+        </a>
+      </div>
+
+      <div id="support-showroom" class="text-center">
+        <div class="w-16 h-16 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+          <i class="fa-solid fa-location-dot text-warmwhite text-2xl"></i>
+        </div>
+        <h3 class="font-serif text-xl mb-4">Visit Showroom</h3>
+        <p class="text-charcoal/70 mb-6 leading-relaxed">
+          See full-scale displays of our stone look tiles and explore finishes in person at our showrooms.
+        </p>
+        <a href="showrooms.html" class="text-sm tracking-wider border-b border-charcoal pb-1 hover:text-sage transition-colors">
+          FIND LOCATION
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer" class="bg-warmwhite border-t border-stone/30 py-16">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="lg:col-span-2">
+                <a href="index.html" class="flex items-center gap-3 mb-6">
+                    <img 
+                        src="images/er_icon_2.svg" 
+                        alt="Enzo Rossetti logo"
+                        class="w-8 h-8"
+                    />
+                    <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+                </a>
+                <p class="text-charcoal/70 mb-6 max-w-sm leading-relaxed">
+                    Italian-inspired ceramic and porcelain tiles for contemporary architecture and interior design.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Collections</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="casa-terra.html" class="hover:text-charcoal transition-colors">Casa Terra</a></li>
+                    <li><a href="casa-rossetti.html" class="hover:text-charcoal transition-colors">Casa Rossetti</a></li>
+                    <li><a href="products.html" class="hover:text-charcoal transition-colors">All Products</a></li>
+                    <li><a href="collections.html" class="hover:text-charcoal transition-colors">Collections Overview</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Resources</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="professionals.html" class="hover:text-charcoal transition-colors">Professionals</a></li>
+                    <li><a href="inspiration.html" class="hover:text-charcoal transition-colors">Inspiration</a></li>
+                    <li><a href="professionals.html#installation" class="hover:text-charcoal transition-colors">Technical Guides</a></li>
+                    <li><a href="professionals.html#downloads" class="hover:text-charcoal transition-colors">Downloads</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Company</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="about.html" class="hover:text-charcoal transition-colors">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-charcoal transition-colors">Contact</a></li>
+                    <li><a href="showrooms.html" class="hover:text-charcoal transition-colors">Showrooms</a></li>
+                    <li><a href="dealers.html" class="hover:text-charcoal transition-colors">Become a Dealer</a></li>
+                    <li><a href="careers.html" class="hover:text-charcoal transition-colors">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-stone/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-charcoal/60">
+            <p>&copy; 2024 Enzo Rossetti. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy.html" class="hover:text-charcoal transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-charcoal transition-colors">Terms of Use</a>
+                <a href="cookies.html" class="hover:text-charcoal transition-colors">Cookie Settings</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+  // ---------- Data (add/edit products here) ----------
+  const PRODUCTS = [
+    {
+      id: "pietra-antica",
+      collection: "CASA TERRA",
+      look: "Stone",
+      room: "Bathroom",
+      colour: "Beige / Taupe",
+      format: "60×60 cm",
+      name: "Pietra Antica",
+      desc: "Ancient limestone with natural texture",
+      finishes: "Matt, Structured",
+      badge: "",
+      coloursCount: 3,
+      swatches: ["#E5DDD5", "#C9BEB3", "#A89B8F"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/4e4af4418c-dd3e1d99880ae0029d38.png",
+      featuredRank: 1,
+      createdRank: 8
+    },
+    {
+      id: "travertino-classico",
+      collection: "CASA ROSSETTI",
+      look: "Stone",
+      room: "Living Spaces",
+      colour: "White / Cream",
+      format: "60×120 cm",
+      name: "Travertino Classico",
+      desc: "Italian travertine inspiration",
+      finishes: "Polished, Lappato",
+      badge: "NEW",
+      coloursCount: 2,
+      swatches: ["#F5F0E8", "#E8DFD3"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/4099b07b4d-20dd19aab4b5f78729ac.png",
+      featuredRank: 2,
+      createdRank: 1
+    },
+    {
+      id: "basalto-nero",
+      collection: "CASA TERRA",
+      look: "Stone",
+      room: "Offices",
+      colour: "Black",
+      format: "80×80 cm",
+      name: "Basalto Nero",
+      desc: "Volcanic stone with deep character",
+      finishes: "Matt, Natural",
+      badge: "",
+      coloursCount: 2,
+      swatches: ["#3A3A3A", "#2B2B2B"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/fd1a6fed9e-99331be47a15a2b1aef8.png",
+      featuredRank: 3,
+      createdRank: 5
+    },
+    {
+      id: "arenaria-sand",
+      collection: "CASA TERRA",
+      look: "Stone",
+      room: "Kitchen",
+      colour: "Beige / Taupe",
+      format: "60×60 cm",
+      name: "Arenaria Sand",
+      desc: "Warm sandstone with soft texture",
+      finishes: "Matt, Structured",
+      badge: "",
+      coloursCount: 3,
+      swatches: ["#D4C4B0", "#C9B8A8", "#B8A898"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/7e88d6eb76-97d6c80bf09df3ed3d00.png",
+      featuredRank: 4,
+      createdRank: 6
+    },
+    {
+      id: "slate-grey",
+      collection: "CASA TERRA",
+      look: "Stone",
+      room: "Living Spaces",
+      colour: "Grey",
+      format: "60×60 cm",
+      name: "Slate Grey",
+      desc: "Natural slate with layered structure",
+      finishes: "Structured, Natural",
+      badge: "",
+      coloursCount: 2,
+      swatches: ["#8B8D8F", "#6B6D6F"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/30a485ceb6-f9b578f7714d1f8ff964.png",
+      featuredRank: 5,
+      createdRank: 7
+    },
+    {
+      id: "quarzo-bianco",
+      collection: "CASA ROSSETTI",
+      look: "Stone",
+      room: "Bathroom",
+      colour: "White / Cream",
+      format: "120×120 cm",
+      name: "Quarzo Bianco",
+      desc: "White quartz with subtle veining",
+      finishes: "Polished, Soft Matt",
+      badge: "",
+      coloursCount: 1,
+      swatches: ["#F8F7F5"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/87b10b040c-32f809edd7c3c2cf76e9.png",
+      featuredRank: 6,
+      createdRank: 9
+    },
+    {
+      id: "granito-grigio",
+      collection: "CASA TERRA",
+      look: "Stone",
+      room: "Hospitality",
+      colour: "Grey",
+      format: "60×120 cm",
+      name: "Granito Grigio",
+      desc: "Grey granite with mineral texture",
+      finishes: "Polished, Lappato",
+      badge: "",
+      coloursCount: 2,
+      swatches: ["#A8A8A8", "#888888"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/47e0498dd3-53375a825e2b5171d176.png",
+      featuredRank: 7,
+      createdRank: 4
+    },
+    {
+      id: "porfido-rosso",
+      collection: "CASA TERRA",
+      look: "Stone",
+      room: "External floors",
+      colour: "Brown",
+      format: "30×60 cm",
+      name: "Porfido Rosso",
+      desc: "Red porphyry with rustic charm",
+      finishes: "Natural, Structured",
+      badge: "POPULAR",
+      coloursCount: 2,
+      swatches: ["#9B6B5F", "#7B4B3F"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/ed515d5f3a-a6c17f34649eaed22892.png",
+      featuredRank: 8,
+      createdRank: 3
+    },
+    {
+      id: "calcare-avorio",
+      collection: "CASA ROSSETTI",
+      look: "Stone",
+      room: "Bedroom",
+      colour: "White / Cream",
+      format: "80×80 cm",
+      name: "Calcare Avorio",
+      desc: "Ivory limestone with soft finish",
+      finishes: "Matt, Soft Matt",
+      badge: "",
+      coloursCount: 2,
+      swatches: ["#F0EBE3", "#E5DDD5"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/083a317910-8210a2abddd3b2b7b19b.png",
+      featuredRank: 9,
+      createdRank: 10
+    },
+    {
+      id: "pietra-serena",
+      collection: "CASA TERRA",
+      look: "Stone",
+      room: "Offices",
+      colour: "Grey",
+      format: "120×120 cm",
+      name: "Pietra Serena",
+      desc: "Tuscan stone with blue-grey tones",
+      finishes: "Natural, Matt",
+      badge: "",
+      coloursCount: 1,
+      swatches: ["#7B8A8F"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/a8e6807cf9-c6b43beb7df93508024c.png",
+      featuredRank: 10,
+      createdRank: 11
+    },
+    {
+      id: "fossil-stone",
+      collection: "CASA TERRA",
+      look: "Stone",
+      room: "Living Spaces",
+      colour: "Beige / Taupe",
+      format: "60×60 cm",
+      name: "Fossil Stone",
+      desc: "Limestone with fossil imprints",
+      finishes: "Matt, Structured",
+      badge: "",
+      coloursCount: 2,
+      swatches: ["#D4C4B0", "#C4B4A0"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/55f3f458ac-a83030bcfb394c99d4ed.png",
+      featuredRank: 11,
+      createdRank: 12
+    },
+    {
+      id: "dolomite-white",
+      collection: "CASA ROSSETTI",
+      look: "Stone",
+      room: "Bathroom",
+      colour: "White / Cream",
+      format: "60×120 cm",
+      name: "Dolomite White",
+      desc: "Pure white dolomite stone",
+      finishes: "Polished, Lappato",
+      badge: "NEW",
+      coloursCount: 1,
+      swatches: ["#FAFAF8"],
+      img: "https://storage.googleapis.com/uxpilot-auth.appspot.com/18637bc90d-d437652241ae60b55d59.png",
+      featuredRank: 12,
+      createdRank: 2
+    }
+  ];
+
+  // ---------- State ----------
+  const state = {
+    tab: "look",
+    filters: { look: "", room: "", colour: "", format: "" },
+    sort: "featured",
+    page: 1,
+    pageSize: 8,
+    view: "grid" // grid | list
+  };
+
+  // ---------- Elements ----------
+  const lookSelect = document.getElementById("lookSelect");
+  const roomSelect = document.getElementById("roomSelect");
+  const colourSelect = document.getElementById("colourSelect");
+  const formatSelect = document.getElementById("formatSelect");
+  const sortSelect = document.getElementById("sortSelect");
+
+  const productsContainer = document.getElementById("productsContainer");
+  const paginationEl = document.getElementById("pagination");
+  const activeChipsEl = document.getElementById("activeChips");
+  const resultsTitle = document.getElementById("resultsTitle");
+  const resultsCount = document.getElementById("resultsCount");
+
+  const clearAllBtn = document.getElementById("clearAllBtn");
+  const tabBtns = Array.from(document.querySelectorAll(".tab-btn"));
+
+  const gridBtn = document.getElementById("gridBtn");
+  const listBtn = document.getElementById("listBtn");
+
+  // ---------- Helpers ----------
+  function titleFromState() {
+    if (state.filters.look) return `${state.filters.look.toUpperCase()} LOOK TILES`;
+    if (state.tab === "room" && state.filters.room) return `${state.filters.room.toUpperCase()} TILES`;
+    if (state.tab === "format" && state.filters.format) return `${state.filters.format.toUpperCase()} TILES`;
+    return "All Tiles";
+  }
+
+  function applyFilters(data) {
+    return data.filter(p => {
+      if (state.filters.look && p.look !== state.filters.look) return false;
+      if (state.filters.room && p.room !== state.filters.room) return false;
+      if (state.filters.colour && p.colour !== state.filters.colour) return false;
+      if (state.filters.format && p.format !== state.filters.format) return false;
+      return true;
+    });
+  }
+
+  function applySort(data) {
+    const sorted = [...data];
+    if (state.sort === "featured") sorted.sort((a,b) => a.featuredRank - b.featuredRank);
+    if (state.sort === "az") sorted.sort((a,b) => a.name.localeCompare(b.name));
+    if (state.sort === "za") sorted.sort((a,b) => b.name.localeCompare(a.name));
+    if (state.sort === "newest") sorted.sort((a,b) => a.createdRank - b.createdRank);
+    return sorted;
+  }
+
+  function paginate(data) {
+    const total = data.length;
+    const totalPages = Math.max(1, Math.ceil(total / state.pageSize));
+    if (state.page > totalPages) state.page = totalPages;
+    const start = (state.page - 1) * state.pageSize;
+    return { pageItems: data.slice(start, start + state.pageSize), total, totalPages };
+  }
+
+  function chipLabel(key, val) {
+    const map = { look: "Look", room: "Room", colour: "Colour", format: "Format" };
+    return `${map[key]}: ${val}`;
+  }
+
+  function renderChips() {
+    activeChipsEl.innerHTML = "";
+    const entries = Object.entries(state.filters).filter(([,v]) => v);
+
+    if (!entries.length) {
+      const empty = document.createElement("span");
+      empty.className = "text-sm text-charcoal/50";
+      empty.textContent = "None";
+      activeChipsEl.appendChild(empty);
+      return;
+    }
+
+    for (const [k, v] of entries) {
+      const chip = document.createElement("div");
+      chip.className = "flex items-center gap-2 bg-charcoal text-warmwhite px-4 py-2 text-sm";
+      chip.innerHTML = `
+        <span>${chipLabel(k, v)}</span>
+        <button class="ml-2 hover:text-sage transition-colors" aria-label="Remove filter">
+          <i class="fa-solid fa-xmark text-xs"></i>
+        </button>
+      `;
+      chip.querySelector("button").addEventListener("click", () => {
+        state.filters[k] = "";
+        syncSelectsFromState();
+        state.page = 1;
+        render();
+      });
+      activeChipsEl.appendChild(chip);
+    }
+  }
+
+  function productCard(p) {
+    const badgeHtml = p.badge
+      ? `<div class="absolute top-4 left-4">
+           <span class="bg-sage text-warmwhite px-3 py-1 text-xs tracking-wider">${p.badge}</span>
+         </div>`
+      : "";
+
+    const swatches = p.swatches.map(c => `<div class="w-6 h-6 border border-stone/40" style="background:${c}"></div>`).join("");
+
+    const baseWrap = state.view === "list"
+      ? "grid grid-cols-1 md:grid-cols-[260px_1fr] gap-6 items-stretch"
+      : "";
+
+    const imgWrap = state.view === "list"
+      ? "relative h-[220px] overflow-hidden bg-stone/20"
+      : "relative h-[400px] overflow-hidden mb-6 bg-stone/20";
+
+    const hoverScale = "group-hover:scale-105 transition-transform duration-500";
+    const metaWrap = state.view === "list" ? "flex flex-col justify-between py-1" : "space-y-2";
+
+    return `
+      <div id="product-${p.id}" class="group ${baseWrap}">
+        <div class="${imgWrap}">
+          <img class="w-full h-full object-cover ${hoverScale}" src="${p.img}" alt="${p.name} tiles">
+          <div class="absolute top-4 right-4 flex gap-2">
+            <button class="w-10 h-10 bg-warmwhite/90 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-warmwhite" aria-label="Save">
+              <i class="fa-regular fa-heart text-sm"></i>
+            </button>
+            <button class="w-10 h-10 bg-warmwhite/90 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity hover:bg-warmwhite" aria-label="Expand">
+              <i class="fa-solid fa-expand text-sm"></i>
+            </button>
+          </div>
+          ${badgeHtml}
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-charcoal/80 to-transparent p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+            <a href="product.html?id=${encodeURIComponent(p.id)}" class="block w-full bg-warmwhite text-charcoal py-3 text-sm tracking-wider hover:bg-stone transition-colors text-center">
+              VIEW SERIES
+            </a>
+          </div>
+        </div>
+
+        <div class="${metaWrap}">
+          <div class="flex items-center gap-2 text-xs tracking-wider text-charcoal/60">
+            <span class="px-2 py-1 bg-stone/30">${p.collection}</span>
+            <span class="px-2 py-1 bg-stone/30">${p.look.toUpperCase()}</span>
+          </div>
+          <div>
+            <h3 class="font-serif text-2xl">${p.name}</h3>
+            <p class="text-charcoal/70 text-sm mt-1">${p.desc}</p>
+          </div>
+
+          <div class="flex items-center gap-3 pt-2">
+            <div class="flex gap-1">${swatches}</div>
+            <span class="text-xs text-charcoal/60">${p.coloursCount} colour${p.coloursCount === 1 ? "" : "s"}</span>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs text-charcoal/60 pt-2">
+            <i class="fa-solid fa-check text-sage"></i>
+            <span>${p.finishes}</span>
+          </div>
+
+          <div class="flex flex-wrap gap-2 pt-3 text-xs text-charcoal/60">
+            <span class="px-2 py-1 border border-stone/50">Room: ${p.room}</span>
+            <span class="px-2 py-1 border border-stone/50">Colour: ${p.colour}</span>
+            <span class="px-2 py-1 border border-stone/50">Format: ${p.format}</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  function renderProducts(items) {
+    productsContainer.innerHTML = items.map(productCard).join("");
+    if (state.view === "list") {
+      productsContainer.className = "grid grid-cols-1 gap-10";
+    } else {
+      productsContainer.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8";
+    }
+  }
+
+  function pageBtn(label, onClick, opts = {}) {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className =
+      (opts.active
+        ? "w-10 h-10 bg-charcoal text-warmwhite flex items-center justify-center"
+        : "w-10 h-10 border border-stone/40 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all"
+      ) + (opts.wide ? " w-auto px-3" : "");
+    btn.innerHTML = label;
+    if (opts.disabled) {
+      btn.disabled = true;
+      btn.className = "w-10 h-10 border border-stone/30 text-charcoal/30 flex items-center justify-center cursor-not-allowed";
+    } else {
+      btn.addEventListener("click", onClick);
+    }
+    return btn;
+  }
+
+  function renderPagination(totalPages) {
+    paginationEl.innerHTML = "";
+    if (totalPages <= 1) return;
+
+    paginationEl.appendChild(pageBtn(`<i class="fa-solid fa-chevron-left text-sm"></i>`, () => {
+      state.page = Math.max(1, state.page - 1);
+      render();
+      window.scrollTo({ top: document.getElementById("product-grid").offsetTop - 120, behavior: "smooth" });
+    }, { disabled: state.page === 1 }));
+
+    // smart window
+    const windowSize = 5;
+    let start = Math.max(1, state.page - Math.floor(windowSize / 2));
+    let end = Math.min(totalPages, start + windowSize - 1);
+    start = Math.max(1, end - windowSize + 1);
+
+    if (start > 1) {
+      paginationEl.appendChild(pageBtn("1", () => { state.page = 1; render(); }, { active: state.page === 1 }));
+      if (start > 2) {
+        const dots = document.createElement("span");
+        dots.className = "px-3 text-charcoal/60";
+        dots.textContent = "…";
+        paginationEl.appendChild(dots);
+      }
+    }
+
+    for (let i = start; i <= end; i++) {
+      paginationEl.appendChild(pageBtn(String(i), () => {
+        state.page = i;
+        render();
+        window.scrollTo({ top: document.getElementById("product-grid").offsetTop - 120, behavior: "smooth" });
+      }, { active: i === state.page }));
+    }
+
+    if (end < totalPages) {
+      if (end < totalPages - 1) {
+        const dots = document.createElement("span");
+        dots.className = "px-3 text-charcoal/60";
+        dots.textContent = "…";
+        paginationEl.appendChild(dots);
+      }
+      paginationEl.appendChild(pageBtn(String(totalPages), () => { state.page = totalPages; render(); }, { active: state.page === totalPages }));
+    }
+
+    paginationEl.appendChild(pageBtn(`<i class="fa-solid fa-chevron-right text-sm"></i>`, () => {
+      state.page = Math.min(totalPages, state.page + 1);
+      render();
+      window.scrollTo({ top: document.getElementById("product-grid").offsetTop - 120, behavior: "smooth" });
+    }, { disabled: state.page === totalPages }));
+  }
+
+  function syncStateFromSelects() {
+    state.filters.look = lookSelect.value;
+    state.filters.room = roomSelect.value;
+    state.filters.colour = colourSelect.value;
+    state.filters.format = formatSelect.value;
+    state.sort = sortSelect.value;
+  }
+
+  function syncSelectsFromState() {
+    lookSelect.value = state.filters.look;
+    roomSelect.value = state.filters.room;
+    colourSelect.value = state.filters.colour;
+    formatSelect.value = state.filters.format;
+    sortSelect.value = state.sort;
+  }
+
+  function setActiveTab(tab) {
+    state.tab = tab;
+    tabBtns.forEach(btn => {
+      const isActive = btn.dataset.tab === tab;
+      btn.className = isActive
+        ? "tab-btn px-8 py-3 rounded border border-stone/40 bg-charcoal text-warmwhite"
+        : "tab-btn px-8 py-3 rounded border border-stone/40 bg-warmwhite hover:bg-warmwhite transition-colors";
+    });
+  }
+
+  function render() {
+    const filtered = applyFilters(PRODUCTS);
+    const sorted = applySort(filtered);
+    const { pageItems, total, totalPages } = paginate(sorted);
+
+    resultsTitle.textContent = titleFromState();
+    resultsCount.textContent = `Showing ${total} series`;
+
+    renderChips();
+    renderProducts(pageItems);
+    renderPagination(totalPages);
+  }
+
+  // ---------- Events ----------
+  [lookSelect, roomSelect, colourSelect, formatSelect].forEach(sel => {
+    sel.addEventListener("change", () => {
+      syncStateFromSelects();
+      state.page = 1;
+      render();
+    });
+  });
+
+  sortSelect.addEventListener("change", () => {
+    syncStateFromSelects();
+    state.page = 1;
+    render();
+  });
+
+  clearAllBtn.addEventListener("click", () => {
+    state.filters = { look: "", room: "", colour: "", format: "" };
+    state.page = 1;
+    syncSelectsFromState();
+    render();
+  });
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      setActiveTab(btn.dataset.tab);
+      // just UI selection + small UX help
+      document.getElementById("filter-system").scrollIntoView({ behavior: "smooth", block: "start" });
+      render();
+    });
+  });
+
+  gridBtn.addEventListener("click", () => {
+    state.view = "grid";
+    gridBtn.className = "w-10 h-10 border border-charcoal bg-charcoal text-warmwhite flex items-center justify-center";
+    listBtn.className = "w-10 h-10 border border-stone/40 hover:border-charcoal flex items-center justify-center transition-colors";
+    render();
+  });
+
+  listBtn.addEventListener("click", () => {
+    state.view = "list";
+    listBtn.className = "w-10 h-10 border border-charcoal bg-charcoal text-warmwhite flex items-center justify-center";
+    gridBtn.className = "w-10 h-10 border border-stone/40 hover:border-charcoal flex items-center justify-center transition-colors";
+    render();
+  });
+
+  // quick “search” placeholder
+  document.getElementById("searchBtn").addEventListener("click", () => {
+    document.getElementById("filter-system").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  // ---------- Init ----------
+  setActiveTab("look");
+  syncSelectsFromState();
+  render();
+</script>
+<script>
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('shadow-soft');
+      else header.classList.remove('shadow-soft');
+    });
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Samples modal
+    const modal = document.getElementById('samplesModal');
+    const closeBtn = document.getElementById('closeSamples');
+    const openers = document.querySelectorAll('[data-open-samples]');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openers.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      const card = modal.querySelector('.bg-warmwhite');
+      if (!card.contains(e.target)) closeModal();
+    });
+
+    // ESC to close
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+  </script>
+
+</body>
+</html>

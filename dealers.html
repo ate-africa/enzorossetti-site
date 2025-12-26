@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Become a Dealer</title>
+    <link rel="icon" type="image/svg+xml" href="images/er_icon_2.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: '#D4CCC5',
+                        kraft: '#C9B8A8',
+                        sage: '#A8B5A0',
+                        charcoal: '#2B2B2B',
+                        warmwhite: '#F5F3F0'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}
+        html { scroll-behavior: smooth; }
+
+        /* Active nav underline */
+        .navlink-active { color: #A8B5A0; position: relative; }
+        .navlink-active:after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -6px;
+            width: 100%; height: 1px;
+            background: rgba(168, 181, 160, .8);
+        }
+
+        /* Room filter active helper */
+        .room-filter-btn.active { background: #2B2B2B; color: #F5F3F0; }
+    </style>
+</head>
+<body class="bg-warmwhite font-sans text-charcoal">
+
+<header id="header" class="bg-warmwhite border-b border-stone/30">
+    <div class="max-w-[1600px] mx-auto px-8 py-6 flex justify-between items-center">
+        <div class="flex items-center gap-12">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/er_icon_2.svg" alt="Enzo Rossetti icon" class="w-8 h-8" />
+                <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 text-sm tracking-wider">
+                <a href="collections.html" class="hover:text-sage transition-colors">COLLECTIONS</a>
+                <a href="products.html" class="hover:text-sage transition-colors">PRODUCTS</a>
+                <a href="professionals.html" class="hover:text-sage transition-colors">PROFESSIONALS</a>
+                <a href="inspiration.html" class="hover:text-sage transition-colors">INSPIRATION</a>
+                <a href="about.html" class="hover:text-sage transition-colors">ABOUT</a>
+            </nav>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="contact.html" class="hidden sm:inline-flex border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> CONTACT US
+            </a>
+
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" type="button" class="lg:hidden w-11 h-11 border border-charcoal/30 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-stone/30 bg-warmwhite">
+        <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-6 space-y-4 text-sm tracking-wider">
+          <a href="collections.html" class="block hover:text-sage transition-colors">COLLECTIONS</a>
+          <a href="products.html" class="block hover:text-sage transition-colors">PRODUCTS</a>
+          <a href="professionals.html" class="block hover:text-sage transition-colors">PROFESSIONALS</a>
+          <a href="inspiration.html" class="block hover:text-sage transition-colors">INSPIRATION</a>
+          <a href="about.html" class="block hover:text-sage transition-colors">ABOUT</a>
+          <div class="pt-4 flex gap-3">
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">CONTACT US</button>
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">SEARCH</button>
+          </div>
+        </div>
+    </div>
+</header>
+
+<section id="dealer-hero" class="relative h-[600px] bg-warmwhite overflow-hidden">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/491ad0bc58-1dfeb4c5eb27a0284501.png" alt="modern tile showroom interior with elegant display systems, professional retail space, architectural lighting" />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-charcoal/30 to-charcoal/70"></div>
+    </div>
+    <div class="relative h-full max-w-[1600px] mx-auto px-8 flex items-end pb-24">
+        <div class="bg-charcoal text-warmwhite p-12 max-w-3xl">
+            <h1 class="font-serif text-5xl mb-4 tracking-wide">Partner with Enzo Rossetti</h1>
+            <p class="text-xl text-warmwhite/90 leading-relaxed mb-6">
+                Join our network of authorized dealers and bring Italian-inspired design to your market.
+            </p>
+            <p class="text-warmwhite/80 leading-relaxed">
+                We're seeking established distributors and showrooms who share our commitment to quality, design excellence, and exceptional client service.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="dealer-intro" class="bg-warmwhite py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
+            <div>
+                <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                    <h2 class="font-serif text-3xl tracking-wide">WHY PARTNER WITH US</h2>
+                </div>
+                <p class="text-lg text-charcoal/80 mb-6 leading-relaxed">
+                    Enzo Rossetti represents the intersection of Italian design heritage and contemporary architectural vision. Our collections are specified by leading architects and designers for premium residential and commercial projects worldwide.
+                </p>
+                <p class="text-charcoal/70 leading-relaxed">
+                    As an authorized dealer, you'll gain access to exclusive collections, comprehensive support, and a brand recognized for its commitment to quality and design innovation.
+                </p>
+
+                <div class="mt-10 flex flex-wrap gap-3">
+                    <a href="#dealer-benefits" class="border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                        VIEW BENEFITS <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="#dealer-application-form" class="bg-charcoal text-warmwhite px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal/90 transition-colors inline-flex items-center gap-2">
+                        APPLY NOW <i class="fa-solid fa-file-signature text-xs"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="relative h-[500px] overflow-hidden">
+                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8148421608-883b8c5d231a4f13d5e4.png" alt="premium ceramic tiles displayed in elegant showroom setting, architectural samples, modern retail display" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="dealer-benefits" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">DEALER BENEFITS</h2>
+            </div>
+            <p class="text-charcoal/70 max-w-2xl mx-auto mt-6">
+                Comprehensive support designed to help you succeed in your market.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div id="benefit-card-1" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-award text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Exclusive Collections</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Access to our complete range of Casa Terra and Casa Rossetti collections, including limited editions and new releases before public launch.
+                </p>
+            </div>
+
+            <div id="benefit-card-2" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-chart-line text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Marketing Support</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Professional marketing materials, digital assets, showroom displays, and co-branded campaigns to drive customer engagement.
+                </p>
+            </div>
+
+            <div id="benefit-card-3" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-graduation-cap text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Training Programs</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Comprehensive product training, technical workshops, and ongoing education for your sales and design teams.
+                </p>
+            </div>
+
+            <div id="benefit-card-4" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-handshake text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Dedicated Account Management</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Personal support from our dealer relations team, ensuring smooth operations and rapid response to your needs.
+                </p>
+            </div>
+
+            <div id="benefit-card-5" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-box text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Sample Program</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Comprehensive sample library, display materials, and regular updates to showcase our latest collections effectively.
+                </p>
+            </div>
+
+            <div id="benefit-card-6" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-shield-halved text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Territory Protection</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Defined market territories with protection policies to ensure your investment and business development efforts are respected.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="dealer-requirements" class="bg-warmwhite py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                    <h2 class="font-serif text-3xl tracking-wide">WHAT WE LOOK FOR</h2>
+                </div>
+                <p class="text-lg text-charcoal/80 mb-8 leading-relaxed">
+                    We partner with established businesses that align with our brand values and commitment to excellence.
+                </p>
+
+                <div class="space-y-6">
+                    <div id="requirement-1" class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-charcoal flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-store text-warmwhite"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Established Showroom</h4>
+                            <p class="text-charcoal/70 leading-relaxed">
+                                A professional retail or trade showroom with appropriate space to display our collections and serve design professionals and discerning clients.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="requirement-2" class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-charcoal flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-users text-warmwhite"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Experienced Team</h4>
+                            <p class="text-charcoal/70 leading-relaxed">
+                                Knowledgeable staff with experience in premium tiles, surfaces, or related design products, capable of providing expert guidance to clients.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="requirement-3" class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-charcoal flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-network-wired text-warmwhite"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Industry Connections</h4>
+                            <p class="text-charcoal/70 leading-relaxed">
+                                Established relationships with architects, interior designers, contractors, and developers in your market.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="requirement-4" class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-charcoal flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-lightbulb text-warmwhite"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Brand Alignment</h4>
+                            <p class="text-charcoal/70 leading-relaxed">
+                                A commitment to quality, design excellence, and client service that reflects the Enzo Rossetti ethos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="requirement-5" class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-charcoal flex items-center justify-center flex-shrink-0 mt-1">
+                            <i class="fa-solid fa-chart-column text-warmwhite"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif text-xl mb-2">Financial Stability</h4>
+                            <p class="text-charcoal/70 leading-relaxed">
+                                Solid business foundation with capacity for inventory investment and sustainable growth in the premium segment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-10 border-t border-charcoal/10 pt-8">
+                    <p class="text-sm text-charcoal/60 mb-4">Prefer a quick chat before applying?</p>
+                    <a href="contact.html" class="text-sage hover:text-charcoal transition-colors text-sm tracking-wider inline-flex items-center gap-2">
+                        CONTACT OUR TEAM <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative h-[700px] overflow-hidden">
+                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/491ad0bc58-1dfeb4c5eb27a0284501.png" alt="professional tile showroom with elegant display, design consultation area, modern interior" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="dealer-process" class="bg-stone/20 py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">APPLICATION PROCESS</h2>
+            </div>
+            <p class="text-charcoal/70 max-w-2xl mx-auto mt-6">
+                A straightforward path to becoming an authorized Enzo Rossetti dealer.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div id="process-step-1" class="bg-warmwhite p-8 text-center">
+                <div class="w-20 h-20 bg-charcoal text-warmwhite flex items-center justify-center mx-auto mb-6 font-serif text-3xl">
+                    01
+                </div>
+                <h3 class="font-serif text-xl mb-4">Initial Enquiry</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Complete the dealer application form with information about your business, market, and experience.
+                </p>
+            </div>
+
+            <div id="process-step-2" class="bg-warmwhite p-8 text-center">
+                <div class="w-20 h-20 bg-charcoal text-warmwhite flex items-center justify-center mx-auto mb-6 font-serif text-3xl">
+                    02
+                </div>
+                <h3 class="font-serif text-xl mb-4">Review & Discussion</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Our dealer relations team reviews your application and schedules a conversation to discuss partnership potential.
+                </p>
+            </div>
+
+            <div id="process-step-3" class="bg-warmwhite p-8 text-center">
+                <div class="w-20 h-20 bg-charcoal text-warmwhite flex items-center justify-center mx-auto mb-6 font-serif text-3xl">
+                    03
+                </div>
+                <h3 class="font-serif text-xl mb-4">Showroom Visit</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Visit one of our flagship showrooms or arrange a virtual presentation to experience our collections firsthand.
+                </p>
+            </div>
+
+            <div id="process-step-4" class="bg-warmwhite p-8 text-center">
+                <div class="w-20 h-20 bg-charcoal text-warmwhite flex items-center justify-center mx-auto mb-6 font-serif text-3xl">
+                    04
+                </div>
+                <h3 class="font-serif text-xl mb-4">Partnership Launch</h3>
+                <p class="text-charcoal/70 text-sm leading-relaxed">
+                    Finalize agreement, receive training and materials, and launch your Enzo Rossetti partnership with full support.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="dealer-application-form" class="bg-warmwhite py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">APPLY TO BECOME A DEALER</h2>
+            </div>
+            <p class="text-charcoal/70 max-w-2xl mx-auto mt-6">
+                Complete the application form below and our dealer relations team will be in touch within 48 hours.
+            </p>
+        </div>
+
+        <form id="dealer-application" class="max-w-[900px] mx-auto bg-stone/10 p-12 space-y-8">
+            <div class="border-b border-charcoal/10 pb-8">
+                <h3 class="font-serif text-2xl mb-6">Business Information</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="companyName">COMPANY NAME *</label>
+                        <input name="companyName" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="companyName" type="text" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="businessType">BUSINESS TYPE *</label>
+                        <select name="businessType" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors appearance-none" id="businessType" required>
+                            <option value="">Select Type</option>
+                            <option value="Tile Showroom">Tile Showroom</option>
+                            <option value="Design Center">Design Center</option>
+                            <option value="Building Materials Distributor">Building Materials Distributor</option>
+                            <option value="Kitchen & Bath Showroom">Kitchen & Bath Showroom</option>
+                            <option value="Architecture & Design Firm">Architecture & Design Firm</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="yearsInBusiness">YEARS IN BUSINESS *</label>
+                        <select name="yearsInBusiness" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors appearance-none" id="yearsInBusiness" required>
+                            <option value="">Select Range</option>
+                            <option value="Less than 2 years">Less than 2 years</option>
+                            <option value="2-5 years">2-5 years</option>
+                            <option value="5-10 years">5-10 years</option>
+                            <option value="10-20 years">10-20 years</option>
+                            <option value="20+ years">20+ years</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="annualRevenue">APPROXIMATE ANNUAL REVENUE</label>
+                        <select name="annualRevenue" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors appearance-none" id="annualRevenue">
+                            <option value="">Select Range</option>
+                            <option value="Under €500K">Under €500K</option>
+                            <option value="€500K - €1M">€500K - €1M</option>
+                            <option value="€1M - €5M">€1M - €5M</option>
+                            <option value="€5M - €10M">€5M - €10M</option>
+                            <option value="Over €10M">Over €10M</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="website">WEBSITE</label>
+                    <input name="website" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="website" type="url" placeholder="https://" />
+                </div>
+            </div>
+
+            <div class="border-b border-charcoal/10 pb-8">
+                <h3 class="font-serif text-2xl mb-6">Location & Facilities</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="street">STREET ADDRESS *</label>
+                        <input name="street" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="street" type="text" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="city">CITY *</label>
+                        <input name="city" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="city" type="text" required />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="state">STATE / REGION</label>
+                        <input name="state" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="state" type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="postalCode">POSTAL CODE *</label>
+                        <input name="postalCode" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="postalCode" type="text" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="dealerCountry">COUNTRY *</label>
+                        <input name="dealerCountry" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="dealerCountry" type="text" required />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="showroomSize">SHOWROOM SIZE (SQ M) *</label>
+                        <input name="showroomSize" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="showroomSize" type="number" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="displayCapacity">DISPLAY CAPACITY *</label>
+                        <select name="displayCapacity" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors appearance-none" id="displayCapacity" required>
+                            <option value="">Select Capacity</option>
+                            <option value="Small (1-3 brands)">Small (1-3 brands)</option>
+                            <option value="Medium (4-8 brands)">Medium (4-8 brands)</option>
+                            <option value="Large (9-15 brands)">Large (9-15 brands)</option>
+                            <option value="Very Large (15+ brands)">Very Large (15+ brands)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b border-charcoal/10 pb-8">
+                <h3 class="font-serif text-2xl mb-6">Contact Person</h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="contactFirstName">FIRST NAME *</label>
+                        <input name="contactFirstName" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="contactFirstName" type="text" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="contactLastName">LAST NAME *</label>
+                        <input name="contactLastName" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="contactLastName" type="text" required />
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="contactEmail">EMAIL ADDRESS *</label>
+                        <input name="contactEmail" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="contactEmail" type="email" required />
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="contactPhone">PHONE NUMBER *</label>
+                        <input name="contactPhone" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="contactPhone" type="tel" required />
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="position">POSITION / TITLE *</label>
+                    <input name="position" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" id="position" type="text" required />
+                </div>
+            </div>
+
+            <div class="border-b border-charcoal/10 pb-8">
+                <h3 class="font-serif text-2xl mb-6">Market & Experience</h3>
+
+                <div class="mb-6">
+                    <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="currentBrands">CURRENT TILE BRANDS CARRIED</label>
+                    <textarea name="currentBrands" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors resize-none" id="currentBrands" rows="3" placeholder="List the tile brands you currently represent..."></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="targetMarket">PRIMARY TARGET MARKET *</label>
+                    <select name="targetMarket" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors appearance-none" id="targetMarket" required>
+                        <option value="">Select Primary Market</option>
+                        <option value="High-End Residential">High-End Residential</option>
+                        <option value="Commercial / Contract">Commercial / Contract</option>
+                        <option value="Hospitality">Hospitality</option>
+                        <option value="Retail">Retail</option>
+                        <option value="Architecture & Design Trade">Architecture & Design Trade</option>
+                        <option value="Mixed">Mixed</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm tracking-wider text-charcoal/70 mb-3">CLIENT BASE (SELECT ALL THAT APPLY)</label>
+                    <div class="space-y-3">
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input name="clientBaseArchitects" type="checkbox" value="Architects" class="w-4 h-4 border-stone/40 text-sage focus:ring-sage" />
+                            <span class="text-sm text-charcoal/70">Architects</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input name="clientBaseDesigners" type="checkbox" value="Interior Designers" class="w-4 h-4 border-stone/40 text-sage focus:ring-sage" />
+                            <span class="text-sm text-charcoal/70">Interior Designers</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input name="clientBaseContractors" type="checkbox" value="Contractors / Builders" class="w-4 h-4 border-stone/40 text-sage focus:ring-sage" />
+                            <span class="text-sm text-charcoal/70">Contractors / Builders</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input name="clientBaseDevelopers" type="checkbox" value="Developers" class="w-4 h-4 border-stone/40 text-sage focus:ring-sage" />
+                            <span class="text-sm text-charcoal/70">Developers</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input name="clientBaseHomeowners" type="checkbox" value="Private Homeowners" class="w-4 h-4 border-stone/40 text-sage focus:ring-sage" />
+                            <span class="text-sm text-charcoal/70">Private Homeowners</span>
+                        </label>
+                        <label class="flex items-center gap-3 cursor-pointer">
+                            <input name="clientBaseHospitality" type="checkbox" value="Hospitality / Commercial Clients" class="w-4 h-4 border-stone/40 text-sage focus:ring-sage" />
+                            <span class="text-sm text-charcoal/70">Hospitality / Commercial Clients</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="font-serif text-2xl mb-6">Additional Information</h3>
+
+                <div class="mb-6">
+                    <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="whyPartner">WHY DO YOU WANT TO PARTNER WITH ENZO ROSSETTI? *</label>
+                    <textarea name="whyPartner" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors resize-none" id="whyPartner" rows="4" required placeholder="Tell us about your interest in representing our brand..."></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="marketingApproach">HOW WOULD YOU MARKET ENZO ROSSETTI IN YOUR TERRITORY?</label>
+                    <textarea name="marketingApproach" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors resize-none" id="marketingApproach" rows="4" placeholder="Describe your approach to promoting our collections..."></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="additionalComments">ADDITIONAL COMMENTS</label>
+                    <textarea name="additionalComments" class="w-full bg-warmwhite border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors resize-none" id="additionalComments" rows="3" placeholder="Any other information you'd like to share..."></textarea>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-charcoal/10">
+                <label class="flex items-start gap-3 cursor-pointer mb-6">
+                    <input name="confirmAccurate" type="checkbox" class="mt-1 w-4 h-4 border-stone/40 text-sage focus:ring-sage" required />
+                    <span class="text-sm text-charcoal/70">
+                        I confirm that the information provided is accurate and understand that Enzo Rossetti will review this application and contact me regarding next steps. I agree to the terms of the dealer application process.
+                    </span>
+                </label>
+
+                <button class="w-full bg-charcoal text-warmwhite px-8 py-4 text-sm tracking-wider hover:bg-charcoal/90 transition-colors" type="submit">
+                    SUBMIT APPLICATION
+                </button>
+
+                <p class="text-xs text-charcoal/50 mt-4 text-center leading-relaxed">
+                    Your application will be reviewed by our dealer relations team. We typically respond within 48 hours. All information provided will be kept confidential.
+                </p>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section id="dealer-faq" class="bg-stone/20 py-24">
+    <div class="max-w-[1200px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">DEALER PROGRAM FAQ</h2>
+            </div>
+        </div>
+
+        <div class="space-y-4">
+            <div id="dealer-faq-1" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">What is the minimum order requirement?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Initial order requirements vary by territory and are discussed during the application process. We work with partners to establish realistic targets based on market potential and business capacity.
+                </p>
+            </div>
+
+            <div id="dealer-faq-2" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">Is there an exclusivity requirement?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    We offer territorial exclusivity to qualified dealers who meet performance benchmarks. This protects your investment and ensures focused market development within your designated area.
+                </p>
+            </div>
+
+            <div id="dealer-faq-3" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">What training is provided?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Comprehensive initial training covers product knowledge, technical specifications, installation guidelines, and sales techniques. Ongoing training includes new collection launches, advanced technical workshops, and annual dealer conferences.
+                </p>
+            </div>
+
+            <div id="dealer-faq-4" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">How long does the application process take?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    From initial application to partnership launch typically takes 4-8 weeks. This includes application review, discussions, showroom visit or virtual presentation, agreement finalization, and initial training.
+                </p>
+            </div>
+
+            <div id="dealer-faq-5" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">What marketing support is included?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Dealers receive professional photography, digital assets, printed materials, showroom display systems, co-branded marketing campaigns, social media support, and access to our media library. We also provide marketing development funds for qualified partners.
+                </p>
+            </div>
+
+            <div id="dealer-faq-6" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">Can I visit your showroom before applying?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Yes, we encourage potential partners to visit our flagship showrooms in Milan, London, or Paris. Appointments can be arranged through our dealer relations team to ensure dedicated time with our specialists.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="dealer-contact-cta" class="bg-warmwhite py-24">
+    <div class="max-w-[1200px] mx-auto px-8 text-center">
+        <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+            <h2 class="font-serif text-3xl tracking-wide">READY TO BEGIN?</h2>
+        </div>
+        <p class="text-xl text-charcoal/80 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Join our network of premium dealers and bring Italian-inspired design excellence to your market.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#dealer-application-form" class="bg-charcoal text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-charcoal/90 transition-colors inline-flex items-center gap-2 justify-center">
+                SUBMIT APPLICATION <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="downloads/dealer-brochure.pdf" class="border border-charcoal px-10 py-4 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2 justify-center">
+                DOWNLOAD DEALER BROCHURE <i class="fa-solid fa-download text-xs"></i>
+            </a>
+        </div>
+        <p class="text-sm text-charcoal/60 mt-8">
+            Questions? Contact our dealer relations team at
+            <a href="mailto:dealers@enzorossetti.com" class="text-sage hover:text-charcoal transition-colors">dealers@enzorossetti.com</a>
+        </p>
+    </div>
+</section>
+
+<footer id="footer" class="bg-warmwhite border-t border-stone/30 py-16">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="lg:col-span-2">
+                <a href="index.html" class="flex items-center gap-3 mb-6">
+                    <img 
+                        src="images/er_icon_2.svg" 
+                        alt="Enzo Rossetti logo"
+                        class="w-8 h-8"
+                    />
+                    <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+                </a>
+                <p class="text-charcoal/70 mb-6 max-w-sm leading-relaxed">
+                    Italian-inspired ceramic and porcelain tiles for contemporary architecture and interior design.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Collections</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="casa-terra.html" class="hover:text-charcoal transition-colors">Casa Terra</a></li>
+                    <li><a href="casa-rossetti.html" class="hover:text-charcoal transition-colors">Casa Rossetti</a></li>
+                    <li><a href="products.html" class="hover:text-charcoal transition-colors">All Products</a></li>
+                    <li><a href="collections.html" class="hover:text-charcoal transition-colors">Collections Overview</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Resources</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="professionals.html" class="hover:text-charcoal transition-colors">Professionals</a></li>
+                    <li><a href="inspiration.html" class="hover:text-charcoal transition-colors">Inspiration</a></li>
+                    <li><a href="professionals.html#installation" class="hover:text-charcoal transition-colors">Technical Guides</a></li>
+                    <li><a href="professionals.html#downloads" class="hover:text-charcoal transition-colors">Downloads</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Company</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="about.html" class="hover:text-charcoal transition-colors">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-charcoal transition-colors">Contact</a></li>
+                    <li><a href="showrooms.html" class="hover:text-charcoal transition-colors">Showrooms</a></li>
+                    <li><a href="dealers.html" class="hover:text-charcoal transition-colors">Become a Dealer</a></li>
+                    <li><a href="careers.html" class="hover:text-charcoal transition-colors">Careers</a></li>
+                  </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-stone/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-charcoal/60">
+            <p>&copy; 2024 Enzo Rossetti. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy.html" class="hover:text-charcoal transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-charcoal transition-colors">Terms of Use</a>
+                <a href="cookies.html" class="hover:text-charcoal transition-colors">Cookie Settings</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+window.addEventListener('load', function() {
+    const form = document.getElementById('dealer-application');
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            console.log('Dealer application submitted:', data);
+
+            alert('Thank you for your application. Our dealer relations team will review your submission and contact you within 48 hours.');
+
+            form.reset();
+        });
+    }
+});
+</script>
+<script>
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('shadow-soft');
+      else header.classList.remove('shadow-soft');
+    });
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Samples modal
+    const modal = document.getElementById('samplesModal');
+    const closeBtn = document.getElementById('closeSamples');
+    const openers = document.querySelectorAll('[data-open-samples]');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openers.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      const card = modal.querySelector('.bg-warmwhite');
+      if (!card.contains(e.target)) closeModal();
+    });
+
+    // ESC to close
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Rossetti Collection</title>
+    <link rel="icon" type="image/svg+xml" href="images/er_icon_2.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: '#D4CCC5',
+                        kraft: '#C9B8A8',
+                        sage: '#A8B5A0',
+                        charcoal: '#2B2B2B',
+                        warmwhite: '#F5F3F0'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}</style>
+</head>
+<body class="bg-warmwhite font-sans text-charcoal">
+
+    <header id="header" class="bg-warmwhite border-b border-stone/30 sticky top-0 z-50 transition-shadow">
+        <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-5 flex justify-between items-center">
+          <div class="flex items-center gap-10">
+            <a href="index.html" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-terracotta">
+                <img src="images/er_icon_2.svg" alt="Enzo Rossetti icon" class="w-8 h-8" />
+                <span class="font-serif text-xl sm:text-2xl tracking-wide">ENZO ROSSETTI</span>
+            </a>
+    
+            <nav class="hidden lg:flex items-center gap-8 text-sm tracking-wider">
+                <a href="collections.html" class="hover:text-sage transition-colors">COLLECTIONS</a>
+                <a href="products.html" class="hover:text-sage transition-colors">PRODUCTS</a>
+                <a href="professionals.html" class="hover:text-sage transition-colors">PROFESSIONALS</a>
+                <a href="inspiration.html" class="hover:text-sage transition-colors">INSPIRATION</a>
+                <a href="about.html" class="hover:text-sage transition-colors">ABOUT</a>
+            </nav>
+          </div>
+    
+          <div class="flex items-center gap-6">
+            <a href="contact.html" class="hidden sm:inline-flex border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> CONTACT US
+            </a>
+    
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" type="button" class="lg:hidden w-11 h-11 border border-charcoal/30 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-stone/30 bg-warmwhite">
+        <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-6 space-y-4 text-sm tracking-wider">
+          <a href="collections.html" class="block hover:text-sage transition-colors">COLLECTIONS</a>
+          <a href="products.html" class="block hover:text-sage transition-colors">PRODUCTS</a>
+          <a href="professionals.html" class="block hover:text-sage transition-colors">PROFESSIONALS</a>
+          <a href="inspiration.html" class="block hover:text-sage transition-colors">INSPIRATION</a>
+          <a href="about.html" class="block hover:text-sage transition-colors">ABOUT</a>
+          <div class="pt-4 flex gap-3">
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">CONTACT US</button>
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">SEARCH</button>
+          </div>
+        </div>
+    </div>
+    </header>
+
+<section id="breadcrumb-section" class="bg-warmwhite border-b border-stone/30 py-4">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="flex items-center gap-3 text-sm text-charcoal/60">
+            <a href="#" class="hover:text-charcoal transition-colors">Home</a>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+            <a href="#" class="hover:text-charcoal transition-colors">Collections</a>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+            <span class="text-charcoal">Casa Rossetti</span>
+        </div>
+    </div>
+</section>
+
+<section id="collection-hero" class="relative h-[700px] bg-warmwhite overflow-hidden">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/61667d7bfa-5362f38727381ed7fa20.png" alt="luxury marble tiles polished surface elegant hotel lobby interior premium architectural photography refined finishes" />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-charcoal/20 to-charcoal/70"></div>
+    </div>
+    <div class="relative h-full max-w-[1600px] mx-auto px-8 flex items-end pb-20">
+        <div class="max-w-3xl">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-6">
+                <p class="text-sm tracking-widest mb-2">PREMIUM COLLECTION</p>
+                <h1 class="font-serif text-6xl tracking-wide">CASA ROSSETTI</h1>
+            </div>
+            <p class="text-2xl text-warmwhite font-light mb-8">Signature finishes for premium spaces.</p>
+        </div>
+    </div>
+</section>
+
+<section id="collection-intro" class="bg-warmwhite py-24">
+    <div class="max-w-[1200px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="font-serif text-4xl mb-6">Refined Surfaces, Architectural Impact</h2>
+                <p class="text-lg text-charcoal/80 leading-relaxed mb-6">
+                    Casa Rossetti represents the pinnacle of our ceramic craftsmanship. Inspired by the world's most prestigious marbles and natural stones, this collection brings sophisticated elegance to high-end residential and commercial interiors.
+                </p>
+                <p class="text-lg text-charcoal/80 leading-relaxed mb-6">
+                    Each surface is meticulously designed to capture the subtle veining, depth, and luminosity of natural stone, while offering the superior performance and consistency of advanced porcelain technology.
+                </p>
+                <p class="text-lg text-charcoal/80 leading-relaxed">
+                    From polished statement floors to soft-matt feature walls, Casa Rossetti transforms spaces with quiet confidence and enduring beauty.
+                </p>
+            </div>
+            <div class="relative h-[500px] bg-stone/20">
+                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7f1675ffa2-94eccbd442f80ce24c18.png" alt="white marble texture tiles elegant veining luxury surface detail close-up refined finish" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="key-attributes" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4">
+                <h2 class="font-serif text-3xl tracking-wide">KEY ATTRIBUTES</h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div id="attribute-finishes" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-gem text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Premium Finishes</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Polished, soft-matt, and lappato surfaces designed to enhance light and create visual depth in sophisticated interiors.
+                </p>
+            </div>
+
+            <div id="attribute-inspiration" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-mountain text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Marble Inspired</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Authentic recreations of Calacatta, Statuario, and other prestigious marble varieties with faithful veining and color depth.
+                </p>
+            </div>
+
+            <div id="attribute-formats" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-expand text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Large Formats</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Available in oversized slabs up to 120×280 cm, minimizing grout lines and maximizing visual continuity.
+                </p>
+            </div>
+
+            <div id="attribute-applications" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-building text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Feature Surfaces</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Ideal for statement floors, feature walls, reception areas, and high-impact architectural elements.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="series-overview" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">COLLECTION SERIES</h2>
+            </div>
+            <p class="text-charcoal/70 text-lg max-w-3xl">
+                Casa Rossetti comprises multiple series, each capturing a distinct marble aesthetic while maintaining the collection's signature refinement.
+            </p>
+        </div>
+
+        <div class="space-y-12">
+            <div id="series-classico" class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                <div class="lg:col-span-2 order-2 lg:order-1">
+                    <div class="bg-charcoal text-warmwhite inline-block px-6 py-2 mb-4 text-sm tracking-wider">
+                        SIGNATURE SERIES
+                    </div>
+                    <h3 class="font-serif text-4xl mb-4">Rossetti Classico</h3>
+                    <p class="text-charcoal/70 text-lg leading-relaxed mb-6">
+                        Inspired by the timeless elegance of Calacatta marble, Classico features soft white backgrounds with delicate grey veining. The polished finish creates a luminous surface ideal for luxury residential and hospitality projects.
+                    </p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">Polished & Soft-Matt finishes</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">60×120, 80×80, 120×120 cm</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">Floors, walls, feature surfaces</span>
+                        </div>
+                    </div>
+                    <button class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+                        VIEW SERIES DETAILS
+                    </button>
+                </div>
+                <div class="lg:col-span-3 order-1 lg:order-2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-[350px] overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7f1675ffa2-94eccbd442f80ce24c18.png" alt="calacatta marble white tiles elegant grey veining polished luxury surface" />
+                        </div>
+                        <div class="h-[350px] overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a9ab0feffb-062d45b14d4a8081a412.png" alt="luxury hotel interior white marble floors elegant lobby polished tiles" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="series-lusso" class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center bg-stone/10 p-12">
+                <div class="lg:col-span-3 order-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-[350px] overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/61667d7bfa-5362f38727381ed7fa20.png" alt="dark marble tiles dramatic veining luxury surface polished finish" />
+                        </div>
+                        <div class="h-[350px] overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ee8dc006b9-118b561a54c6904e56bb.png" alt="luxury hotel lobby dark marble floors elegant architectural interior" />
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 order-2">
+                    <div class="bg-charcoal text-warmwhite inline-block px-6 py-2 mb-4 text-sm tracking-wider">
+                        DRAMATIC ELEGANCE
+                    </div>
+                    <h3 class="font-serif text-4xl mb-4">Rossetti Lusso</h3>
+                    <p class="text-charcoal/70 text-lg leading-relaxed mb-6">
+                        For spaces demanding bold sophistication, Lusso presents deep charcoal and black marble aesthetics with dramatic white and gold veining. A statement series for high-impact commercial and residential interiors.
+                    </p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">Polished & Lappato finishes</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">60×120, 120×120, 120×280 cm</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">Feature walls, reception areas</span>
+                        </div>
+                    </div>
+                    <button class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+                        VIEW SERIES DETAILS
+                    </button>
+                </div>
+            </div>
+
+            <div id="series-softtouch" class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                <div class="lg:col-span-2 order-2 lg:order-1">
+                    <div class="bg-charcoal text-warmwhite inline-block px-6 py-2 mb-4 text-sm tracking-wider">
+                        CONTEMPORARY REFINEMENT
+                    </div>
+                    <h3 class="font-serif text-4xl mb-4">Rossetti SoftTouch</h3>
+                    <p class="text-charcoal/70 text-lg leading-relaxed mb-6">
+                        Combining the visual beauty of marble with a tactile soft-matt finish, SoftTouch offers warmth and subtlety. Ideal for residential spaces where comfort and elegance intersect.
+                    </p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">Exclusive Soft-Matt finish</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">60×60, 60×120, 80×80 cm</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">Living areas, bedrooms, bathrooms</span>
+                        </div>
+                    </div>
+                    <button class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+                        VIEW SERIES DETAILS
+                    </button>
+                </div>
+                <div class="lg:col-span-3 order-1 lg:order-2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-[350px] overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png" alt="soft matt marble tiles warm beige surface subtle texture contemporary finish" />
+                        </div>
+                        <div class="h-[350px] overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/03d6c3d457-84875c6bca02a5092571.png" alt="modern bedroom interior soft marble tiles warm lighting minimalist design" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="series-greige" class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center bg-stone/10 p-12">
+                <div class="lg:col-span-3 order-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="h-[350px] overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-7e0b3591b6f5cbcab781.png" alt="greige marble tiles neutral tones subtle veining contemporary surface" />
+                        </div>
+                        <div class="h-[350px] overflow-hidden">
+                            <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/57eda7a3d6-fad75ee07149b6549baf.png" alt="luxury bathroom greige marble walls modern minimalist spa design" />
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-2 order-2">
+                    <div class="bg-charcoal text-warmwhite inline-block px-6 py-2 mb-4 text-sm tracking-wider">
+                        NEUTRAL SOPHISTICATION
+                    </div>
+                    <h3 class="font-serif text-4xl mb-4">Rossetti Greige</h3>
+                    <p class="text-charcoal/70 text-lg leading-relaxed mb-6">
+                        The perfect balance between grey and beige, Greige offers neutral warmth with understated elegance. Versatile and timeless, suitable for both contemporary and transitional design schemes.
+                    </p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">Polished & Soft-Matt finishes</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">60×120, 80×80, 120×120 cm</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check text-sage"></i>
+                            <span class="text-charcoal/70">All interior applications</span>
+                        </div>
+                    </div>
+                    <button class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+                        VIEW SERIES DETAILS
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="finish-comparison" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">FINISH OPTIONS</h2>
+            </div>
+            <p class="text-charcoal/70 text-lg max-w-3xl">
+                Each Casa Rossetti series is available in multiple finishes to suit different design requirements and aesthetic preferences.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div id="finish-polished" class="bg-warmwhite p-10">
+                <div class="h-[250px] mb-6 overflow-hidden bg-stone/20">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7f1675ffa2-94eccbd442f80ce24c18.png" alt="polished marble surface high gloss reflective finish luxury tiles" />
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Polished</h3>
+                <p class="text-charcoal/70 leading-relaxed mb-6">
+                    High-gloss mirror finish that maximizes light reflection and creates a sense of spaciousness. Ideal for statement floors and feature walls in luxury settings.
+                </p>
+                <div class="space-y-2 text-sm text-charcoal/60">
+                    <p><i class="fa-solid fa-circle text-xs mr-2"></i>Maximum luminosity</p>
+                    <p><i class="fa-solid fa-circle text-xs mr-2"></i>Formal elegance</p>
+                    <p><i class="fa-solid fa-circle text-xs mr-2"></i>Best for low-traffic areas</p>
+                </div>
+            </div>
+
+            <div id="finish-softmatt" class="bg-warmwhite p-10">
+                <div class="h-[250px] mb-6 overflow-hidden bg-stone/20">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png" alt="soft matt marble surface subtle sheen warm tactile finish contemporary tiles" />
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Soft-Matt</h3>
+                <p class="text-charcoal/70 leading-relaxed mb-6">
+                    A contemporary finish with subtle sheen that balances elegance with practicality. Offers warmth and tactile appeal while maintaining visual sophistication.
+                </p>
+                <div class="space-y-2 text-sm text-charcoal/60">
+                    <p><i class="fa-solid fa-circle text-xs mr-2"></i>Balanced aesthetic</p>
+                    <p><i class="fa-solid fa-circle text-xs mr-2"></i>Tactile warmth</p>
+                    <p><i class="fa-solid fa-circle text-xs mr-2"></i>Versatile applications</p>
+                </div>
+            </div>
+
+            <div id="finish-lappato" class="bg-warmwhite p-10">
+                <div class="h-[250px] mb-6 overflow-hidden bg-stone/20">
+                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/61667d7bfa-5362f38727381ed7fa20.png" alt="lappato marble surface semi-polished finish elegant sheen refined texture" />
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Lappato</h3>
+                <p class="text-charcoal/70 leading-relaxed mb-6">
+                    Semi-polished finish combining the elegance of polished marble with enhanced slip resistance. Perfect for high-traffic commercial and hospitality environments.
+                </p>
+                <div class="space-y-2 text-sm text-charcoal/60">
+                    <p><i class="fa-solid fa-circle text-xs mr-2"></i>Enhanced slip resistance</p>
+                    <p><i class="fa-solid fa-circle text-xs mr-2"></i>Commercial durability</p>
+                    <p><i class="fa-solid fa-circle text-xs mr-2"></i>High-traffic suitable</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="in-use-gallery" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">CASA ROSSETTI IN USE</h2>
+            </div>
+            <p class="text-charcoal/70 text-lg max-w-3xl">
+                Discover how Casa Rossetti transforms real spaces across residential, hospitality, and commercial projects.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-12 gap-6">
+            <div id="gallery-1" class="col-span-12 md:col-span-7 relative h-[550px] overflow-hidden group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/a9ab0feffb-062d45b14d4a8081a412.png" alt="luxury hotel lobby white marble floors elegant reception polished tiles architectural lighting" />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-10">
+                    <p class="text-warmwhite/80 text-sm mb-2 tracking-wider">HOSPITALITY</p>
+                    <h3 class="font-serif text-3xl text-warmwhite mb-2">Hotel Lobby Statement</h3>
+                    <p class="text-warmwhite/70 text-sm">Rossetti Classico Polished, 120×120 cm</p>
+                </div>
+            </div>
+
+            <div id="gallery-2" class="col-span-12 md:col-span-5 relative h-[550px] overflow-hidden group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/57eda7a3d6-fad75ee07149b6549baf.png" alt="luxury bathroom marble walls modern spa design minimalist freestanding tub" />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-10">
+                    <p class="text-warmwhite/80 text-sm mb-2 tracking-wider">RESIDENTIAL</p>
+                    <h3 class="font-serif text-2xl text-warmwhite mb-2">Master Bathroom</h3>
+                    <p class="text-warmwhite/70 text-sm">Rossetti Greige Soft-Matt</p>
+                </div>
+            </div>
+
+            <div id="gallery-3" class="col-span-12 md:col-span-5 relative h-[550px] overflow-hidden group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ee8dc006b9-118b561a54c6904e56bb.png" alt="luxury hotel reception dark marble feature wall elegant architectural interior" />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-10">
+                    <p class="text-warmwhite/80 text-sm mb-2 tracking-wider">COMMERCIAL</p>
+                    <h3 class="font-serif text-2xl text-warmwhite mb-2">Reception Feature Wall</h3>
+                    <p class="text-warmwhite/70 text-sm">Rossetti Lusso Polished</p>
+                </div>
+            </div>
+
+            <div id="gallery-4" class="col-span-12 md:col-span-7 relative h-[550px] overflow-hidden group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d71e028141-244d5cbfd4f16d225de4.png" alt="modern penthouse living room large format marble tiles floor to ceiling windows luxury interior" />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-10">
+                    <p class="text-warmwhite/80 text-sm mb-2 tracking-wider">RESIDENTIAL</p>
+                    <h3 class="font-serif text-3xl text-warmwhite mb-2">Penthouse Living Space</h3>
+                    <p class="text-warmwhite/70 text-sm">Rossetti Classico Lappato, 120×280 cm slabs</p>
+                </div>
+            </div>
+
+            <div id="gallery-5" class="col-span-12 md:col-span-6 relative h-[450px] overflow-hidden group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/03d6c3d457-84875c6bca02a5092571.png" alt="serene bedroom interior warm marble tiles soft lighting minimalist design" />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                    <p class="text-warmwhite/80 text-sm mb-2 tracking-wider">RESIDENTIAL</p>
+                    <h3 class="font-serif text-2xl text-warmwhite mb-2">Private Bedroom</h3>
+                    <p class="text-warmwhite/70 text-sm">Rossetti SoftTouch</p>
+                </div>
+            </div>
+
+            <div id="gallery-6" class="col-span-12 md:col-span-6 relative h-[450px] overflow-hidden group">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/832c0b0f8e-b0f6b3e35fc7ba3ab1ab.png" alt="modern kitchen interior marble backsplash minimalist design premium finishes" />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-8">
+                    <p class="text-warmwhite/80 text-sm mb-2 tracking-wider">RESIDENTIAL</p>
+                    <h3 class="font-serif text-2xl text-warmwhite mb-2">Designer Kitchen</h3>
+                    <p class="text-warmwhite/70 text-sm">Rossetti Greige Polished</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="technical-specifications-detail" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">TECHNICAL SPECIFICATIONS</h2>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div id="specs-formats" class="bg-warmwhite p-10">
+                <h3 class="font-serif text-2xl mb-6">Available Formats</h3>
+                <div class="space-y-4">
+                    <div class="flex justify-between items-center border-b border-stone/30 pb-3">
+                        <span class="text-charcoal/70">60 × 60 cm</span>
+                        <span class="text-sm text-charcoal/60">Standard</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-stone/30 pb-3">
+                        <span class="text-charcoal/70">60 × 120 cm</span>
+                        <span class="text-sm text-charcoal/60">Rectangular</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-stone/30 pb-3">
+                        <span class="text-charcoal/70">80 × 80 cm</span>
+                        <span class="text-sm text-charcoal/60">Large Square</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-stone/30 pb-3">
+                        <span class="text-charcoal/70">120 × 120 cm</span>
+                        <span class="text-sm text-charcoal/60">Extra Large</span>
+                    </div>
+                    <div class="flex justify-between items-center border-b border-stone/30 pb-3">
+                        <span class="text-charcoal/70">120 × 280 cm</span>
+                        <span class="text-sm text-charcoal/60">Slab Format</span>
+                    </div>
+                </div>
+                <p class="text-sm text-charcoal/60 mt-6">
+                    All formats available in 9mm and 12mm thickness options
+                </p>
+            </div>
+
+            <div id="specs-performance" class="bg-warmwhite p-10">
+                <h3 class="font-serif text-2xl mb-6">Performance Characteristics</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-charcoal/70">Water Absorption</span>
+                            <span class="text-sm font-medium">≤ 0.5%</span>
+                        </div>
+                        <div class="w-full bg-stone/30 h-2 rounded-full">
+                            <div class="bg-sage h-2 rounded-full" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-charcoal/70">Breaking Strength</span>
+                            <span class="text-sm font-medium">≥ 1300 N</span>
+                        </div>
+                        <div class="w-full bg-stone/30 h-2 rounded-full">
+                            <div class="bg-sage h-2 rounded-full" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-charcoal/70">Frost Resistance</span>
+                            <span class="text-sm font-medium">Compliant</span>
+                        </div>
+                        <div class="w-full bg-stone/30 h-2 rounded-full">
+                            <div class="bg-sage h-2 rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-charcoal/70">Chemical Resistance</span>
+                            <span class="text-sm font-medium">Class A</span>
+                        </div>
+                        <div class="w-full bg-stone/30 h-2 rounded-full">
+                            <div class="bg-sage h-2 rounded-full" style="width: 98%"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-sm text-charcoal/60 mt-6">
+                    Tested and certified to ISO 13006 and EN 14411 standards
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-12 bg-warmwhite p-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <i class="fa-solid fa-shield-halved text-4xl text-charcoal mb-4"></i>
+                    <h4 class="font-serif text-xl mb-2">Durability</h4>
+                    <p class="text-sm text-charcoal/60">Lifetime residential warranty</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-droplet text-4xl text-charcoal mb-4"></i>
+                    <h4 class="font-serif text-xl mb-2">Stain Resistant</h4>
+                    <p class="text-sm text-charcoal/60">Non-porous surface</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-temperature-low text-4xl text-charcoal mb-4"></i>
+                    <h4 class="font-serif text-xl mb-2">Frost Proof</h4>
+                    <p class="text-sm text-charcoal/60">Selected outdoor use</p>
+                </div>
+                <div class="text-center">
+                    <i class="fa-solid fa-recycle text-4xl text-charcoal mb-4"></i>
+                    <h4 class="font-serif text-xl mb-2">Sustainable</h4>
+                    <p class="text-sm text-charcoal/60">LEED certified</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="color-palette" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">COLOR PALETTE</h2>
+            </div>
+            <p class="text-charcoal/70 text-lg max-w-3xl">
+                Casa Rossetti offers a refined spectrum from pure whites to dramatic blacks, each capturing the authentic character of natural marble.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            <div id="color-bianco" class="group cursor-pointer">
+                <div class="h-[200px] bg-white border border-stone/30 mb-4 group-hover:shadow-lg transition-shadow"></div>
+                <h4 class="font-serif text-lg mb-1">Bianco Calacatta</h4>
+                <p class="text-sm text-charcoal/60">Pure white with grey veining</p>
+            </div>
+
+            <div id="color-statuario" class="group cursor-pointer">
+                <div class="h-[200px] bg-gray-50 border border-stone/30 mb-4 group-hover:shadow-lg transition-shadow"></div>
+                <h4 class="font-serif text-lg mb-1">Statuario</h4>
+                <p class="text-sm text-charcoal/60">Soft white with gold accents</p>
+            </div>
+
+            <div id="color-greige" class="group cursor-pointer">
+                <div class="h-[200px] bg-stone border border-stone/30 mb-4 group-hover:shadow-lg transition-shadow"></div>
+                <h4 class="font-serif text-lg mb-1">Greige</h4>
+                <p class="text-sm text-charcoal/60">Warm grey-beige blend</p>
+            </div>
+
+            <div id="color-travertino" class="group cursor-pointer">
+                <div class="h-[200px] bg-kraft border border-stone/30 mb-4 group-hover:shadow-lg transition-shadow"></div>
+                <h4 class="font-serif text-lg mb-1">Travertino</h4>
+                <p class="text-sm text-charcoal/60">Warm beige tones</p>
+            </div>
+
+            <div id="color-grigio" class="group cursor-pointer">
+                <div class="h-[200px] bg-gray-400 border border-stone/30 mb-4 group-hover:shadow-lg transition-shadow"></div>
+                <h4 class="font-serif text-lg mb-1">Grigio Scuro</h4>
+                <p class="text-sm text-charcoal/60">Deep charcoal grey</p>
+            </div>
+
+            <div id="color-nero" class="group cursor-pointer">
+                <div class="h-[200px] bg-charcoal border border-stone/30 mb-4 group-hover:shadow-lg transition-shadow"></div>
+                <h4 class="font-serif text-lg mb-1">Nero Marquina</h4>
+                <p class="text-sm text-charcoal/60">Black with white veining</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="installation-care" class="bg-stone/20 py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div id="installation-guide" class="bg-warmwhite p-10">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-16 h-16 bg-charcoal flex items-center justify-center">
+                        <i class="fa-solid fa-wrench text-warmwhite text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl">Installation Guidelines</h3>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-medium mb-2">Substrate Preparation</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Ensure substrate is clean, level, and structurally sound. Large format tiles require perfectly flat surfaces with maximum deviation of 3mm per 3m.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Adhesive Selection</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Use high-quality flexible adhesive suitable for porcelain. Apply using notched trowel with full bed coverage for large format tiles.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Grouting</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Minimum 2mm joint width recommended. Use epoxy grout for wet areas and high-traffic commercial applications.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Expansion Joints</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Install movement joints every 8-10m and at perimeter edges, doorways, and transitions to other floor finishes.
+                        </p>
+                    </div>
+                </div>
+                <button class="mt-8 border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+                    DOWNLOAD INSTALLATION GUIDE
+                </button>
+            </div>
+
+            <div id="maintenance-care" class="bg-warmwhite p-10">
+                <div class="flex items-center gap-4 mb-8">
+                    <div class="w-16 h-16 bg-charcoal flex items-center justify-center">
+                        <i class="fa-solid fa-spray-can text-warmwhite text-2xl"></i>
+                    </div>
+                    <h3 class="font-serif text-3xl">Care & Maintenance</h3>
+                </div>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-medium mb-2">Daily Cleaning</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Sweep or vacuum regularly. Clean with pH-neutral detergent and water. Avoid abrasive cleaners or acidic products.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Polished Finishes</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Wipe spills immediately to prevent water marks. Use microfiber cloth for streak-free shine. Periodic professional maintenance recommended.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Matt & Textured Finishes</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            More forgiving of minor scratches. Regular cleaning sufficient to maintain appearance. Suitable for high-traffic areas.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium mb-2">Stain Removal</h4>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Non-porous surface resists most stains. For stubborn marks, use appropriate specialist cleaner. Test in inconspicuous area first.
+                        </p>
+                    </div>
+                </div>
+                <button class="mt-8 border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+                    DOWNLOAD CARE GUIDE
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="professional-resources" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">PROFESSIONAL RESOURCES</h2>
+            </div>
+            <p class="text-charcoal/70 text-lg max-w-3xl">
+                Complete technical documentation and support materials for architects, designers, and specifiers.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div id="resource-datasheets" class="border border-stone/30 p-8 hover:border-charcoal transition-colors group cursor-pointer">
+                <i class="fa-solid fa-file-lines text-4xl text-charcoal mb-6 group-hover:text-sage transition-colors"></i>
+                <h3 class="font-serif text-xl mb-3">Technical Datasheets</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Complete specifications for each series including dimensions, performance data, and certifications.
+                </p>
+                <span class="text-sm text-charcoal/60 flex items-center gap-2">
+                    Download PDF <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </div>
+
+            <div id="resource-cad" class="border border-stone/30 p-8 hover:border-charcoal transition-colors group cursor-pointer">
+                <i class="fa-solid fa-drafting-compass text-4xl text-charcoal mb-6 group-hover:text-sage transition-colors"></i>
+                <h3 class="font-serif text-xl mb-3">CAD Files</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    2D and 3D models in DWG, DXF, and Revit formats for architectural specification.
+                </p>
+                <span class="text-sm text-charcoal/60 flex items-center gap-2">
+                    Download Files <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </div>
+
+            <div id="resource-samples" class="border border-stone/30 p-8 hover:border-charcoal transition-colors group cursor-pointer">
+                <i class="fa-solid fa-cube text-4xl text-charcoal mb-6 group-hover:text-sage transition-colors"></i>
+                <h3 class="font-serif text-xl mb-3">Sample Request</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Order physical samples for client presentations and material specification.
+                </p>
+                <span class="text-sm text-charcoal/60 flex items-center gap-2">
+                    Request Samples <i class="fa-solid fa-arrow-right text-xs"></i>
+                </span>
+            </div>
+
+            <div id="resource-support" class="border border-stone/30 p-8 hover:border-charcoal transition-colors group cursor-pointer">
+                <i class="fa-solid fa-headset text-4xl text-charcoal mb-6 group-hover:text-sage transition-colors"></i>
+                <h3 class="font-serif text-xl mb-3">Project Support</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Technical consultation and specification assistance for large-scale projects.
+                </p>
+                <span class="text-sm text-charcoal/60 flex items-center gap-2">
+                    Contact Team <i class="fa-solid fa-arrow-right text-xs"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="related-collections" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <h2 class="font-serif text-4xl mb-4">Explore Other Collections</h2>
+            <p class="text-charcoal/70 text-lg">
+                Discover complementary tile collections from Enzo Rossetti.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div id="related-casaterra" class="group relative h-[500px] overflow-hidden">
+                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png" alt="natural stone texture ceramic tiles earthy warm tones textured surface architectural detail" />
+                <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-12">
+                    <h3 class="font-serif text-4xl text-warmwhite mb-3">Casa Terra</h3>
+                    <p class="text-warmwhite/90 text-lg mb-6">Earth. Texture. Warmth.</p>
+                    <p class="text-warmwhite/70 mb-8 leading-relaxed">
+                        Natural stone and concrete aesthetics with tactile finishes. Perfect for contemporary spaces seeking organic warmth.
+                    </p>
+                    <a href="casa-terra.html" class="inline-flex border border-warmwhite text-warmwhite px-8 py-3 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all">
+                        EXPLORE CASA TERRA
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-8">
+                <div id="related-stone" class="group relative h-[240px] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-7e0b3591b6f5cbcab781.png" alt="natural stone texture ceramic tiles grey limestone surface architectural detail" />
+                    <div class="absolute inset-0 bg-charcoal/50 group-hover:bg-charcoal/70 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
+                        <h3 class="font-serif text-2xl mb-2">Stone Look</h3>
+                        <i class="fa-solid fa-arrow-right text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+
+                <div id="related-concrete" class="group relative h-[240px] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7bf0a58c0e-37f0be09167d66fe10c2.png" alt="concrete texture porcelain tiles industrial modern surface grey cement finish" />
+                    <div class="absolute inset-0 bg-charcoal/50 group-hover:bg-charcoal/70 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
+                        <h3 class="font-serif text-2xl mb-2">Concrete Look</h3>
+                        <i class="fa-solid fa-arrow-right text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+
+                <div id="related-wood" class="group relative h-[240px] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4ed516e55c-43b519be9db59c66f22d.png" alt="wood effect ceramic tiles natural oak texture warm timber finish" />
+                    <div class="absolute inset-0 bg-charcoal/50 group-hover:bg-charcoal/70 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
+                        <h3 class="font-serif text-2xl mb-2">Wood Look</h3>
+                        <i class="fa-solid fa-arrow-right text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+
+                <div id="related-design" class="group relative h-[240px] overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/933595d2e8-b9ec178951f77d6392db.png" alt="contemporary geometric tiles modern pattern design unconventional ceramic surface" />
+                    <div class="absolute inset-0 bg-charcoal/50 group-hover:bg-charcoal/70 transition-colors"></div>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
+                        <h3 class="font-serif text-2xl mb-2">Design</h3>
+                        <i class="fa-solid fa-arrow-right text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="collection-cta" class="bg-charcoal text-warmwhite py-32">
+    <div class="max-w-[1000px] mx-auto px-8 text-center">
+        <h2 class="font-serif text-5xl mb-6">Specify Casa Rossetti</h2>
+        <p class="text-xl text-warmwhite/80 mb-12 leading-relaxed max-w-2xl mx-auto">
+            Request samples, technical documentation, or schedule a consultation with our specification team to discuss your project requirements.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <button type="button" data-open-samples class="bg-warmwhite text-charcoal px-10 py-4 text-sm tracking-wider hover:bg-stone transition-colors">
+                REQUEST SAMPLES
+            </button>
+            <button class="border border-warmwhite text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all">
+                DOWNLOAD CATALOG
+            </button>
+            <a href="contact.html" class="inline-flex justify-center border border-warmwhite text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all">
+                CONTACT TEAM
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="bg-warmwhite border-t border-stone/30 py-16">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="lg:col-span-2">
+                <a href="index.html" class="flex items-center gap-3 mb-6">
+                    <img 
+                        src="images/er_icon_2.svg" 
+                        alt="Enzo Rossetti logo"
+                        class="w-8 h-8"
+                    />
+                    <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+                </a>
+                <p class="text-charcoal/70 mb-6 max-w-sm leading-relaxed">
+                    Italian-inspired ceramic and porcelain tiles for contemporary architecture and interior design.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Collections</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="casa-terra.html" class="hover:text-charcoal transition-colors">Casa Terra</a></li>
+                    <li><a href="casa-rossetti.html" class="hover:text-charcoal transition-colors">Casa Rossetti</a></li>
+                    <li><a href="products.html" class="hover:text-charcoal transition-colors">All Products</a></li>
+                    <li><a href="collections.html" class="hover:text-charcoal transition-colors">Collections Overview</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Resources</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="professionals.html" class="hover:text-charcoal transition-colors">Professionals</a></li>
+                    <li><a href="inspiration.html" class="hover:text-charcoal transition-colors">Inspiration</a></li>
+                    <li><a href="professionals.html#installation" class="hover:text-charcoal transition-colors">Technical Guides</a></li>
+                    <li><a href="professionals.html#downloads" class="hover:text-charcoal transition-colors">Downloads</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Company</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="about.html" class="hover:text-charcoal transition-colors">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-charcoal transition-colors">Contact</a></li>
+                    <li><a href="showrooms.html" class="hover:text-charcoal transition-colors">Showrooms</a></li>
+                    <li><a href="dealers.html" class="hover:text-charcoal transition-colors">Become a Dealer</a></li>
+                    <li><a href="careers.html" class="hover:text-charcoal transition-colors">Careers</a></li>
+                  </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-stone/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-charcoal/60">
+            <p>&copy; 2024 Enzo Rossetti. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy.html" class="hover:text-charcoal transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-charcoal transition-colors">Terms of Use</a>
+                <a href="cookies.html" class="hover:text-charcoal transition-colors">Cookie Settings</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Samples Modal -->
+<div id="samplesModal" class="fixed inset-0 z-[9999] hidden" role="dialog" aria-modal="true" aria-labelledby="samplesTitle">
+    <div class="absolute inset-0 bg-charcoal/70"></div>
+
+    <div class="relative w-full h-full flex items-center justify-center p-5">
+      <div class="bg-warmwhite w-full max-w-2xl shadow-soft border border-stone/40">
+        <div class="flex items-center justify-between p-6 border-b border-stone/30">
+          <h3 id="samplesTitle" class="font-serif text-2xl tracking-wide">Request Samples</h3>
+          <button id="closeSamples" type="button" class="w-11 h-11 border border-charcoal/20 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <form class="p-6 space-y-5" onsubmit="event.preventDefault(); alert('Sample request submitted (demo).'); closeModal();">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm text-charcoal/70">Full Name</label>
+              <input required class="mt-2 w-full border border-stone/40 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-terracotta" />
+            </div>
+            <div>
+              <label class="text-sm text-charcoal/70">Email</label>
+              <input type="email" required class="mt-2 w-full border border-stone/40 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-terracotta" />
+            </div>
+          </div>
+
+          <div>
+            <label class="text-sm text-charcoal/70">Which series?</label>
+            <select class="mt-2 w-full border border-stone/40 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-terracotta">
+              <option>Rossetti Classico</option>
+              <option>Rossetti Lusso</option>
+              <option>Rossetti SoftTouch</option>
+              <option>Rossetti Greige</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-sm text-charcoal/70">Notes (optional)</label>
+            <textarea rows="4" class="mt-2 w-full border border-stone/40 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-terracotta"></textarea>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3 sm:justify-end pt-2">
+            <button type="button" class="border border-charcoal px-6 py-3 hover:bg-charcoal hover:text-warmwhite transition-all" onclick="closeModal()">
+              Cancel
+            </button>
+            <button type="submit" class="bg-charcoal text-warmwhite px-6 py-3 hover:opacity-90 transition-all">
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+</div>
+
+<script>
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('shadow-soft');
+      else header.classList.remove('shadow-soft');
+    });
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Samples modal
+    const modal = document.getElementById('samplesModal');
+    const closeBtn = document.getElementById('closeSamples');
+    const openers = document.querySelectorAll('[data-open-samples]');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openers.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      const card = modal.querySelector('.bg-warmwhite');
+      if (!card.contains(e.target)) closeModal();
+    });
+
+    // ESC to close
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+  </script>
+  
+</body>
+</html>

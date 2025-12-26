@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Enzo Rossetti</title>
+    <link rel="icon" type="image/svg+xml" href="images/er_icon_2.svg">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: '#D4CCC5',
+                        kraft: '#C9B8A8',
+                        sage: '#A8B5A0',
+                        charcoal: '#2B2B2B',
+                        warmwhite: '#F5F3F0'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        html { scroll-behavior: smooth; }
+
+        /* Active nav underline */
+        .navlink-active { color: #A8B5A0; position: relative; }
+        .navlink-active:after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -6px;
+            width: 100%; height: 1px;
+            background: rgba(168, 181, 160, .8);
+        }
+
+        /* Room filter active helper */
+        .room-filter-btn.active { background: #2B2B2B; color: #F5F3F0; }
+    </style>
+</head>
+
+<body class="bg-warmwhite font-sans text-charcoal">
+
+<!-- HEADER -->
+<header id="header" class="bg-warmwhite border-b border-stone/30 sticky top-0 z-50">
+    <div class="max-w-[1600px] mx-auto px-8 py-6 flex justify-between items-center">
+        <div class="flex items-center gap-12">
+            <a href="index.html" class="flex items-center gap-3" aria-label="Enzo Rossetti Home">
+                <img src="images/er_icon_2.svg" alt="Enzo Rossetti icon" class="w-8 h-8" />
+                <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 text-sm tracking-wider">
+                <a href="collections.html" class="hover:text-sage transition-colors">COLLECTIONS</a>
+                <a href="products.html" class="hover:text-sage transition-colors">PRODUCTS</a>
+                <a href="professionals.html" class="hover:text-sage transition-colors">PROFESSIONALS</a>
+                <a href="inspiration.html" class="hover:text-sage transition-colors">INSPIRATION</a>
+                <a href="about.html" class="navlink-active">ABOUT</a>
+            </nav>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="contact.html" class="hidden sm:inline-flex border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> CONTACT US
+            </a>
+
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" type="button" class="lg:hidden w-11 h-11 border border-charcoal/30 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-stone/30 bg-warmwhite">
+        <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-6 space-y-4 text-sm tracking-wider">
+          <a href="collections.html" class="block hover:text-sage transition-colors">COLLECTIONS</a>
+          <a href="products.html" class="block hover:text-sage transition-colors">PRODUCTS</a>
+          <a href="professionals.html" class="block hover:text-sage transition-colors">PROFESSIONALS</a>
+          <a href="inspiration.html" class="block hover:text-sage transition-colors">INSPIRATION</a>
+          <a href="about.html" class="block hover:text-sage transition-colors">ABOUT</a>
+          <div class="pt-4 flex gap-3">
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">CONTACT US</button>
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">SEARCH</button>
+          </div>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="contact-hero" class="relative h-[500px] bg-warmwhite overflow-hidden">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover"
+             src="https://storage.googleapis.com/uxpilot-auth.appspot.com/491ad0bc58-1dfeb4c5eb27a0284501.png"
+             alt="modern architectural interior with premium tiles, minimalist design, natural light, professional photography" />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-charcoal/20 to-charcoal/60"></div>
+    </div>
+    <div class="relative h-full max-w-[1600px] mx-auto px-8 flex items-end pb-20">
+        <div class="bg-charcoal text-warmwhite p-12 max-w-3xl">
+            <h1 class="font-serif text-5xl mb-4 tracking-wide">Get in Touch</h1>
+            <p class="text-xl text-warmwhite/90 leading-relaxed">
+                Whether you're planning a new project, need technical specifications, or want to request samples, we're here to assist you.
+            </p>
+
+            <div class="mt-8 flex flex-wrap gap-3 text-sm tracking-wider">
+                <a href="#contact-form-section" class="border border-warmwhite/40 px-4 py-2 hover:bg-warmwhite hover:text-charcoal transition-all inline-flex items-center gap-2">
+                    <i class="fa-regular fa-pen-to-square"></i>CONTACT FORM
+                </a>
+                <a href="#showroom-locations" class="border border-warmwhite/40 px-4 py-2 hover:bg-warmwhite hover:text-charcoal transition-all inline-flex items-center gap-2">
+                    <i class="fa-solid fa-location-dot"></i>SHOWROOMS
+                </a>
+                <a href="#faq-section" class="border border-warmwhite/40 px-4 py-2 hover:bg-warmwhite hover:text-charcoal transition-all inline-flex items-center gap-2">
+                    <i class="fa-regular fa-circle-question"></i>FAQ
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- QUICK CONTACT CARDS -->
+<section id="contact-intro" class="bg-warmwhite py-20">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div id="contact-info-card-1" class="text-center p-8">
+                <div class="w-16 h-16 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-envelope text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-xl mb-3">Email Enquiries</h3>
+                <p class="text-charcoal/70 text-sm mb-4">For general questions and project support</p>
+                <a href="mailto:info@enzorossetti.com" class="text-sage hover:text-charcoal transition-colors">info@enzorossetti.com</a>
+            </div>
+
+            <div id="contact-info-card-2" class="text-center p-8">
+                <div class="w-16 h-16 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-phone text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-xl mb-3">Phone Support</h3>
+                <p class="text-charcoal/70 text-sm mb-4">Monday to Friday, 9:00 – 18:00 CET</p>
+                <a href="tel:+390212345678" class="text-sage hover:text-charcoal transition-colors">+39 02 1234 5678</a>
+            </div>
+
+            <div id="contact-info-card-3" class="text-center p-8">
+                <div class="w-16 h-16 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-location-dot text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-xl mb-3">Showroom Visits</h3>
+                <p class="text-charcoal/70 text-sm mb-4">Visit our flagship showroom by appointment</p>
+                <a href="#showroom-locations" class="text-sage hover:text-charcoal transition-colors">Find Locations</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FORM + SIDEBAR -->
+<section id="contact-form-section" class="bg-stone/20 py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-16">
+
+            <!-- LEFT SIDEBAR -->
+            <div class="lg:col-span-2">
+                <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                    <h2 class="font-serif text-3xl tracking-wide">CONTACT FORM</h2>
+                </div>
+                <p class="text-lg text-charcoal/80 mb-8 leading-relaxed">
+                    Complete the form and our team will respond within 24 hours. For urgent enquiries, please call us directly.
+                </p>
+
+                <div id="contact-reasons" class="space-y-6 mb-12">
+                    <div>
+                        <h4 class="font-serif text-lg mb-3">What We Can Help With:</h4>
+                        <ul class="space-y-3 text-charcoal/70">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-sage mt-1"></i>
+                                <span>Project specifications and technical support</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-sage mt-1"></i>
+                                <span>Sample requests and material selection</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-sage mt-1"></i>
+                                <span>Pricing and availability information</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-sage mt-1"></i>
+                                <span>Dealer and distributor enquiries</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-check text-sage mt-1"></i>
+                                <span>Installation guidance and maintenance</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="contact-alternative" class="border-t border-charcoal/20 pt-8">
+                    <p class="text-sm text-charcoal/60 mb-4">Looking for product support or technical documentation?</p>
+                    <a href="professionals.html" class="text-sage hover:text-charcoal transition-colors text-sm tracking-wider flex items-center gap-2">
+                        VISIT PROFESSIONALS <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- SUCCESS MESSAGE -->
+                <div id="form-success" class="hidden mt-10 bg-warmwhite border border-stone/50 p-6">
+                    <div class="flex items-start gap-3">
+                        <div class="w-10 h-10 bg-charcoal flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-check text-warmwhite"></i>
+                        </div>
+                        <div>
+                            <p class="font-serif text-lg mb-1">Message received</p>
+                            <p class="text-sm text-charcoal/70">Thank you. We’ll reply within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FORM -->
+            <div class="lg:col-span-3">
+                <form id="contact-form" class="bg-warmwhite p-10 space-y-6" novalidate>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="firstName">
+                                FIRST NAME *
+                            </label>
+                            <input name="firstName" class="w-full bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors"
+                                   id="firstName" type="text" required autocomplete="given-name" />
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="lastName">
+                                LAST NAME *
+                            </label>
+                            <input name="lastName" class="w-full bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors"
+                                   id="lastName" type="text" required autocomplete="family-name" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="email">
+                                EMAIL ADDRESS *
+                            </label>
+                            <input name="email" class="w-full bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors"
+                                   id="email" type="email" required autocomplete="email" />
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="phone">
+                                PHONE NUMBER
+                            </label>
+                            <input name="phone" class="w-full bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors"
+                                   id="phone" type="tel" autocomplete="tel" />
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="company">
+                                COMPANY / ORGANIZATION
+                            </label>
+                            <input name="company" class="w-full bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors"
+                                   id="company" type="text" autocomplete="organization" />
+                        </div>
+                        <div class="relative">
+                            <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="country">
+                                COUNTRY *
+                            </label>
+                            <select name="country" class="w-full bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors appearance-none pr-10"
+                                    id="country" required autocomplete="country-name">
+                                <option value="">Select Country</option>
+                                <option value="Italy">Italy</option>
+                                <option value="United Kingdom">United Kingdom</option>
+                                <option value="Germany">Germany</option>
+                                <option value="France">France</option>
+                                <option value="Spain">Spain</option>
+                                <option value="United States">United States</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down absolute right-4 top-[46px] text-charcoal/50 pointer-events-none"></i>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="projectType">
+                            PROJECT TYPE *
+                        </label>
+                        <select name="projectType" class="w-full bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors appearance-none pr-10"
+                                id="projectType" required>
+                            <option value="">Select Project Type</option>
+                            <option value="Residential - New Build">Residential - New Build</option>
+                            <option value="Residential - Renovation">Residential - Renovation</option>
+                            <option value="Commercial - Office">Commercial - Office</option>
+                            <option value="Commercial - Retail">Commercial - Retail</option>
+                            <option value="Hospitality - Hotel">Hospitality - Hotel</option>
+                            <option value="Hospitality - Restaurant">Hospitality - Restaurant</option>
+                            <option value="Public Space">Public Space</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down absolute right-4 top-[46px] text-charcoal/50 pointer-events-none"></i>
+                    </div>
+
+                    <div class="relative">
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="enquiryType">
+                            ENQUIRY TYPE *
+                        </label>
+                        <select name="enquiryType" class="w-full bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors appearance-none pr-10"
+                                id="enquiryType" required>
+                            <option value="">Select Enquiry Type</option>
+                            <option value="General Information">General Information</option>
+                            <option value="Technical Specifications">Technical Specifications</option>
+                            <option value="Sample Request">Sample Request</option>
+                            <option value="Pricing Enquiry">Pricing Enquiry</option>
+                            <option value="Project Consultation">Project Consultation</option>
+                            <option value="Become a Dealer">Become a Dealer</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down absolute right-4 top-[46px] text-charcoal/50 pointer-events-none"></i>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm tracking-wider text-charcoal/70 mb-2" for="message">
+                            MESSAGE *
+                        </label>
+                        <textarea name="message" class="w-full bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors resize-none"
+                                  id="message" rows="6" required placeholder="Please provide details about your project or enquiry..."></textarea>
+                    </div>
+
+                    <div id="contact-checkboxes" class="space-y-3 pt-4">
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input name="requestSamples" type="checkbox" class="mt-1 w-4 h-4 border-stone/40 text-sage focus:ring-sage" id="requestSamples" />
+                            <span class="text-sm text-charcoal/70">I would like to request physical samples</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input name="requestCatalog" type="checkbox" class="mt-1 w-4 h-4 border-stone/40 text-sage focus:ring-sage" id="requestCatalog" />
+                            <span class="text-sm text-charcoal/70">I would like to receive a digital catalog</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input name="becomeDealer" type="checkbox" class="mt-1 w-4 h-4 border-stone/40 text-sage focus:ring-sage" id="becomeDealer" />
+                            <span class="text-sm text-charcoal/70">I am interested in becoming a dealer or distributor</span>
+                        </label>
+                        <label class="flex items-start gap-3 cursor-pointer">
+                            <input name="newsletter" type="checkbox" class="mt-1 w-4 h-4 border-stone/40 text-sage focus:ring-sage" id="newsletter" />
+                            <span class="text-sm text-charcoal/70">I would like to receive updates about new collections and projects</span>
+                        </label>
+                    </div>
+
+                    <div class="pt-6">
+                        <button id="submit-btn" class="w-full bg-charcoal text-warmwhite px-8 py-4 text-sm tracking-wider hover:bg-charcoal/90 transition-colors inline-flex items-center justify-center gap-2"
+                                type="submit">
+                            <i class="fa-regular fa-paper-plane"></i>
+                            SEND MESSAGE
+                        </button>
+                    </div>
+
+                    <p class="text-xs text-charcoal/50 leading-relaxed">
+                        By submitting this form, you agree to our privacy policy. We will use your information to respond to your enquiry and may contact you about relevant products and services. You can unsubscribe at any time.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SHOWROOM LOCATIONS -->
+<section id="showroom-locations" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">SHOWROOM LOCATIONS</h2>
+            </div>
+            <p class="text-charcoal/70 mt-6 max-w-2xl">
+                Visit our showrooms to experience our collections firsthand. Appointments recommended for personalized consultations.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div id="showroom-milan" class="bg-stone/10 p-8">
+                <div class="mb-6">
+                    <h3 class="font-serif text-2xl mb-2">Milan Flagship</h3>
+                    <p class="text-sm text-charcoal/60 tracking-wider">ITALY</p>
+                </div>
+                <div class="space-y-3 text-charcoal/70 mb-6">
+                    <p class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-sage mt-1"></i>
+                        <span>Via della Spiga 42<br/>20121 Milano, Italy</span>
+                    </p>
+                    <p class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-sage mt-1"></i>
+                        <span>+39 02 1234 5678</span>
+                    </p>
+                    <p class="flex items-start gap-3">
+                        <i class="fa-solid fa-clock text-sage mt-1"></i>
+                        <span>Mon–Fri: 9:00–18:00<br/>Sat: 10:00–17:00</span>
+                    </p>
+                </div>
+                <a href="#contact-form-section" data-prefill="Milan Flagship" class="book-appointment border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-block">
+                    BOOK APPOINTMENT
+                </a>
+            </div>
+
+            <div id="showroom-london" class="bg-stone/10 p-8">
+                <div class="mb-6">
+                    <h3 class="font-serif text-2xl mb-2">London</h3>
+                    <p class="text-sm text-charcoal/60 tracking-wider">UNITED KINGDOM</p>
+                </div>
+                <div class="space-y-3 text-charcoal/70 mb-6">
+                    <p class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-sage mt-1"></i>
+                        <span>128 Clerkenwell Road<br/>London EC1R 5DL, UK</span>
+                    </p>
+                    <p class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-sage mt-1"></i>
+                        <span>+44 20 7123 4567</span>
+                    </p>
+                    <p class="flex items-start gap-3">
+                        <i class="fa-solid fa-clock text-sage mt-1"></i>
+                        <span>Mon–Fri: 9:00–18:00<br/>Sat: 10:00–16:00</span>
+                    </p>
+                </div>
+                <a href="#contact-form-section" data-prefill="London Showroom" class="book-appointment border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-block">
+                    BOOK APPOINTMENT
+                </a>
+            </div>
+
+            <div id="showroom-paris" class="bg-stone/10 p-8">
+                <div class="mb-6">
+                    <h3 class="font-serif text-2xl mb-2">Paris</h3>
+                    <p class="text-sm text-charcoal/60 tracking-wider">FRANCE</p>
+                </div>
+                <div class="space-y-3 text-charcoal/70 mb-6">
+                    <p class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-sage mt-1"></i>
+                        <span>15 Rue du Faubourg Saint-Honoré<br/>75008 Paris, France</span>
+                    </p>
+                    <p class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-sage mt-1"></i>
+                        <span>+33 1 42 65 78 90</span>
+                    </p>
+                    <p class="flex items-start gap-3">
+                        <i class="fa-solid fa-clock text-sage mt-1"></i>
+                        <span>Mon–Fri: 9:30–18:30<br/>Sat: 10:00–17:00</span>
+                    </p>
+                </div>
+                <a href="#contact-form-section" data-prefill="Paris Showroom" class="book-appointment border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-block">
+                    BOOK APPOINTMENT
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DEALER NETWORK -->
+<section id="dealer-network" class="bg-stone/20 py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative h-[500px] overflow-hidden">
+                <img class="w-full h-full object-cover"
+                     src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8148421608-883b8c5d231a4f13d5e4.png"
+                     alt="professional tile showroom interior, display stands with ceramic samples, modern retail space" />
+            </div>
+            <div>
+                <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                    <h2 class="font-serif text-3xl tracking-wide">DEALER NETWORK</h2>
+                </div>
+                <p class="text-lg text-charcoal/80 mb-8 leading-relaxed">
+                    Enzo Rossetti tiles are available through our network of authorized dealers and distributors across Europe, North America, and Asia Pacific.
+                </p>
+                <div class="space-y-4 mb-10">
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-globe text-sage text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-serif text-lg mb-1">International Distribution</h4>
+                            <p class="text-charcoal/70 text-sm">Find authorized dealers in over 40 countries worldwide</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-handshake text-sage text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-serif text-lg mb-1">Trade Partnerships</h4>
+                            <p class="text-charcoal/70 text-sm">Exclusive support for architects and designers</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-box text-sage text-xl mt-1"></i>
+                        <div>
+                            <h4 class="font-serif text-lg mb-1">Sample Program</h4>
+                            <p class="text-charcoal/70 text-sm">Comprehensive sample service for professionals</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-4 flex-wrap">
+                    <a href="dealer-locator.html" class="bg-charcoal text-warmwhite px-8 py-3 text-sm tracking-wider hover:bg-charcoal/90 transition-colors inline-flex items-center gap-2">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                        FIND A DEALER
+                    </a>
+                    <a href="dealers.html" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                        <i class="fa-solid fa-handshake"></i>
+                        BECOME A DEALER
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT ROUTING -->
+<section id="contact-details-extended" class="bg-warmwhite py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div id="contact-sales" class="p-8 bg-stone/10">
+                <i class="fa-solid fa-briefcase text-3xl text-charcoal mb-6"></i>
+                <h3 class="font-serif text-xl mb-3">Sales Enquiries</h3>
+                <p class="text-charcoal/70 text-sm mb-4">For pricing, availability, and project quotes</p>
+                <a href="mailto:sales@enzorossetti.com" class="text-sage hover:text-charcoal transition-colors text-sm">sales@enzorossetti.com</a>
+            </div>
+
+            <div id="contact-technical" class="p-8 bg-stone/10">
+                <i class="fa-solid fa-wrench text-3xl text-charcoal mb-6"></i>
+                <h3 class="font-serif text-xl mb-3">Technical Support</h3>
+                <p class="text-charcoal/70 text-sm mb-4">Installation guidance and specifications</p>
+                <a href="mailto:technical@enzorossetti.com" class="text-sage hover:text-charcoal transition-colors text-sm">technical@enzorossetti.com</a>
+            </div>
+
+            <div id="contact-trade" class="p-8 bg-stone/10">
+                <i class="fa-solid fa-users text-3xl text-charcoal mb-6"></i>
+                <h3 class="font-serif text-xl mb-3">Trade Program</h3>
+                <p class="text-charcoal/70 text-sm mb-4">For architects and interior designers</p>
+                <a href="mailto:trade@enzorossetti.com" class="text-sage hover:text-charcoal transition-colors text-sm">trade@enzorossetti.com</a>
+            </div>
+
+            <div id="contact-press" class="p-8 bg-stone/10">
+                <i class="fa-solid fa-newspaper text-3xl text-charcoal mb-6"></i>
+                <h3 class="font-serif text-xl mb-3">Press & Media</h3>
+                <p class="text-charcoal/70 text-sm mb-4">Media enquiries and press materials</p>
+                <a href="mailto:press@enzorossetti.com" class="text-sage hover:text-charcoal transition-colors text-sm">press@enzorossetti.com</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq-section" class="bg-stone/20 py-24">
+    <div class="max-w-[1200px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">FREQUENTLY ASKED</h2>
+            </div>
+            <p class="text-charcoal/70 max-w-2xl mx-auto">
+                Common questions about ordering, samples, and working with Enzo Rossetti.
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            <div id="faq-1" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">How can I request samples?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    You can request samples through our contact form above, by emailing sales@enzorossetti.com, or by visiting one of our showrooms. We offer complimentary samples for professionals and a nominal fee for private clients. Sample requests are typically dispatched within 2–3 business days.
+                </p>
+            </div>
+
+            <div id="faq-2" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">Do you ship internationally?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Yes, we ship worldwide through our network of authorized distributors. Delivery times and costs vary by location. For international orders, please contact our sales team for detailed shipping information and to find your nearest authorized dealer.
+                </p>
+            </div>
+
+            <div id="faq-3" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">What is the lead time for orders?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Standard lead times are typically 4–6 weeks for in-stock items and 8–12 weeks for special orders or custom formats. Large commercial projects may require additional time. We recommend contacting us early in your project planning to ensure timely delivery.
+                </p>
+            </div>
+
+            <div id="faq-4" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">Do you offer trade discounts?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Yes—our trade program supports architects, interior designers, and construction professionals with preferential pricing, priority sample service, and dedicated project support. Apply by contacting trade@enzorossetti.com.
+                </p>
+            </div>
+
+            <div id="faq-5" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">Can I visit a showroom without an appointment?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Walk-ins are welcome, but we recommend booking an appointment to ensure dedicated time with our consultants. This also allows us to prepare materials specific to your project.
+                </p>
+            </div>
+
+            <div id="faq-6" class="bg-warmwhite p-8">
+                <h3 class="font-serif text-xl mb-3">What technical documentation is available?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    We provide installation guidelines, maintenance recommendations, CAD files, BIM objects, and full specification sheets. Access these in the Professionals section or request them from technical@enzorossetti.com.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL -->
+<section id="social-connect" class="bg-warmwhite py-24">
+    <div class="max-w-[1400px] mx-auto px-8 text-center">
+        <div class="mb-12">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">STAY CONNECTED</h2>
+            </div>
+            <p class="text-charcoal/70 max-w-2xl mx-auto">
+                Follow us for design inspiration, project highlights, and new collection launches.
+            </p>
+        </div>
+
+        <div class="flex justify-center gap-6 mb-12">
+            <a href="#" class="w-16 h-16 border-2 border-charcoal flex items-center justify-center hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
+                <i class="fa-brands fa-instagram text-2xl"></i>
+            </a>
+            <a href="#" class="w-16 h-16 border-2 border-charcoal flex items-center justify-center hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
+                <i class="fa-brands fa-pinterest text-2xl"></i>
+            </a>
+            <a href="#" class="w-16 h-16 border-2 border-charcoal flex items-center justify-center hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin text-2xl"></i>
+            </a>
+            <a href="#" class="w-16 h-16 border-2 border-charcoal flex items-center justify-center hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Facebook">
+                <i class="fa-brands fa-facebook text-2xl"></i>
+            </a>
+        </div>
+
+        <div class="max-w-md mx-auto">
+            <h3 class="font-serif text-xl mb-4">Newsletter</h3>
+            <p class="text-charcoal/70 text-sm mb-6">Subscribe to receive updates about new collections, projects, and design insights.</p>
+            <form id="newsletter-form" class="flex gap-3">
+                <input id="newsletter-email" type="email" required placeholder="Your email address"
+                       class="flex-1 bg-stone/20 border border-stone/40 text-charcoal px-4 py-3 focus:outline-none focus:border-sage transition-colors" />
+                <button type="submit" class="bg-charcoal text-warmwhite px-8 py-3 text-sm tracking-wider hover:bg-charcoal/90 transition-colors whitespace-nowrap inline-flex items-center gap-2">
+                    <i class="fa-regular fa-bell"></i>
+                    SUBSCRIBE
+                </button>
+            </form>
+            <p id="newsletter-success" class="hidden mt-4 text-sm text-charcoal/70">
+                Thanks — you’re subscribed.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- MAP (placeholder) -->
+<section id="map-section" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-12 text-center">
+            <h2 class="font-serif text-3xl mb-4">Global Presence</h2>
+            <p class="text-charcoal/70 max-w-2xl mx-auto">
+                Enzo Rossetti serves clients worldwide through our showrooms and authorized dealer network.
+            </p>
+        </div>
+        <div class="bg-warmwhite h-[500px] flex items-center justify-center">
+            <div class="text-center">
+                <i class="fa-solid fa-map-location-dot text-6xl text-charcoal/20 mb-6"></i>
+                <p class="text-charcoal/60">Interactive map showing our global locations</p>
+                <a href="dealer-locator.html" class="mt-6 border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    VIEW DEALER LOCATOR
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" class="bg-warmwhite border-t border-stone/30 py-16">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="lg:col-span-2">
+                <a href="index.html" class="flex items-center gap-3 mb-6">
+                    <img 
+                        src="images/er_icon_2.svg" 
+                        alt="Enzo Rossetti logo"
+                        class="w-8 h-8"
+                    />
+                    <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+                </a>
+                <p class="text-charcoal/70 mb-6 max-w-sm leading-relaxed">
+                    Italian-inspired ceramic and porcelain tiles for contemporary architecture and interior design.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Collections</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="casa-terra.html" class="hover:text-charcoal transition-colors">Casa Terra</a></li>
+                    <li><a href="casa-rossetti.html" class="hover:text-charcoal transition-colors">Casa Rossetti</a></li>
+                    <li><a href="products.html" class="hover:text-charcoal transition-colors">All Products</a></li>
+                    <li><a href="collections.html" class="hover:text-charcoal transition-colors">Collections Overview</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Resources</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="professionals.html" class="hover:text-charcoal transition-colors">Professionals</a></li>
+                    <li><a href="inspiration.html" class="hover:text-charcoal transition-colors">Inspiration</a></li>
+                    <li><a href="professionals.html#installation" class="hover:text-charcoal transition-colors">Technical Guides</a></li>
+                    <li><a href="professionals.html#downloads" class="hover:text-charcoal transition-colors">Downloads</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Company</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="about.html" class="hover:text-charcoal transition-colors">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-charcoal transition-colors">Contact</a></li>
+                    <li><a href="showrooms.html" class="hover:text-charcoal transition-colors">Showrooms</a></li>
+                    <li><a href="dealers.html" class="hover:text-charcoal transition-colors">Become a Dealer</a></li>
+                    <li><a href="careers.html" class="hover:text-charcoal transition-colors">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-stone/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-charcoal/60">
+            <p>&copy; 2024 Enzo Rossetti. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy.html" class="hover:text-charcoal transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-charcoal transition-colors">Terms of Use</a>
+                <a href="cookies.html" class="hover:text-charcoal transition-colors">Cookie Settings</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+(function () {
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    const submitBtn = document.getElementById('submit-btn');
+
+    // Prefill message when user clicks "BOOK APPOINTMENT"
+    document.querySelectorAll('.book-appointment').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const showroom = btn.getAttribute('data-prefill');
+            const enquiry = document.getElementById('enquiryType');
+            const message = document.getElementById('message');
+
+            // If you want a dedicated option, keep as-is. Otherwise leave.
+            if (enquiry && enquiry.value === '') enquiry.value = 'Project Consultation';
+
+            if (message && showroom) {
+                const prefix = `I'd like to book an appointment at: ${showroom}.\n\n`;
+                if (!message.value.startsWith(prefix)) message.value = prefix + message.value;
+                message.focus();
+            }
+        });
+    });
+
+    // Contact form submit (front-end only demo)
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Basic validity check
+            if (!form.checkValidity()) {
+                // Let browser show errors
+                form.reportValidity();
+                return;
+            }
+
+            // Simulate sending
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> SENDING...';
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            data.requestSamples = !!formData.get('requestSamples');
+            data.requestCatalog = !!formData.get('requestCatalog');
+            data.becomeDealer = !!formData.get('becomeDealer');
+            data.newsletter = !!formData.get('newsletter');
+
+            console.log('Form submitted:', data);
+
+            setTimeout(() => {
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fa-regular fa-paper-plane"></i> SEND MESSAGE';
+                if (success) success.classList.remove('hidden');
+                success?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 700);
+        });
+    }
+
+    // Newsletter (front-end only demo)
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterSuccess = document.getElementById('newsletter-success');
+
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('newsletter-email');
+            if (!email || !email.value) return;
+
+            console.log('Newsletter signup:', email.value);
+
+            newsletterForm.reset();
+            newsletterSuccess?.classList.remove('hidden');
+        });
+    }
+})();
+</script>
+
+<script>
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('shadow-soft');
+      else header.classList.remove('shadow-soft');
+    });
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Samples modal
+    const modal = document.getElementById('samplesModal');
+    const closeBtn = document.getElementById('closeSamples');
+    const openers = document.querySelectorAll('[data-open-samples]');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openers.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      const card = modal.querySelector('.bg-warmwhite');
+      if (!card.contains(e.target)) closeModal();
+    });
+
+    // ESC to close
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+</script>
+
+</body>
+</html>

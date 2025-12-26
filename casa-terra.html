@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Casa Terra by Enzo Rossetti: earth-inspired porcelain and ceramic tiles with authentic textures, warm tones, and technical performance for contemporary interiors." />
+  <title>Casa Terra Collection | Enzo Rossetti</title>
+  <link rel="icon" type="image/svg+xml" href="images/er_icon_2.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            stone: '#D4CCC5',
+            kraft: '#C9B8A8',
+            sage: '#A8B5A0',
+            charcoal: '#2B2B2B',
+            warmwhite: '#F5F3F0',
+            terracotta: '#B8846B',
+            sand: '#E5D4C1'
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'serif'],
+            sans: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,0.08)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <style>
+    ::-webkit-scrollbar { display: none; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body class="bg-warmwhite font-sans text-charcoal antialiased">
+
+  <!-- Skip link -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-charcoal focus:text-warmwhite focus:px-4 focus:py-2">
+    Skip to content
+  </a>
+
+  <!-- Header -->
+  <header id="header" class="bg-warmwhite border-b border-stone/30 sticky top-0 z-50 transition-shadow">
+    <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-5 flex justify-between items-center">
+      <div class="flex items-center gap-10">
+        <a href="index.html" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-terracotta">
+            <img src="images/er_icon_2.svg" alt="Enzo Rossetti icon" class="w-8 h-8" />
+            <span class="font-serif text-xl sm:text-2xl tracking-wide">ENZO ROSSETTI</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8 text-sm tracking-wider">
+            <a href="collections.html" class="hover:text-sage transition-colors">COLLECTIONS</a>
+            <a href="products.html" class="hover:text-sage transition-colors">PRODUCTS</a>
+            <a href="professionals.html" class="hover:text-sage transition-colors">PROFESSIONALS</a>
+            <a href="inspiration.html" class="hover:text-sage transition-colors">INSPIRATION</a>
+            <a href="about.html" class="hover:text-sage transition-colors">ABOUT</a>
+        </nav>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <a href="contact.html" class="hidden sm:inline-flex border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+            <i class="fa-solid fa-envelope"></i> CONTACT US
+        </a>
+
+        <!-- Mobile menu button -->
+        <button id="mobileMenuBtn" type="button" class="lg:hidden w-11 h-11 border border-charcoal/30 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</div>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" class="lg:hidden hidden border-t border-stone/30 bg-warmwhite">
+    <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-6 space-y-4 text-sm tracking-wider">
+      <a href="collections.html" class="block hover:text-sage transition-colors">COLLECTIONS</a>
+      <a href="products.html" class="block hover:text-sage transition-colors">PRODUCTS</a>
+      <a href="professionals.html" class="block hover:text-sage transition-colors">PROFESSIONALS</a>
+      <a href="inspiration.html" class="block hover:text-sage transition-colors">INSPIRATION</a>
+      <a href="about.html" class="block hover:text-sage transition-colors">ABOUT</a>
+      <div class="pt-4 flex gap-3">
+        <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">CONTACT US</button>
+        <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">SEARCH</button>
+      </div>
+    </div>
+</div>
+</header>
+
+  <!-- Breadcrumb -->
+  <section class="bg-warmwhite border-b border-stone/20 py-4">
+    <div class="max-w-[1600px] mx-auto px-5 sm:px-8">
+      <div class="flex items-center gap-3 text-sm text-charcoal/60">
+        <a href="#" class="hover:text-charcoal transition-colors">Home</a>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+        <a href="#" class="hover:text-charcoal transition-colors">Collections</a>
+        <i class="fa-solid fa-chevron-right text-xs"></i>
+        <span class="text-charcoal">Casa Terra</span>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="collections" class="relative h-[680px] bg-warmwhite overflow-hidden">
+      <div class="absolute inset-0">
+        <img class="w-full h-full object-cover" loading="lazy"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png"
+          alt="Natural stone texture ceramic tiles in warm earthy tones" />
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-charcoal/20 to-charcoal/75"></div>
+      </div>
+
+      <div class="relative h-full max-w-[1600px] mx-auto px-5 sm:px-8 flex items-end pb-14 sm:pb-20">
+        <div class="bg-terracotta/90 text-warmwhite p-7 sm:p-12 max-w-3xl shadow-soft">
+          <div class="mb-6">
+            <h1 class="font-serif text-4xl sm:text-6xl mb-3 sm:mb-4 tracking-wide">Casa Terra</h1>
+            <p class="text-xl sm:text-2xl font-light tracking-wide">Earth. Texture. Warmth.</p>
+          </div>
+
+          <p class="text-base sm:text-lg leading-relaxed mb-8 text-warmwhite/90">
+            Inspired by the raw beauty of natural stone and the organic textures of earth, Casa Terra brings authenticity and warmth to contemporary interiors. This collection celebrates material honesty through carefully crafted ceramic surfaces.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="#series-overview" class="inline-flex justify-center bg-warmwhite text-charcoal px-8 py-3 text-sm tracking-wider hover:bg-stone transition-colors focus:outline-none focus:ring-2 focus:ring-warmwhite">
+              VIEW ALL SERIES
+            </a>
+            <button type="button" data-open-samples class="border border-warmwhite px-8 py-3 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all focus:outline-none focus:ring-2 focus:ring-warmwhite">
+              REQUEST SAMPLES
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="bg-warmwhite py-20 sm:py-24">
+      <div class="max-w-[1400px] mx-auto px-5 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+          <div>
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+              <h2 class="font-serif text-2xl sm:text-3xl tracking-wide">ABOUT CASA TERRA</h2>
+            </div>
+
+            <p class="text-lg text-charcoal/80 mb-6 leading-relaxed">
+              Casa Terra explores the relationship between natural materials and modern living. Each series in this collection draws from geological formations, weathered surfaces, and the tactile qualities of stone and earth.
+            </p>
+            <p class="text-charcoal/70 leading-relaxed mb-8">
+              The collection features matt and textured finishes that emphasize materiality and depth. Subtle color variations and surface irregularities are intentional, reflecting the authentic character of natural stone while maintaining the technical performance of ceramic.
+            </p>
+
+            <div class="flex items-start gap-3 text-charcoal/70">
+              <i class="fa-solid fa-quote-left text-2xl text-terracotta mt-1"></i>
+              <p class="text-lg italic leading-relaxed">
+                "Casa Terra celebrates imperfection as beauty, bringing the grounding presence of natural materials into refined modern spaces."
+              </p>
+            </div>
+          </div>
+
+          <div class="relative h-[420px] sm:h-[600px]">
+            <img class="w-full h-full object-cover" loading="lazy"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-7e0b3591b6f5cbcab781.png"
+              alt="Textured stone wall interior with warm earth tones" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Attributes -->
+    <section class="bg-sand/30 py-20 sm:py-24">
+      <div class="max-w-[1600px] mx-auto px-5 sm:px-8">
+        <div class="mb-12 sm:mb-16 text-center">
+          <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+            <h2 class="font-serif text-2xl sm:text-3xl tracking-wide">KEY ATTRIBUTES</h2>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div class="bg-warmwhite p-10 text-center shadow-soft">
+            <div class="w-16 h-16 mx-auto mb-6 bg-terracotta/20 flex items-center justify-center">
+              <i class="fa-solid fa-hand-dots text-terracotta text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-4">Matt & Textured Finishes</h3>
+            <p class="text-charcoal/70 leading-relaxed text-sm">
+              Authentic surface treatments that emphasize tactility and natural character, from soft matt to deeply structured finishes.
+            </p>
+          </div>
+
+          <div class="bg-warmwhite p-10 text-center shadow-soft">
+            <div class="w-16 h-16 mx-auto mb-6 bg-terracotta/20 flex items-center justify-center">
+              <i class="fa-solid fa-mountain text-terracotta text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-4">Stone & Concrete Looks</h3>
+            <p class="text-charcoal/70 leading-relaxed text-sm">
+              Inspired by limestone, sandstone, travertine, and weathered concrete. Each series captures distinct geological characteristics.
+            </p>
+          </div>
+
+          <div class="bg-warmwhite p-10 text-center shadow-soft">
+            <div class="w-16 h-16 mx-auto mb-6 bg-terracotta/20 flex items-center justify-center">
+              <i class="fa-solid fa-shield-halved text-terracotta text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-4">Durable & Practical</h3>
+            <p class="text-charcoal/70 leading-relaxed text-sm">
+              High-performance porcelain technology ensures resistance to wear, staining, and moisture while maintaining aesthetic integrity.
+            </p>
+          </div>
+
+          <div class="bg-warmwhite p-10 text-center shadow-soft">
+            <div class="w-16 h-16 mx-auto mb-6 bg-terracotta/20 flex items-center justify-center">
+              <i class="fa-solid fa-home-lg text-terracotta text-2xl"></i>
+            </div>
+            <h3 class="font-serif text-xl mb-4">Indoor & Selected Outdoor</h3>
+            <p class="text-charcoal/70 leading-relaxed text-sm">
+              Suitable for residential and commercial interiors, with selected series certified for covered exterior applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Series overview (your content preserved) -->
+    <section id="series-overview" class="bg-warmwhite py-20 sm:py-24">
+      <div class="max-w-[1600px] mx-auto px-5 sm:px-8">
+        <div class="mb-12 sm:mb-16">
+          <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+            <h2 class="font-serif text-2xl sm:text-3xl tracking-wide">SERIES IN THIS COLLECTION</h2>
+          </div>
+          <p class="text-charcoal/70 mt-6 max-w-2xl">
+            Each series within Casa Terra offers distinct aesthetic and technical characteristics, unified by a commitment to natural materiality.
+          </p>
+        </div>
+
+        <div class="space-y-10 sm:space-y-12">
+          <!-- Pietra Antica -->
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-stone/10 p-6 sm:p-8">
+            <div class="lg:col-span-2 h-[320px] sm:h-[400px] overflow-hidden">
+              <img class="w-full h-full object-cover" loading="lazy"
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png"
+                alt="Limestone texture tiles in warm beige tones" />
+            </div>
+            <div class="lg:col-span-3 flex flex-col justify-center">
+              <h3 class="font-serif text-3xl mb-4">Pietra Antica</h3>
+              <p class="text-lg text-charcoal/80 mb-4">Ancient stone. Timeless character.</p>
+              <p class="text-charcoal/70 leading-relaxed mb-6">
+                Inspired by weathered limestone and travertine, Pietra Antica captures the gentle irregularities and warm tones of aged stone. Available in four natural shades from ivory to taupe.
+              </p>
+              <div class="flex flex-wrap gap-3 sm:gap-4 mb-6">
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Matt Finish</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Structured Surface</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">30×60, 60×60 cm</span>
+              </div>
+              <div class="text-sm text-charcoal/60 mb-6">
+                <p><strong>Suggested applications:</strong> Living spaces, bedrooms, bathrooms, hospitality interiors</p>
+              </div>
+              <button type="button" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all self-start">
+                VIEW PIETRA ANTICA
+              </button>
+            </div>
+          </div>
+
+          <!-- Sabbia -->
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-stone/10 p-6 sm:p-8">
+            <div class="lg:col-span-2 h-[320px] sm:h-[400px] overflow-hidden">
+              <img class="w-full h-full object-cover" loading="lazy"
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7bf0a58c0e-37f0be09167d66fe10c2.png"
+                alt="Sand texture ceramic tiles in warm desert tones" />
+            </div>
+            <div class="lg:col-span-3 flex flex-col justify-center">
+              <h3 class="font-serif text-3xl mb-4">Sabbia</h3>
+              <p class="text-lg text-charcoal/80 mb-4">Desert sand. Soft textures. Warmth.</p>
+              <p class="text-charcoal/70 leading-relaxed mb-6">
+                Sabbia evokes the fine-grained texture of windswept sand and sedimentary rock. Its soft, tactile surface and warm color palette create inviting, grounded spaces. Available in five earth tones.
+              </p>
+              <div class="flex flex-wrap gap-3 sm:gap-4 mb-6">
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Soft Matt</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Fine Texture</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">60×60, 60×120 cm</span>
+              </div>
+              <div class="text-sm text-charcoal/60 mb-6">
+                <p><strong>Suggested applications:</strong> Residential floors, feature walls, commercial interiors</p>
+              </div>
+              <button type="button" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all self-start">
+                VIEW SABBIA
+              </button>
+            </div>
+          </div>
+
+          <!-- Cemento Naturale -->
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-stone/10 p-6 sm:p-8">
+            <div class="lg:col-span-2 h-[320px] sm:h-[400px] overflow-hidden">
+              <img class="w-full h-full object-cover" loading="lazy"
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7bf0a58c0e-37f0be09167d66fe10c2.png"
+                alt="Concrete texture tiles in modern cement finish" />
+            </div>
+            <div class="lg:col-span-3 flex flex-col justify-center">
+              <h3 class="font-serif text-3xl mb-4">Cemento Naturale</h3>
+              <p class="text-lg text-charcoal/80 mb-4">Raw concrete. Industrial elegance.</p>
+              <p class="text-charcoal/70 leading-relaxed mb-6">
+                Inspired by poured concrete and industrial surfaces, this series balances urban aesthetic with natural imperfections. Subtle color variations and micro-textures create depth and authenticity.
+              </p>
+              <div class="flex flex-wrap gap-3 sm:gap-4 mb-6">
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Matt Finish</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Micro-textured</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">60×120, 80×80 cm</span>
+              </div>
+              <div class="text-sm text-charcoal/60 mb-6">
+                <p><strong>Suggested applications:</strong> Contemporary living spaces, offices, retail, hospitality</p>
+              </div>
+              <button type="button" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all self-start">
+                VIEW CEMENTO NATURALE
+              </button>
+            </div>
+          </div>
+
+          <!-- Argilla -->
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-stone/10 p-6 sm:p-8">
+            <div class="lg:col-span-2 h-[320px] sm:h-[400px] overflow-hidden">
+              <img class="w-full h-full object-cover" loading="lazy"
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png"
+                alt="Terracotta clay texture tiles in warm tones" />
+            </div>
+            <div class="lg:col-span-3 flex flex-col justify-center">
+              <h3 class="font-serif text-3xl mb-4">Argilla</h3>
+              <p class="text-lg text-charcoal/80 mb-4">Fired clay. Mediterranean warmth.</p>
+              <p class="text-charcoal/70 leading-relaxed mb-6">
+                Argilla celebrates the tradition of terracotta and fired clay with contemporary refinement. Rich, warm tones and subtle surface variations evoke Mediterranean heritage while meeting modern performance standards.
+              </p>
+              <div class="flex flex-wrap gap-3 sm:gap-4 mb-6">
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Natural Matt</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Textured</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">30×60, 60×60 cm</span>
+              </div>
+              <div class="text-sm text-charcoal/60 mb-6">
+                <p><strong>Suggested applications:</strong> Residential interiors, restaurants, boutique hospitality</p>
+              </div>
+              <button type="button" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all self-start">
+                VIEW ARGILLA
+              </button>
+            </div>
+          </div>
+
+          <!-- Roccia Grigia -->
+          <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 bg-stone/10 p-6 sm:p-8">
+            <div class="lg:col-span-2 h-[320px] sm:h-[400px] overflow-hidden">
+              <img class="w-full h-full object-cover" loading="lazy"
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-7e0b3591b6f5cbcab781.png"
+                alt="Grey stone texture tiles with subtle mineral veining" />
+            </div>
+            <div class="lg:col-span-3 flex flex-col justify-center">
+              <h3 class="font-serif text-3xl mb-4">Roccia Grigia</h3>
+              <p class="text-lg text-charcoal/80 mb-4">Grey stone. Nordic restraint.</p>
+              <p class="text-charcoal/70 leading-relaxed mb-6">
+                Inspired by Nordic granite and slate, Roccia Grigia offers cool grey tones with subtle mineral veining. Its refined character suits contemporary minimalist interiors and architectural statements.
+              </p>
+              <div class="flex flex-wrap gap-3 sm:gap-4 mb-6">
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Matt Finish</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">Light Structure</span>
+                <span class="px-4 py-2 bg-warmwhite text-sm text-charcoal/70 border border-stone">60×60, 60×120 cm</span>
+              </div>
+              <div class="text-sm text-charcoal/60 mb-6">
+                <p><strong>Suggested applications:</strong> Bathrooms, kitchens, contemporary living spaces, offices</p>
+              </div>
+              <button type="button" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all self-start">
+                VIEW ROCCIA GRIGIA
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical / Support / CTA / Footer -->
+    <!-- (Kept your original sections mostly as-is, with small a11y tweaks + sample modal triggers) -->
+
+    <!-- Color Palette -->
+    <section id="color-palette" class="bg-sand/30 py-20 sm:py-24">
+      <div class="max-w-[1600px] mx-auto px-5 sm:px-8">
+        <div class="mb-12 sm:mb-16 text-center">
+          <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+            <h2 class="font-serif text-2xl sm:text-3xl tracking-wide">COLLECTION COLOR PALETTE</h2>
+          </div>
+          <p class="text-charcoal/70 mt-6 max-w-2xl mx-auto">
+            Casa Terra embraces warm earth tones, soft neutrals, and organic color variations that reflect natural materials.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+          <div class="text-center"><div class="h-32 bg-[#F5EDE3] border border-stone/30 mb-4"></div><p class="text-sm text-charcoal/70">Ivory</p></div>
+          <div class="text-center"><div class="h-32 bg-[#E5D4C1] border border-stone/30 mb-4"></div><p class="text-sm text-charcoal/70">Sand</p></div>
+          <div class="text-center"><div class="h-32 bg-[#C9B8A8] border border-stone/30 mb-4"></div><p class="text-sm text-charcoal/70">Taupe</p></div>
+          <div class="text-center"><div class="h-32 bg-[#B8846B] border border-stone/30 mb-4"></div><p class="text-sm text-charcoal/70">Terracotta</p></div>
+          <div class="text-center"><div class="h-32 bg-[#A8998C] border border-stone/30 mb-4"></div><p class="text-sm text-charcoal/70">Greige</p></div>
+          <div class="text-center"><div class="h-32 bg-[#8B8378] border border-stone/30 mb-4"></div><p class="text-sm text-charcoal/70">Stone Grey</p></div>
+          <div class="text-center"><div class="h-32 bg-[#6B6860] border border-stone/30 mb-4"></div><p class="text-sm text-charcoal/70">Slate</p></div>
+          <div class="text-center"><div class="h-32 bg-[#4A4540] border border-stone/30 mb-4"></div><p class="text-sm text-charcoal/70">Charcoal</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- In-use gallery (unchanged) -->
+    <section id="in-use-gallery" class="bg-warmwhite py-20 sm:py-24">
+      <div class="max-w-[1600px] mx-auto px-5 sm:px-8">
+        <div class="mb-12 sm:mb-16">
+          <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+            <h2 class="font-serif text-2xl sm:text-3xl tracking-wide">CASA TERRA IN USE</h2>
+          </div>
+          <p class="text-charcoal/70 mt-6 max-w-2xl">
+            Explore how Casa Terra tiles create atmosphere and character in real-world applications.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12 md:col-span-7 h-[500px] relative overflow-hidden group">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e531fbe681-97dfe5927827f1dd0b50.png"
+              alt="Modern living room with Casa Terra tiles" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-10">
+              <p class="text-warmwhite/80 text-sm mb-2">LIVING SPACE</p>
+              <h3 class="font-serif text-3xl text-warmwhite mb-2">Contemporary Residence</h3>
+              <p class="text-warmwhite/70 text-sm">Pietra Antica in Ivory, 60×60 cm, Matt finish</p>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-5 h-[500px] relative overflow-hidden group">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/57eda7a3d6-fad75ee07149b6549baf.png"
+              alt="Luxury bathroom with Casa Terra tiles" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-10">
+              <p class="text-warmwhite/80 text-sm mb-2">BATHROOM</p>
+              <h3 class="font-serif text-2xl text-warmwhite mb-2">Spa Retreat</h3>
+              <p class="text-warmwhite/70 text-sm">Sabbia in Sand tone</p>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-5 h-[500px] relative overflow-hidden group">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/832c0b0f8e-b0f6b3e35fc7ba3ab1ab.png"
+              alt="Minimalist kitchen with Casa Terra tiles" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-10">
+              <p class="text-warmwhite/80 text-sm mb-2">KITCHEN</p>
+              <h3 class="font-serif text-2xl text-warmwhite mb-2">Urban Kitchen</h3>
+              <p class="text-warmwhite/70 text-sm">Cemento Naturale</p>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-7 h-[500px] relative overflow-hidden group">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ee8dc006b9-118b561a54c6904e56bb.png"
+              alt="Boutique hotel lobby with Casa Terra tiles" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-10">
+              <p class="text-warmwhite/80 text-sm mb-2">HOSPITALITY</p>
+              <h3 class="font-serif text-3xl text-warmwhite mb-2">Boutique Hotel Entrance</h3>
+              <p class="text-warmwhite/70 text-sm">Argilla in Terracotta, 60×60 cm</p>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-6 h-[500px] relative overflow-hidden group">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/03d6c3d457-84875c6bca02a5092571.png"
+              alt="Serene bedroom with Casa Terra tiles" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-10">
+              <p class="text-warmwhite/80 text-sm mb-2">BEDROOM</p>
+              <h3 class="font-serif text-2xl text-warmwhite mb-2">Restful Sanctuary</h3>
+              <p class="text-warmwhite/70 text-sm">Roccia Grigia in Grey</p>
+            </div>
+          </div>
+
+          <div class="col-span-12 md:col-span-6 h-[500px] relative overflow-hidden group">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b8d05c9349-3318fc18602f72dfdbb9.png"
+              alt="Contemporary restaurant with Casa Terra tiles" />
+            <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-10">
+              <p class="text-warmwhite/80 text-sm mb-2">RESTAURANT</p>
+              <h3 class="font-serif text-2xl text-warmwhite mb-2">Dining Experience</h3>
+              <p class="text-warmwhite/70 text-sm">Mixed Casa Terra series</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Details (your original section kept) -->
+    <section id="technical-details" class="bg-stone/20 py-20 sm:py-24">
+      <div class="max-w-[1600px] mx-auto px-5 sm:px-8">
+        <div class="mb-12 sm:mb-16">
+          <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+            <h2 class="font-serif text-2xl sm:text-3xl tracking-wide">TECHNICAL SPECIFICATIONS</h2>
+          </div>
+          <p class="text-charcoal/70 mt-6 max-w-2xl">
+            Casa Terra combines aesthetic authenticity with technical performance, meeting international standards for ceramic and porcelain tiles.
+          </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-warmwhite p-8 shadow-soft">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta/20 flex items-center justify-center">
+                <i class="fa-solid fa-ruler-combined text-terracotta text-xl"></i>
+              </div>
+              <h3 class="font-serif text-xl">Available Formats</h3>
+            </div>
+            <ul class="space-y-3 text-charcoal/70">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>30×60 cm (12&quot;×24&quot;)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>60×60 cm (24&quot;×24&quot;)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>60×120 cm (24&quot;×48&quot;)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>80×80 cm (32&quot;×32&quot;)</span></li>
+              <li class="text-sm text-charcoal/60 mt-4">Thickness: 9-10mm depending on format</li>
+            </ul>
+          </div>
+
+          <div class="bg-warmwhite p-8 shadow-soft">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta/20 flex items-center justify-center">
+                <i class="fa-solid fa-hand-dots text-terracotta text-xl"></i>
+              </div>
+              <h3 class="font-serif text-xl">Surface Finishes</h3>
+            </div>
+            <ul class="space-y-3 text-charcoal/70">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Natural Matt</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Soft Matt</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Structured (textured)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Fine Texture</span></li>
+              <li class="text-sm text-charcoal/60 mt-4">R10-R11 slip resistance rating</li>
+            </ul>
+          </div>
+
+          <div class="bg-warmwhite p-8 shadow-soft">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta/20 flex items-center justify-center">
+                <i class="fa-solid fa-shield-halved text-terracotta text-xl"></i>
+              </div>
+              <h3 class="font-serif text-xl">Performance</h3>
+            </div>
+            <ul class="space-y-3 text-charcoal/70">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Water absorption &lt;0.5%</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Frost resistant</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Stain resistant</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>High breaking strength</span></li>
+              <li class="text-sm text-charcoal/60 mt-4">Class 4-5 wear resistance (PEI)</li>
+            </ul>
+          </div>
+
+          <div class="bg-warmwhite p-8 shadow-soft">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta/20 flex items-center justify-center">
+                <i class="fa-solid fa-home text-terracotta text-xl"></i>
+              </div>
+              <h3 class="font-serif text-xl">Suitable For</h3>
+            </div>
+            <ul class="space-y-3 text-charcoal/70">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Internal floors (residential)</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Internal walls</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Commercial light traffic</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Bathrooms & wet areas</span></li>
+              <li class="text-sm text-charcoal/60 mt-4">Selected series for covered outdoor use</li>
+            </ul>
+          </div>
+
+          <div class="bg-warmwhite p-8 shadow-soft">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta/20 flex items-center justify-center">
+                <i class="fa-solid fa-certificate text-terracotta text-xl"></i>
+              </div>
+              <h3 class="font-serif text-xl">Certifications</h3>
+            </div>
+            <ul class="space-y-3 text-charcoal/70">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>ISO 13006 Group BIa</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>EN 14411 compliant</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>ANSI A137.1</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>LEED contribution</span></li>
+              <li class="text-sm text-charcoal/60 mt-4">Low VOC emissions certified</li>
+            </ul>
+          </div>
+
+          <div class="bg-warmwhite p-8 shadow-soft">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-terracotta/20 flex items-center justify-center">
+                <i class="fa-solid fa-broom text-terracotta text-xl"></i>
+              </div>
+              <h3 class="font-serif text-xl">Maintenance</h3>
+            </div>
+            <ul class="space-y-3 text-charcoal/70">
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Easy to clean</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>No sealing required</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Chemical resistant</span></li>
+              <li class="flex items-center gap-2"><i class="fa-solid fa-check text-terracotta text-sm"></i><span>Mild pH-neutral cleaners</span></li>
+              <li class="text-sm text-charcoal/60 mt-4">Detailed care guide provided</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-12 bg-warmwhite p-10 text-center shadow-soft">
+          <p class="text-charcoal/70 mb-6">
+            Complete technical datasheets, CAD files, and installation guidelines available for download.
+          </p>
+          <button type="button" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+            DOWNLOAD TECHNICAL DOCUMENTATION
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Installation & Care -->
+    <section id="installation-guidance" class="bg-warmwhite py-20 sm:py-24">
+      <div class="max-w-[1400px] mx-auto px-5 sm:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center">
+          <div class="relative h-[420px] sm:h-[500px]">
+            <img class="w-full h-full object-cover" loading="lazy"
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8148421608-883b8c5d231a4f13d5e4.png"
+              alt="Professional tile installer working with Casa Terra tiles" />
+          </div>
+          <div>
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+              <h2 class="font-serif text-2xl sm:text-3xl tracking-wide">INSTALLATION & CARE</h2>
+            </div>
+            <p class="text-lg text-charcoal/80 mb-6 leading-relaxed">
+              Proper installation ensures optimal performance and longevity of Casa Terra tiles. We recommend working with experienced tile installers familiar with large-format porcelain.
+            </p>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-terracotta/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-terracotta font-semibold">1</span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-lg mb-2">Substrate Preparation</h4>
+                  <p class="text-charcoal/70 text-sm">Ensure substrate is level, clean, and properly primed. Use appropriate adhesive for tile format.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-terracotta/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-terracotta font-semibold">2</span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-lg mb-2">Joint Width</h4>
+                  <p class="text-charcoal/70 text-sm">Minimum 2-3mm joint width recommended. Use appropriate grout color to complement tile tone.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-terracotta/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <span class="text-terracotta font-semibold">3</span>
+                </div>
+                <div>
+                  <h4 class="font-serif text-lg mb-2">Daily Maintenance</h4>
+                  <p class="text-charcoal/70 text-sm">Clean with pH-neutral detergent and warm water. Avoid abrasive cleaners on textured surfaces.</p>
+                </div>
+              </div>
+            </div>
+
+            <button type="button" class="border border-charcoal px-8 py-3 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+              VIEW INSTALLATION GUIDE
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Support -->
+    <section id="professional-support" class="bg-stone/20 py-20 sm:py-24">
+      <div class="max-w-[1400px] mx-auto px-5 sm:px-8 text-center">
+        <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+          <h2 class="font-serif text-2xl sm:text-3xl tracking-wide">PROFESSIONAL SUPPORT</h2>
+        </div>
+        <p class="text-lg text-charcoal/80 mb-12 max-w-2xl mx-auto leading-relaxed">
+          Architects and designers specifying Casa Terra benefit from dedicated technical support, sample ordering, and project consultation services.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-terracotta/20 flex items-center justify-center">
+              <i class="fa-solid fa-file-lines text-terracotta text-2xl"></i>
+            </div>
+            <h4 class="font-serif text-lg mb-2">Technical Specs</h4>
+            <p class="text-sm text-charcoal/70">Complete datasheets and CAD files</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-terracotta/20 flex items-center justify-center">
+              <i class="fa-solid fa-swatchbook text-terracotta text-2xl"></i>
+            </div>
+            <h4 class="font-serif text-lg mb-2">Sample Service</h4>
+            <p class="text-sm text-charcoal/70">Order physical samples</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-terracotta/20 flex items-center justify-center">
+              <i class="fa-solid fa-headset text-terracotta text-2xl"></i>
+            </div>
+            <h4 class="font-serif text-lg mb-2">Consultation</h4>
+            <p class="text-sm text-charcoal/70">Project-specific guidance</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 mx-auto mb-4 bg-terracotta/20 flex items-center justify-center">
+              <i class="fa-solid fa-truck text-terracotta text-2xl"></i>
+            </div>
+            <h4 class="font-serif text-lg mb-2">Logistics</h4>
+            <p class="text-sm text-charcoal/70">Global shipping coordination</p>
+          </div>
+        </div>
+
+        <button type="button" class="border border-charcoal px-10 py-4 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+          ACCESS PROFESSIONAL RESOURCES
+        </button>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="bg-terracotta/90 text-warmwhite py-24 sm:py-32">
+      <div class="max-w-[1000px] mx-auto px-5 sm:px-8 text-center">
+        <h2 class="font-serif text-4xl sm:text-5xl mb-6">Explore Casa Terra</h2>
+        <p class="text-lg sm:text-xl text-warmwhite/90 mb-12 leading-relaxed max-w-2xl mx-auto">
+          Request samples, download technical documentation, or speak with our team about specifying Casa Terra for your project.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+          <button type="button" data-open-samples class="bg-warmwhite text-charcoal px-10 py-4 text-sm tracking-wider hover:bg-stone transition-colors">
+            REQUEST SAMPLES
+          </button>
+          <button type="button" class="border border-warmwhite text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all">
+            CONTACT US
+          </button>
+          <button type="button" class="border border-warmwhite text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all">
+            DOWNLOAD CATALOG
+          </button>
+        </div>
+
+        <div class="mt-12 sm:mt-16 flex justify-center gap-5 sm:gap-8 text-sm text-warmwhite/70 flex-wrap">
+          <a href="mailto:info@enzorossetti.com" class="hover:text-warmwhite transition-colors">info@enzorossetti.com</a>
+          <span class="hidden sm:inline">|</span>
+          <a href="tel:+390212345678" class="hover:text-warmwhite transition-colors">+39 02 1234 5678</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (kept close to your original) -->
+  <footer id="footer" class="bg-warmwhite border-t border-stone/30 py-16">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="lg:col-span-2">
+                <a href="index.html" class="flex items-center gap-3 mb-6">
+                    <img 
+                        src="images/er_icon_2.svg" 
+                        alt="Enzo Rossetti logo"
+                        class="w-8 h-8"
+                    />
+                    <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+                </a>
+                <p class="text-charcoal/70 mb-6 max-w-sm leading-relaxed">
+                    Italian-inspired ceramic and porcelain tiles for contemporary architecture and interior design.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Collections</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="casa-terra.html" class="hover:text-charcoal transition-colors">Casa Terra</a></li>
+                    <li><a href="casa-rossetti.html" class="hover:text-charcoal transition-colors">Casa Rossetti</a></li>
+                    <li><a href="products.html" class="hover:text-charcoal transition-colors">All Products</a></li>
+                    <li><a href="collections.html" class="hover:text-charcoal transition-colors">Collections Overview</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Resources</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="professionals.html" class="hover:text-charcoal transition-colors">Professionals</a></li>
+                    <li><a href="inspiration.html" class="hover:text-charcoal transition-colors">Inspiration</a></li>
+                    <li><a href="professionals.html#installation" class="hover:text-charcoal transition-colors">Technical Guides</a></li>
+                    <li><a href="professionals.html#downloads" class="hover:text-charcoal transition-colors">Downloads</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Company</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="about.html" class="hover:text-charcoal transition-colors">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-charcoal transition-colors">Contact</a></li>
+                    <li><a href="showrooms.html" class="hover:text-charcoal transition-colors">Showrooms</a></li>
+                    <li><a href="dealers.html" class="hover:text-charcoal transition-colors">Become a Dealer</a></li>
+                    <li><a href="careers.html" class="hover:text-charcoal transition-colors">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-stone/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-charcoal/60">
+            <p>&copy; 2024 Enzo Rossetti. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy.html" class="hover:text-charcoal transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-charcoal transition-colors">Terms of Use</a>
+                <a href="cookies.html" class="hover:text-charcoal transition-colors">Cookie Settings</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Samples Modal -->
+  <div id="samplesModal" class="fixed inset-0 z-[9999] hidden" role="dialog" aria-modal="true" aria-labelledby="samplesTitle">
+    <div class="absolute inset-0 bg-charcoal/70"></div>
+
+    <div class="relative w-full h-full flex items-center justify-center p-5">
+      <div class="bg-warmwhite w-full max-w-2xl shadow-soft border border-stone/40">
+        <div class="flex items-center justify-between p-6 border-b border-stone/30">
+          <h3 id="samplesTitle" class="font-serif text-2xl tracking-wide">Request Samples</h3>
+          <button id="closeSamples" type="button" class="w-11 h-11 border border-charcoal/20 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <form class="p-6 space-y-5" onsubmit="event.preventDefault(); alert('Sample request submitted (demo).'); closeModal();">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm text-charcoal/70">Full Name</label>
+              <input required class="mt-2 w-full border border-stone/40 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-terracotta" />
+            </div>
+            <div>
+              <label class="text-sm text-charcoal/70">Email</label>
+              <input type="email" required class="mt-2 w-full border border-stone/40 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-terracotta" />
+            </div>
+          </div>
+
+          <div>
+            <label class="text-sm text-charcoal/70">Which series?</label>
+            <select class="mt-2 w-full border border-stone/40 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-terracotta">
+              <option>Pietra Antica</option>
+              <option>Sabbia</option>
+              <option>Cemento Naturale</option>
+              <option>Argilla</option>
+              <option>Roccia Grigia</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="text-sm text-charcoal/70">Notes (optional)</label>
+            <textarea rows="4" class="mt-2 w-full border border-stone/40 bg-white px-4 py-3 focus:outline-none focus:ring-2 focus:ring-terracotta"></textarea>
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-3 sm:justify-end pt-2">
+            <button type="button" class="border border-charcoal px-6 py-3 hover:bg-charcoal hover:text-warmwhite transition-all" onclick="closeModal()">
+              Cancel
+            </button>
+            <button type="submit" class="bg-charcoal text-warmwhite px-6 py-3 hover:opacity-90 transition-all">
+              Submit Request
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('shadow-soft');
+      else header.classList.remove('shadow-soft');
+    });
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Samples modal
+    const modal = document.getElementById('samplesModal');
+    const closeBtn = document.getElementById('closeSamples');
+    const openers = document.querySelectorAll('[data-open-samples]');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openers.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      const card = modal.querySelector('.bg-warmwhite');
+      if (!card.contains(e.target)) closeModal();
+    });
+
+    // ESC to close
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+  </script>
+</body>
+</html>

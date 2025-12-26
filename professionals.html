@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/svg+xml" href="images/er_icon_2.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professionals | Enzo Rossetti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: '#D4CCC5',
+                        kraft: '#C9B8A8',
+                        sage: '#A8B5A0',
+                        charcoal: '#2B2B2B',
+                        warmwhite: '#F5F3F0'
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>::-webkit-scrollbar { display: none;}
+        html { scroll-behavior: smooth; }
+
+        /* Active nav underline */
+        .navlink-active { color: #A8B5A0; position: relative; }
+        .navlink-active:after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -6px;
+            width: 100%; height: 1px;
+            background: rgba(168, 181, 160, .8);
+        }
+
+        /* Room filter active helper */
+        .room-filter-btn.active { background: #2B2B2B; color: #F5F3F0; }
+
+    </style>
+</head>
+<body class="bg-warmwhite font-sans text-charcoal">
+
+<header id="header" class="bg-warmwhite border-b border-stone/30">
+    <div class="max-w-[1600px] mx-auto px-8 py-6 flex justify-between items-center">
+        <div class="flex items-center gap-12">
+            <!-- UPDATED: logo icon treatment + link -->
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/er_icon_2.svg" alt="Enzo Rossetti icon" class="w-8 h-8" />
+                <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+            </a>
+
+            <!-- UPDATED: nav links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm tracking-wider">
+                <a href="collections.html" class="hover:text-sage transition-colors">COLLECTIONS</a>
+                <a href="products.html" class="hover:text-sage transition-colors">PRODUCTS</a>
+                <a href="professionals.html" class="navlink-active">PROFESSIONALS</a>
+                <a href="inspiration.html" class="hover:text-sage transition-colors">INSPIRATION</a>
+                <a href="about.html" class="hover:text-sage transition-colors">ABOUT</a>
+            </nav>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="contact.html" class="hidden sm:inline-flex border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+                <i class="fa-solid fa-envelope"></i> CONTACT US
+            </a>
+
+            <!-- Mobile menu button -->
+            <button id="mobileMenuBtn" type="button" class="lg:hidden w-11 h-11 border border-charcoal/30 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Open menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="lg:hidden hidden border-t border-stone/30 bg-warmwhite">
+        <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-6 space-y-4 text-sm tracking-wider">
+          <a href="collections.html" class="block hover:text-sage transition-colors">COLLECTIONS</a>
+          <a href="products.html" class="block hover:text-sage transition-colors">PRODUCTS</a>
+          <a href="professionals.html" class="block hover:text-sage transition-colors">PROFESSIONALS</a>
+          <a href="inspiration.html" class="block hover:text-sage transition-colors">INSPIRATION</a>
+          <a href="about.html" class="block hover:text-sage transition-colors">ABOUT</a>
+          <div class="pt-4 flex gap-3">
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">CONTACT US</button>
+            <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">SEARCH</button>
+          </div>
+        </div>
+    </div>
+</header>
+
+<section id="hero-professionals" class="relative h-[600px] bg-warmwhite overflow-hidden">
+    <div class="absolute inset-0">
+        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8148421608-883b8c5d231a4f13d5e4.png" alt="architect working with tile samples and technical drawings, professional design studio, modern workspace" />
+        <div class="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-charcoal/50 to-charcoal/70"></div>
+    </div>
+    <div class="relative h-full max-w-[1600px] mx-auto px-8 flex items-center">
+        <div class="max-w-3xl">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                <h1 class="font-serif text-5xl tracking-wide">FOR ARCHITECTS & DESIGNERS</h1>
+            </div>
+            <p class="text-xl text-warmwhite leading-relaxed max-w-2xl">
+                Comprehensive technical resources, installation guidance, and specification support for professionals creating exceptional spaces with Enzo Rossetti ceramic and porcelain tiles.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="professionals-intro" class="bg-warmwhite py-24">
+    <div class="max-w-[1200px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="font-serif text-4xl mb-6">Technical Reliability You Can Specify with Confidence</h2>
+                <p class="text-lg text-charcoal/80 leading-relaxed mb-6">
+                    Enzo Rossetti tiles are engineered for demanding architectural applications. We provide complete technical documentation, performance data, and installation guidelines to support your specification process from concept through to completion.
+                </p>
+                <p class="text-lg text-charcoal/80 leading-relaxed">
+                    Our dedicated professional services team works directly with architects, interior designers, and contractors to ensure seamless project delivery and optimal material performance.
+                </p>
+            </div>
+            <div class="relative h-[500px] bg-stone/20">
+                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b8d05c9349-3318fc18602f72dfdbb9.png" alt="professional reviewing technical specifications and material samples, design consultation, architectural workspace" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="technical-documentation" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">TECHNICAL SPECIFICATIONS</h2>
+            </div>
+            <p class="text-charcoal/70 mt-6 max-w-3xl">
+                Detailed performance data and material characteristics for accurate specification and project planning.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div id="spec-physical" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-cube text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Physical Properties</h3>
+                <ul class="space-y-3 text-charcoal/70">
+                    <li class="flex justify-between">
+                        <span>Water Absorption</span>
+                        <span class="font-medium">≤ 0.5%</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Breaking Strength</span>
+                        <span class="font-medium">≥ 1300 N</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Modulus of Rupture</span>
+                        <span class="font-medium">≥ 35 N/mm²</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Frost Resistance</span>
+                        <span class="font-medium">Compliant</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Thermal Shock</span>
+                        <span class="font-medium">Resistant</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="spec-surface" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-layer-group text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Surface Quality</h3>
+                <ul class="space-y-3 text-charcoal/70">
+                    <li class="flex justify-between">
+                        <span>Wear Resistance</span>
+                        <span class="font-medium">PEI 4-5</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Stain Resistance</span>
+                        <span class="font-medium">Class 5</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Chemical Resistance</span>
+                        <span class="font-medium">Class A</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Slip Resistance</span>
+                        <span class="font-medium">R9-R11</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Scratch Hardness</span>
+                        <span class="font-medium">Mohs 6-7</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="spec-dimensional" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-ruler-combined text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Dimensional Data</h3>
+                <ul class="space-y-3 text-charcoal/70">
+                    <li class="flex justify-between">
+                        <span>Length/Width</span>
+                        <span class="font-medium">± 0.5%</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Thickness</span>
+                        <span class="font-medium">± 5%</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Straightness</span>
+                        <span class="font-medium">± 0.5%</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Rectangularity</span>
+                        <span class="font-medium">± 0.5%</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span>Warpage</span>
+                        <span class="font-medium">± 0.5%</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="spec-standards" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-certificate text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Standards</h3>
+                <ul class="space-y-3 text-charcoal/70">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>ISO 13006 Group BIa</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>EN 14411 Annex G</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>ANSI A137.1</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>LEED v4 Certified</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Low VOC Emissions</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="installation-guidelines" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">INSTALLATION GUIDELINES</h2>
+            </div>
+            <p class="text-charcoal/70 mt-6 max-w-3xl">
+                Professional installation recommendations to ensure optimal performance and longevity.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div id="installation-preparation" class="bg-stone/10 p-12">
+                <h3 class="font-serif text-3xl mb-8">Surface Preparation</h3>
+                <div class="space-y-6">
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Substrate Requirements</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Substrates must be clean, dry, level, and structurally sound. Maximum deviation: 3mm over 2m for floors, 2mm over 2m for walls. Remove all contaminants, curing compounds, and existing coatings.
+                        </p>
+                    </div>
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Moisture Testing</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Concrete substrates: maximum 3% moisture content (calcium carbide method) or 75% RH (in-situ probe). Test in accordance with ASTM F2170 or equivalent local standards.
+                        </p>
+                    </div>
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Priming</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Apply appropriate primer to porous or uneven substrates. Use epoxy-based primers for non-porous surfaces. Allow primer to cure according to manufacturer specifications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="installation-method" class="bg-stone/10 p-12">
+                <h3 class="font-serif text-3xl mb-8">Installation Method</h3>
+                <div class="space-y-6">
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Adhesive Selection</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Use C2-class cementitious adhesive for standard applications. For large-format tiles (≥60×60cm), use C2S1 or C2S2 adhesive with deformable properties. Rapid-set adhesives for fast-track projects.
+                        </p>
+                    </div>
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Application Technique</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Apply adhesive using notched trowel appropriate to tile size (8-10mm for standard, 10-12mm for large format). Back-buttering required for tiles ≥60×60cm. Maintain minimum 95% adhesive coverage.
+                        </p>
+                    </div>
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Joint Width</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Minimum 2mm for rectified tiles, 3-5mm for standard tiles. Perimeter and movement joints required every 8-10m or as per structural engineer specifications. Respect all building expansion joints.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="installation-grouting" class="bg-stone/10 p-12">
+                <h3 class="font-serif text-3xl mb-8">Grouting</h3>
+                <div class="space-y-6">
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Grout Selection</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Use CG2 cementitious grout for standard applications. Epoxy grout (RG) recommended for wet areas, commercial kitchens, and high-traffic zones. Match grout color to tile for seamless appearance.
+                        </p>
+                    </div>
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Application</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Apply grout after adhesive has fully cured (minimum 24-48 hours). Work diagonally across joints. Remove excess immediately with damp sponge. Avoid over-wetting polished surfaces.
+                        </p>
+                    </div>
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Curing</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Allow grout to cure for minimum 24 hours before light traffic, 7 days before full loading. Protect from rapid drying, direct sunlight, and freezing temperatures during curing period.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="installation-special" class="bg-stone/10 p-12">
+                <h3 class="font-serif text-3xl mb-8">Special Applications</h3>
+                <div class="space-y-6">
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Underfloor Heating</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            All Enzo Rossetti tiles suitable for underfloor heating systems. Use flexible adhesive and grout. Commission heating system before installation, allow to cool completely before tiling.
+                        </p>
+                    </div>
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">External Facades</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Mechanical fixing systems required for vertical external applications above 3m. Consult structural engineer for wind load calculations. Ensure adequate drainage and ventilation cavity.
+                        </p>
+                    </div>
+                    <div class="border-l-2 border-sage pl-6">
+                        <h4 class="font-semibold text-lg mb-2">Wet Rooms & Pools</h4>
+                        <p class="text-charcoal/70 leading-relaxed">
+                            Apply tanking membrane to substrate before tiling. Use slip-resistant finishes (R11-R13). Ensure proper falls to drainage points (minimum 1:80). Use epoxy grout for pool applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-16 bg-charcoal text-warmwhite p-12 text-center">
+            <h3 class="font-serif text-2xl mb-4">Need Installation Support?</h3>
+            <p class="text-warmwhite/80 mb-8 max-w-2xl mx-auto">
+                Our technical team provides on-site consultation and project-specific installation guidance for complex applications.
+            </p>
+            <!-- UPDATED: CTA link -->
+            <a href="contact.html" class="inline-block bg-warmwhite text-charcoal px-10 py-4 text-sm tracking-wider hover:bg-stone transition-colors">
+                REQUEST TECHNICAL SUPPORT
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="maintenance-recommendations" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">MAINTENANCE RECOMMENDATIONS</h2>
+            </div>
+            <p class="text-charcoal/70 mt-6 max-w-3xl">
+                Professional cleaning and maintenance protocols to preserve tile appearance and performance.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div id="maintenance-routine" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-broom text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-6">Routine Cleaning</h3>
+                <div class="space-y-4 text-charcoal/70">
+                    <p class="leading-relaxed">
+                        <span class="font-semibold text-charcoal block mb-2">Daily Maintenance</span>
+                        Sweep or vacuum to remove loose dirt and debris. Damp mop with pH-neutral cleaner diluted according to manufacturer instructions. Avoid acidic or alkaline cleaners on polished surfaces.
+                    </p>
+                    <p class="leading-relaxed">
+                        <span class="font-semibold text-charcoal block mb-2">Weekly Deep Clean</span>
+                        Use microfiber mop with recommended cleaning solution. Pay attention to grout lines and textured surfaces. Rinse thoroughly with clean water to prevent residue buildup.
+                    </p>
+                    <p class="leading-relaxed">
+                        <span class="font-semibold text-charcoal block mb-2">Commercial Environments</span>
+                        Increase cleaning frequency based on traffic levels. Use automatic scrubber-dryers for large areas. Implement entrance matting systems to reduce dirt ingress.
+                    </p>
+                </div>
+            </div>
+
+            <div id="maintenance-protection" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-shield-halved text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-6">Surface Protection</h3>
+                <div class="space-y-4 text-charcoal/70">
+                    <p class="leading-relaxed">
+                        <span class="font-semibold text-charcoal block mb-2">Stain Prevention</span>
+                        Wipe spills immediately, particularly acidic substances (wine, citrus, coffee). Apply penetrating sealer to grout joints in high-risk areas. Re-seal grout annually in commercial applications.
+                    </p>
+                    <p class="leading-relaxed">
+                        <span class="font-semibold text-charcoal block mb-2">Scratch Prevention</span>
+                        Use furniture pads under table and chair legs. Avoid dragging heavy objects across tile surface. Place protective mats in high-traffic entry points.
+                    </p>
+                    <p class="leading-relaxed">
+                        <span class="font-semibold text-charcoal block mb-2">UV Protection</span>
+                        Enzo Rossetti tiles are UV-stable and colorfast. However, use window treatments to minimize heat stress in areas with intense direct sunlight, particularly on external facades.
+                    </p>
+                </div>
+            </div>
+
+            <div id="maintenance-restoration" class="bg-warmwhite p-10">
+                <div class="w-16 h-16 bg-charcoal flex items-center justify-center mb-6">
+                    <i class="fa-solid fa-wrench text-warmwhite text-2xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-6">Restoration</h3>
+                <div class="space-y-4 text-charcoal/70">
+                    <p class="leading-relaxed">
+                        <span class="font-semibold text-charcoal block mb-2">Deep Stain Removal</span>
+                        For stubborn stains, use poultice method with appropriate solvent. Test in inconspicuous area first. Avoid abrasive cleaning pads on polished finishes.
+                    </p>
+                    <p class="leading-relaxed">
+                        <span class="font-semibold text-charcoal block mb-2">Grout Refresh</span>
+                        Regrout joints if cracking or discoloration occurs. Clean grout lines with specialized cleaner before resealing. Consider epoxy grout for long-term performance.
+                    </p>
+                    <p class="leading-relaxed">
+                        <span class="font-semibold text-charcoal block mb-2">Professional Service</span>
+                        For commercial installations, schedule periodic professional deep cleaning and inspection. We can recommend certified maintenance contractors in your region.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-warmwhite p-10 border-l-4 border-sage">
+                <h4 class="font-serif text-xl mb-4">Recommended Products</h4>
+                <ul class="space-y-2 text-charcoal/70">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle text-sage text-xs mt-2"></i>
+                        <span>pH-neutral ceramic tile cleaner (pH 7-8)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle text-sage text-xs mt-2"></i>
+                        <span>Microfiber mops and cloths (non-abrasive)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle text-sage text-xs mt-2"></i>
+                        <span>Penetrating grout sealer (water-based)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-circle text-sage text-xs mt-2"></i>
+                        <span>Soft-bristle brush for textured surfaces</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-warmwhite p-10 border-l-4 border-charcoal">
+                <h4 class="font-serif text-xl mb-4">Products to Avoid</h4>
+                <ul class="space-y-2 text-charcoal/70">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-charcoal text-xs mt-2"></i>
+                        <span>Acidic cleaners (vinegar, lemon juice, bathroom cleaners)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-charcoal text-xs mt-2"></i>
+                        <span>Abrasive powders and scouring pads</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-charcoal text-xs mt-2"></i>
+                        <span>Wax-based or oil-based cleaners</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-xmark text-charcoal text-xs mt-2"></i>
+                        <span>Bleach on colored grout or textured surfaces</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="downloads-section" class="bg-warmwhite py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">DOWNLOADS</h2>
+            </div>
+            <p class="text-charcoal/70 mt-6 max-w-3xl">
+                Comprehensive technical documentation, product catalogs, and digital assets for specification and presentation.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- UPDATED: download links -->
+            <a id="download-catalogs" href="downloads.html#catalogs" class="block bg-stone/10 p-8 hover:bg-stone/20 transition-colors">
+                <div class="flex items-start justify-between mb-6">
+                    <i class="fa-solid fa-book text-4xl text-charcoal"></i>
+                    <span class="text-sm text-charcoal/60">PDF</span>
+                </div>
+                <h3 class="font-serif text-xl mb-3">Product Catalogs</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Complete collection catalogs with product imagery, specifications, and application examples.
+                </p>
+                <span class="text-sm tracking-wider hover:text-sage transition-colors flex items-center gap-2">
+                    DOWNLOAD <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </a>
+
+            <a id="download-technical" href="downloads.html#datasheets" class="block bg-stone/10 p-8 hover:bg-stone/20 transition-colors">
+                <div class="flex items-start justify-between mb-6">
+                    <i class="fa-solid fa-file-lines text-4xl text-charcoal"></i>
+                    <span class="text-sm text-charcoal/60">PDF</span>
+                </div>
+                <h3 class="font-serif text-xl mb-3">Technical Datasheets</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Detailed performance data, test results, and compliance certificates for each series.
+                </p>
+                <span class="text-sm tracking-wider hover:text-sage transition-colors flex items-center gap-2">
+                    DOWNLOAD <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </a>
+
+            <a id="download-cad" href="downloads.html#cad" class="block bg-stone/10 p-8 hover:bg-stone/20 transition-colors">
+                <div class="flex items-start justify-between mb-6">
+                    <i class="fa-solid fa-drafting-compass text-4xl text-charcoal"></i>
+                    <span class="text-sm text-charcoal/60">DWG / DXF</span>
+                </div>
+                <h3 class="font-serif text-xl mb-3">CAD Files</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    2D and 3D CAD drawings for all tile formats and installation details.
+                </p>
+                <span class="text-sm tracking-wider hover:text-sage transition-colors flex items-center gap-2">
+                    DOWNLOAD <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </a>
+
+            <a id="download-bim" href="downloads.html#bim" class="block bg-stone/10 p-8 hover:bg-stone/20 transition-colors">
+                <div class="flex items-start justify-between mb-6">
+                    <i class="fa-solid fa-cubes text-4xl text-charcoal"></i>
+                    <span class="text-sm text-charcoal/60">REVIT / IFC</span>
+                </div>
+                <h3 class="font-serif text-xl mb-3">BIM Objects</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Revit families and IFC objects with embedded product data for BIM workflows.
+                </p>
+                <span class="text-sm tracking-wider hover:text-sage transition-colors flex items-center gap-2">
+                    DOWNLOAD <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </a>
+
+            <a id="download-installation" href="downloads.html#installation" class="block bg-stone/10 p-8 hover:bg-stone/20 transition-colors">
+                <div class="flex items-start justify-between mb-6">
+                    <i class="fa-solid fa-hammer text-4xl text-charcoal"></i>
+                    <span class="text-sm text-charcoal/60">PDF</span>
+                </div>
+                <h3 class="font-serif text-xl mb-3">Installation Manuals</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Comprehensive installation guides with step-by-step instructions and best practices.
+                </p>
+                <span class="text-sm tracking-wider hover:text-sage transition-colors flex items-center gap-2">
+                    DOWNLOAD <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </a>
+
+            <a id="download-maintenance" href="downloads.html#maintenance" class="block bg-stone/10 p-8 hover:bg-stone/20 transition-colors">
+                <div class="flex items-start justify-between mb-6">
+                    <i class="fa-solid fa-spray-can text-4xl text-charcoal"></i>
+                    <span class="text-sm text-charcoal/60">PDF</span>
+                </div>
+                <h3 class="font-serif text-xl mb-3">Maintenance Guides</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Cleaning protocols, stain removal procedures, and long-term care instructions.
+                </p>
+                <span class="text-sm tracking-wider hover:text-sage transition-colors flex items-center gap-2">
+                    DOWNLOAD <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </a>
+
+            <a id="download-images" href="downloads.html#images" class="block bg-stone/10 p-8 hover:bg-stone/20 transition-colors">
+                <div class="flex items-start justify-between mb-6">
+                    <i class="fa-solid fa-images text-4xl text-charcoal"></i>
+                    <span class="text-sm text-charcoal/60">ZIP</span>
+                </div>
+                <h3 class="font-serif text-xl mb-3">High-Res Images</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    Professional product photography and lifestyle imagery for presentations.
+                </p>
+                <span class="text-sm tracking-wider hover:text-sage transition-colors flex items-center gap-2">
+                    DOWNLOAD <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </a>
+
+            <a id="download-certificates" href="downloads.html#certificates" class="block bg-stone/10 p-8 hover:bg-stone/20 transition-colors">
+                <div class="flex items-start justify-between mb-6">
+                    <i class="fa-solid fa-award text-4xl text-charcoal"></i>
+                    <span class="text-sm text-charcoal/60">PDF</span>
+                </div>
+                <h3 class="font-serif text-xl mb-3">Certificates</h3>
+                <p class="text-charcoal/70 text-sm mb-6 leading-relaxed">
+                    ISO certifications, LEED documentation, and environmental compliance certificates.
+                </p>
+                <span class="text-sm tracking-wider hover:text-sage transition-colors flex items-center gap-2">
+                    DOWNLOAD <i class="fa-solid fa-download text-xs"></i>
+                </span>
+            </a>
+        </div>
+
+        <div class="mt-16 text-center">
+            <p class="text-charcoal/70 mb-6">Need a specific document or custom specification?</p>
+            <!-- UPDATED: link -->
+            <a href="contact.html" class="inline-block border border-charcoal px-10 py-4 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+                REQUEST CUSTOM DOCUMENTATION
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="faq-section" class="bg-stone/20 py-24">
+    <div class="max-w-[1200px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">FREQUENTLY ASKED QUESTIONS</h2>
+            </div>
+            <p class="text-charcoal/70 mt-6 max-w-2xl mx-auto">
+                Common specification and technical questions answered by our product experts.
+            </p>
+        </div>
+
+        <div class="space-y-6">
+            <div id="faq-1" class="bg-warmwhite p-8 border-l-4 border-charcoal">
+                <h3 class="font-serif text-xl mb-3">What is the maximum size tile suitable for floor applications?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    All Enzo Rossetti tiles up to 120×280cm are suitable for floor applications when installed correctly with appropriate adhesive. Large-format tiles (≥60×120cm) require flexible C2S1 or C2S2 adhesive and back-buttering. Substrate must be level to within 3mm over 2m. For commercial high-traffic areas, we recommend maximum 120×120cm format for optimal performance.
+                </p>
+            </div>
+
+            <div id="faq-2" class="bg-warmwhite p-8 border-l-4 border-charcoal">
+                <h3 class="font-serif text-xl mb-3">Are Enzo Rossetti tiles suitable for external use?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Yes, all our porcelain tiles are frost-resistant and suitable for external applications in accordance with EN 14411. Water absorption is ≤0.5%, meeting requirements for outdoor use in all climates. For external floors, specify tiles with R11-R13 slip resistance rating. For vertical facades, mechanical fixing systems are required for heights above 3m. Consult our technical team for specific project requirements.
+                </p>
+            </div>
+
+            <div id="faq-3" class="bg-warmwhite p-8 border-l-4 border-charcoal">
+                <h3 class="font-serif text-xl mb-3">What is the lead time for project orders?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Standard stock items: 2-4 weeks for quantities up to 500m². Custom orders and special formats: 6-8 weeks. Large commercial projects (≥1000m²): 8-12 weeks including quality control and batch matching. We recommend early engagement during design development phase to ensure material availability aligns with project schedule. Samples available within 5-7 working days.
+                </p>
+            </div>
+
+            <div id="faq-4" class="bg-warmwhite p-8 border-l-4 border-charcoal">
+                <h3 class="font-serif text-xl mb-3">How do I specify for LEED or BREEAM certification?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Enzo Rossetti tiles contribute to multiple LEED v4 and BREEAM credits including Materials & Resources (recycled content, regional materials), Indoor Environmental Quality (low-emitting materials), and Innovation (EPD documentation). We provide complete environmental documentation including EPDs, HPDs, and Declare labels. Our technical team can assist with credit calculations and documentation submission. All tiles meet California Section 01350 VOC emissions standards.
+                </p>
+            </div>
+
+            <div id="faq-5" class="bg-warmwhite p-8 border-l-4 border-charcoal">
+                <h3 class="font-serif text-xl mb-3">Can tiles be installed over existing tile?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Installation over existing tile is possible if the existing surface is sound, well-bonded, and level. Surface must be mechanically abraded or primed with epoxy primer to ensure adequate bond. This approach is not recommended for wet areas or where substrate integrity is questionable. Maximum build-up height must be considered for door clearances and transitions. We recommend removal of existing tile for optimal long-term performance, particularly in commercial applications.
+                </p>
+            </div>
+
+            <div id="faq-6" class="bg-warmwhite p-8 border-l-4 border-charcoal">
+                <h3 class="font-serif text-xl mb-3">What warranty do you provide for commercial projects?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Enzo Rossetti provides a 10-year manufacturer warranty against defects in materials for commercial installations when installed according to our guidelines by certified installers. Warranty covers manufacturing defects including dimensional variation, structural integrity, and color consistency. Excludes damage from improper installation, inadequate maintenance, or misuse. Extended warranties available for large-scale projects. Register projects within 30 days of completion to activate warranty.
+                </p>
+            </div>
+
+            <div id="faq-7" class="bg-warmwhite p-8 border-l-4 border-charcoal">
+                <h3 class="font-serif text-xl mb-3">Do you provide on-site technical support during installation?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    Yes, we offer on-site technical consultation for projects over 500m² or complex installations including facades, large-format tiles, or special applications. Our technical representatives can attend pre-installation meetings, conduct substrate inspections, and provide guidance during critical installation phases. This service is complimentary for major commercial projects. Contact our professional services team to arrange site visits and discuss project-specific requirements.
+                </p>
+            </div>
+
+            <div id="faq-8" class="bg-warmwhite p-8 border-l-4 border-charcoal">
+                <h3 class="font-serif text-xl mb-3">How should I handle batch variation and shade matching?</h3>
+                <p class="text-charcoal/70 leading-relaxed">
+                    All ceramic and porcelain tiles exhibit natural batch variation. Order sufficient quantity from single production batch when possible. Tiles are calibrated and shade-sorted during manufacturing; check batch numbers on packaging. For large projects, we recommend ordering 10% excess for future repairs from the same batch. Mix tiles from multiple boxes during installation to blend any subtle variation. Store reserve tiles in controlled environment for long-term projects. We maintain batch records for 5 years to facilitate future matching.
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-16 bg-charcoal text-warmwhite p-12 text-center">
+            <h3 class="font-serif text-2xl mb-4">Still Have Questions?</h3>
+            <p class="text-warmwhite/80 mb-8 max-w-2xl mx-auto">
+                Our technical team is available to discuss your specific project requirements and provide expert guidance.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <!-- UPDATED: mailto + tel -->
+                <a href="mailto:professionals@enzorossetti.com" class="bg-warmwhite text-charcoal px-10 py-4 text-sm tracking-wider hover:bg-stone transition-colors">
+                    EMAIL TECHNICAL TEAM
+                </a>
+                <a href="contact.html" class="border border-warmwhite text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-warmwhite hover:text-charcoal transition-all">
+                    SCHEDULE CONSULTATION
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="sample-request" class="bg-warmwhite py-24">
+    <div class="max-w-[1400px] mx-auto px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative h-[600px] bg-stone/20">
+                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png" alt="professional reviewing tile samples in design studio, material selection, architectural workspace" />
+            </div>
+            <div>
+                <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+                    <h2 class="font-serif text-3xl tracking-wide">REQUEST SAMPLES</h2>
+                </div>
+                <p class="text-lg text-charcoal/80 leading-relaxed mb-8">
+                    Order physical samples to evaluate material quality, finish, and color in your project context. Samples are provided free of charge for professional projects.
+                </p>
+
+                <!-- UPDATED: form action -->
+                <form class="space-y-6" action="contact.html" method="GET">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm tracking-wider mb-2">FULL NAME *</label>
+                            <input type="text" name="name" class="w-full px-4 py-3 border border-stone focus:border-charcoal focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider mb-2">COMPANY *</label>
+                            <input type="text" name="company" class="w-full px-4 py-3 border border-stone focus:border-charcoal focus:outline-none" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm tracking-wider mb-2">EMAIL *</label>
+                            <input type="email" name="email" class="w-full px-4 py-3 border border-stone focus:border-charcoal focus:outline-none" required>
+                        </div>
+                        <div>
+                            <label class="block text-sm tracking-wider mb-2">PHONE</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-3 border border-stone focus:border-charcoal focus:outline-none">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider mb-2">PROFESSION *</label>
+                        <select name="profession" class="w-full px-4 py-3 border border-stone focus:border-charcoal focus:outline-none" required>
+                            <option value="">Select your profession</option>
+                            <option value="architect">Architect</option>
+                            <option value="interior-designer">Interior Designer</option>
+                            <option value="contractor">Contractor / Builder</option>
+                            <option value="developer">Property Developer</option>
+                            <option value="specifier">Specifier / Consultant</option>
+                            <option value="retailer">Tile Retailer / Distributor</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider mb-2">PROJECT DETAILS</label>
+                        <textarea name="project_details" rows="4" class="w-full px-4 py-3 border border-stone focus:border-charcoal focus:outline-none" placeholder="Brief description of your project, application area, and approximate quantity"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-sm tracking-wider mb-2">SERIES OF INTEREST *</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3">
+                                <input type="checkbox" name="series" value="Casa Terra" class="w-4 h-4">
+                                <span class="text-charcoal/70">Casa Terra Collection</span>
+                            </label>
+                            <label class="flex items-center gap-3">
+                                <input type="checkbox" name="series" value="Casa Rossetti" class="w-4 h-4">
+                                <span class="text-charcoal/70">Casa Rossetti Collection</span>
+                            </label>
+                            <label class="flex items-center gap-3">
+                                <input type="checkbox" name="series" value="Specific series" class="w-4 h-4">
+                                <span class="text-charcoal/70">Specific series (please specify in project details)</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="flex items-start gap-3">
+                            <input type="checkbox" name="send_docs" value="yes" class="w-4 h-4 mt-1">
+                            <span class="text-sm text-charcoal/70">I would like to receive the complete product catalog and technical documentation</span>
+                        </label>
+                    </div>
+                    <button type="submit" class="bg-charcoal text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-charcoal/80 transition-colors">
+                        REQUEST SAMPLES
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="professional-services" class="bg-stone/20 py-24">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="mb-16 text-center">
+            <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+                <h2 class="font-serif text-3xl tracking-wide">PROFESSIONAL SERVICES</h2>
+            </div>
+            <p class="text-charcoal/70 mt-6 max-w-3xl mx-auto">
+                Dedicated support throughout your project lifecycle, from initial specification to post-installation care.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div id="service-specification" class="bg-warmwhite p-10 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-clipboard-list text-warmwhite text-3xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Specification Support</h3>
+                <p class="text-charcoal/70 leading-relaxed mb-6">
+                    Expert guidance on product selection, performance requirements, and compliance with building codes and standards.
+                </p>
+                <ul class="text-left space-y-2 text-sm text-charcoal/70">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Material recommendations</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Performance analysis</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Code compliance review</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="service-quantity" class="bg-warmwhite p-10 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-calculator text-warmwhite text-3xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Quantity Estimation</h3>
+                <p class="text-charcoal/70 leading-relaxed mb-6">
+                    Accurate material calculations including wastage allowances and trim requirements for precise project budgeting.
+                </p>
+                <ul class="text-left space-y-2 text-sm text-charcoal/70">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Take-off service</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Wastage calculation</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Budget estimation</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="service-site" class="bg-warmwhite p-10 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-hard-hat text-warmwhite text-3xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Site Consultation</h3>
+                <p class="text-charcoal/70 leading-relaxed mb-6">
+                    On-site technical visits for substrate assessment, installation supervision, and quality control inspections.
+                </p>
+                <ul class="text-left space-y-2 text-sm text-charcoal/70">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Pre-installation meetings</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Substrate inspection</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Installation monitoring</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="service-training" class="bg-warmwhite p-10 text-center">
+                <div class="w-20 h-20 mx-auto mb-6 bg-charcoal flex items-center justify-center">
+                    <i class="fa-solid fa-chalkboard-user text-warmwhite text-3xl"></i>
+                </div>
+                <h3 class="font-serif text-2xl mb-4">Installer Training</h3>
+                <p class="text-charcoal/70 leading-relaxed mb-6">
+                    Certified training programs for contractors on large-format installation, special applications, and best practices.
+                </p>
+                <ul class="text-left space-y-2 text-sm text-charcoal/70">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Installation workshops</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Technical seminars</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-check text-sage mt-1"></i>
+                        <span>Certification programs</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mt-16 text-center">
+            <!-- UPDATED: link -->
+            <a href="contact.html" class="inline-block border border-charcoal px-10 py-4 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+                CONTACT PROFESSIONAL SERVICES TEAM
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="project-registration" class="bg-warmwhite py-24">
+    <div class="max-w-[1200px] mx-auto px-8">
+        <div class="bg-charcoal text-warmwhite p-16 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="font-serif text-4xl mb-6">Register Your Project</h2>
+                <p class="text-xl text-warmwhite/80 leading-relaxed mb-8">
+                    Register commercial projects over 200m² to receive priority technical support, dedicated account management, and extended warranty coverage.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div>
+                        <div class="text-4xl font-serif mb-2">10</div>
+                        <p class="text-warmwhite/70 text-sm">Year Warranty</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-serif mb-2">24/7</div>
+                        <p class="text-warmwhite/70 text-sm">Technical Support</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-serif mb-2">48h</div>
+                        <p class="text-warmwhite/70 text-sm">Response Time</p>
+                    </div>
+                </div>
+                <!-- UPDATED: link -->
+                <a href="contact.html" class="inline-block bg-warmwhite text-charcoal px-10 py-4 text-sm tracking-wider hover:bg-stone transition-colors">
+                    REGISTER PROJECT
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="closing-professionals-cta" class="bg-stone/20 py-32">
+    <div class="max-w-[1000px] mx-auto px-8 text-center">
+        <h2 class="font-serif text-5xl mb-6">Ready to Specify Enzo Rossetti?</h2>
+        <p class="text-xl text-charcoal/80 mb-12 leading-relaxed max-w-2xl mx-auto">
+            Our professional services team is ready to support your project from initial concept through to successful completion.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+            <!-- UPDATED: links -->
+            <a href="contact.html" class="bg-charcoal text-warmwhite px-10 py-4 text-sm tracking-wider hover:bg-charcoal/80 transition-colors">
+                START A PROJECT
+            </a>
+            <a href="contact.html" class="border border-charcoal text-charcoal px-10 py-4 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all">
+                SCHEDULE CONSULTATION
+            </a>
+        </div>
+        <div class="mt-16 flex justify-center gap-8 text-sm text-charcoal/60">
+            <a href="mailto:professionals@enzorossetti.com" class="hover:text-charcoal transition-colors">professionals@enzorossetti.com</a>
+            <span>|</span>
+            <a href="tel:+390212345678" class="hover:text-charcoal transition-colors">+39 02 1234 5678</a>
+        </div>
+    </div>
+</section>
+
+<footer id="footer" class="bg-warmwhite border-t border-stone/30 py-16">
+    <div class="max-w-[1600px] mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+
+            <div class="lg:col-span-2">
+                <!-- UPDATED: footer logo icon treatment + link -->
+                <a href="index.html" class="flex items-center gap-3 mb-6">
+                    <img src="images/er_icon_2.svg" alt="Enzo Rossetti icon" class="w-8 h-8" />
+                    <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+                </a>
+
+                <p class="text-charcoal/70 mb-6 max-w-sm leading-relaxed">
+                    Italian-inspired ceramic and porcelain tiles for contemporary architecture and interior design.
+                </p>
+
+                <!-- UPDATED: social links (placeholders kept as pages; replace with real URLs if needed) -->
+                <div class="flex gap-4">
+                    <a href="https://instagram.com/" target="_blank" rel="noopener" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://pinterest.com/" target="_blank" rel="noopener" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                    <a href="https://linkedin.com/" target="_blank" rel="noopener" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Collections</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="collections.html#casa-terra" class="hover:text-charcoal transition-colors">Casa Terra</a></li>
+                    <li><a href="collections.html#casa-rossetti" class="hover:text-charcoal transition-colors">Casa Rossetti</a></li>
+                    <li><a href="products.html" class="hover:text-charcoal transition-colors">All Products</a></li>
+                    <li><a href="products.html?filter=new" class="hover:text-charcoal transition-colors">New Releases</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Resources</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="professionals.html" class="hover:text-charcoal transition-colors">Professionals</a></li>
+                    <li><a href="inspiration.html" class="hover:text-charcoal transition-colors">Inspiration</a></li>
+                    <li><a href="technical-guides.html" class="hover:text-charcoal transition-colors">Technical Guides</a></li>
+                    <li><a href="downloads.html" class="hover:text-charcoal transition-colors">Downloads</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-serif text-lg mb-6">Company</h4>
+                <ul class="space-y-3 text-charcoal/70 text-sm">
+                    <li><a href="about.html" class="hover:text-charcoal transition-colors">About Us</a></li>
+                    <li><a href="contact.html" class="hover:text-charcoal transition-colors">Contact</a></li>
+                    <li><a href="showrooms.html" class="hover:text-charcoal transition-colors">Showrooms</a></li>
+                    <li><a href="dealers.html" class="hover:text-charcoal transition-colors">Become a Dealer</a></li>
+                    <li><a href="careers.html" class="hover:text-charcoal transition-colors">Careers</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="border-t border-stone/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-charcoal/60">
+            <p>&copy; 2024 Enzo Rossetti. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="privacy.html" class="hover:text-charcoal transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-charcoal transition-colors">Terms of Use</a>
+                <a href="cookies.html" class="hover:text-charcoal transition-colors">Cookie Settings</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Sticky header shadow
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) header.classList.add('shadow-soft');
+      else header.classList.remove('shadow-soft');
+    });
+
+    // Mobile menu
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    // Close mobile menu when clicking a link
+    mobileMenu?.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Samples modal
+    const modal = document.getElementById('samplesModal');
+    const closeBtn = document.getElementById('closeSamples');
+    const openers = document.querySelectorAll('[data-open-samples]');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+      closeBtn.focus();
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openers.forEach(btn => btn.addEventListener('click', openModal));
+    closeBtn.addEventListener('click', closeModal);
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      const card = modal.querySelector('.bg-warmwhite');
+      if (!card.contains(e.target)) closeModal();
+    });
+
+    // ESC to close
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+</script>
+</body>
+</html>
