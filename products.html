@@ -40,8 +40,6 @@
   <style>
     ::-webkit-scrollbar { display: none; }
     select { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
-    .filter-dropdown { display:none; }
-    .filter-dropdown.open { display:block; }
     html { scroll-behavior: smooth; }
 
     /* Active nav underline */
@@ -53,9 +51,6 @@
         width: 100%; height: 1px;
         background: rgba(168, 181, 160, .8);
     }
-
-    /* Room filter active helper */
-    .room-filter-btn.active { background: #2B2B2B; color: #F5F3F0; }
   </style>
 </head>
 
@@ -77,31 +72,34 @@
       </nav>
     </div>
     <div class="flex items-center gap-6">
-        <a href="contact.html" class="hidden sm:inline-flex border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
-            <i class="fa-solid fa-envelope"></i> CONTACT US
-        </a>
+      <a href="contact.html" class="hidden sm:inline-flex border border-charcoal px-6 py-2.5 text-sm tracking-wider hover:bg-charcoal hover:text-warmwhite transition-all inline-flex items-center gap-2">
+        <i class="fa-solid fa-envelope"></i> CONTACT US
+      </a>
 
-        <!-- Mobile menu button -->
-        <button id="mobileMenuBtn" type="button" class="xl:hidden w-11 h-11 border border-charcoal/30 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-terracotta" aria-label="Open menu" aria-expanded="false">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+      <!-- Mobile menu button -->
+      <button id="mobileMenuBtn" type="button"
+        class="xl:hidden w-11 h-11 border border-charcoal/30 flex items-center justify-center hover:border-charcoal focus:outline-none focus:ring-2 focus:ring-sage"
+        aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
-</div>
+  </div>
 
-<!-- Mobile menu -->
-<div id="mobileMenu" class="xl:hidden hidden border-t border-stone/30 bg-warmwhite">
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="xl:hidden hidden border-t border-stone/30 bg-warmwhite">
     <div class="max-w-[1600px] mx-auto px-5 sm:px-8 py-6 space-y-4 text-sm tracking-wider">
       <a href="collections.html" class="block hover:text-sage transition-colors">COLLECTIONS</a>
       <a href="products.html" class="block hover:text-sage transition-colors">PRODUCTS</a>
       <a href="professionals.html" class="block hover:text-sage transition-colors">PROFESSIONALS</a>
       <a href="inspiration.html" class="block hover:text-sage transition-colors">INSPIRATION</a>
       <a href="about.html" class="block hover:text-sage transition-colors">ABOUT</a>
-      <div class="pt-4 flex gap-3">
-        <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">CONTACT US</button>
-        <button type="button" class="flex-1 border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">SEARCH</button>
+      <div class="pt-4">
+        <a href="contact.html" class="block w-full text-center border border-charcoal px-5 py-2.5 hover:bg-charcoal hover:text-warmwhite transition-all">
+          CONTACT US
+        </a>
       </div>
     </div>
-</div>
+  </div>
 </header>
 
 <section id="hero-section" class="relative h-[500px] bg-warmwhite overflow-hidden">
@@ -121,7 +119,7 @@
   </div>
 </section>
 
-<!-- Tabs (no BY COLLECTION) -->
+<!-- Tabs (no BY COLLECTION, no SEARCH) -->
 <section id="browse-navigation" class="bg-stone/20 py-8 sticky top-0 z-40 border-b border-stone/40">
   <div class="max-w-[1600px] mx-auto px-8">
     <div class="flex flex-wrap items-center justify-center gap-6 text-sm tracking-wider">
@@ -144,7 +142,6 @@
       </button>
     </div>
 
-    <!-- ONE ROW ON LG -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 gap-6">
       <!-- LOOK -->
       <div id="filter-look" class="relative">
@@ -262,13 +259,13 @@
 <section id="product-grid" class="bg-warmwhite py-16">
   <div class="max-w-[1600px] mx-auto px-8">
     <div id="productsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"></div>
-
-    <!-- Real pagination (no giant empty block) -->
     <div id="pagination" class="mt-14 flex items-center justify-center gap-2"></div>
   </div>
 </section>
 
-<section id="look-description" class="bg-warmwhite py-24">
+<!-- ======= CONTENT SECTIONS (Stone + added Marble/Concrete/Wood/Design) ======= -->
+
+<section id="stone-look" class="bg-warmwhite py-24">
   <div class="max-w-[1200px] mx-auto px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
       <div>
@@ -287,14 +284,14 @@
       </div>
       <div class="relative h-[500px] bg-stone/20">
         <img class="w-full h-full object-cover"
-          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/929909708b-65bd941601b7bc8cf7bd.png"
-          alt="stone effect tiles in modern interior, natural texture, architectural detail photography">
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4415388cb6-052fcf0f336289805bfc.png"
+          alt="stone effect tiles in modern interior, natural limestone texture, editorial style">
       </div>
     </div>
   </div>
 </section>
 
-<section id="application-showcase" class="bg-stone/20 py-24">
+<section id="stone-application" class="bg-stone/20 py-24">
   <div class="max-w-[1600px] mx-auto px-8">
     <div class="mb-16 text-center">
       <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
@@ -306,10 +303,10 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div id="app-bathroom" class="group relative h-[450px] overflow-hidden">
+      <div class="group relative h-[450px] overflow-hidden">
         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           src="https://storage.googleapis.com/uxpilot-auth.appspot.com/57eda7a3d6-fad75ee07149b6549baf.png"
-          alt="luxury bathroom with stone tiles, modern design, natural texture">
+          alt="bathroom with stone tiles">
         <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 p-8">
           <p class="text-warmwhite/80 text-sm mb-2">BATHROOM</p>
@@ -318,10 +315,10 @@
         </div>
       </div>
 
-      <div id="app-kitchen" class="group relative h-[450px] overflow-hidden">
+      <div class="group relative h-[450px] overflow-hidden">
         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           src="https://storage.googleapis.com/uxpilot-auth.appspot.com/832c0b0f8e-b0f6b3e35fc7ba3ab1ab.png"
-          alt="modern kitchen with stone effect tiles, minimalist design, natural palette">
+          alt="kitchen with stone tiles">
         <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 p-8">
           <p class="text-warmwhite/80 text-sm mb-2">KITCHEN</p>
@@ -330,15 +327,323 @@
         </div>
       </div>
 
-      <div id="app-living" class="group relative h-[450px] overflow-hidden">
+      <div class="group relative h-[450px] overflow-hidden">
         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e531fbe681-97dfe5927827f1dd0b50.png"
-          alt="contemporary living room with large stone tiles, minimalist furniture, natural light">
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e531fbe681-7139a408345d2141696a.png"
+          alt="living room with stone tiles">
         <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
         <div class="absolute bottom-0 left-0 right-0 p-8">
           <p class="text-warmwhite/80 text-sm mb-2">LIVING SPACE</p>
           <h3 class="font-serif text-3xl text-warmwhite mb-3">Refined Living</h3>
           <p class="text-warmwhite/70 text-sm">Travertino Classico in lappato finish</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="marble-look" class="bg-warmwhite py-24">
+  <div class="max-w-[1200px] mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="relative h-[500px] bg-stone/20 order-2 lg:order-1">
+        <img class="w-full h-full object-cover"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b456f9ebc6-d9c0e11bed81f7bf4081.png"
+          alt="marble look tiles close-up">
+      </div>
+      <div class="order-1 lg:order-2">
+        <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+          <h2 class="font-serif text-3xl tracking-wide">MARBLE LOOK TILES</h2>
+        </div>
+        <p class="text-lg text-charcoal/80 mb-6 leading-relaxed">
+          Inspired by the timeless elegance of Italian marble, our porcelain surfaces capture the refined beauty of Calacatta, Statuario, and Carrara stone.
+        </p>
+        <p class="text-charcoal/70 mb-6 leading-relaxed">
+          Each series recreates delicate veining, luminous depth, and sophisticated character — offering both classic white tones and dramatic dark variations.
+        </p>
+        <p class="text-charcoal/70 leading-relaxed">
+          Available in polished, lappato, and soft-matt finishes. Ideal for feature walls, premium floors, and statement surfaces in residential and hospitality projects.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="marble-application" class="bg-stone/20 py-24">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="mb-16 text-center">
+      <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+        <h2 class="font-serif text-3xl tracking-wide">MARBLE IN APPLICATION</h2>
+      </div>
+      <p class="text-charcoal/70 max-w-2xl mx-auto">
+        Timeless elegance in contemporary interiors
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/2939fd8497-d7e492eb54cb144ba015.png"
+          alt="hotel lobby with marble tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">HOSPITALITY</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Grand Entrance</h3>
+          <p class="text-warmwhite/70 text-sm">Calacatta Oro in polished finish</p>
+        </div>
+      </div>
+
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/9ebb602b90-d94fd52ef9b8bf480444.png"
+          alt="bathroom with marble tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">BATHROOM</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Refined Sanctuary</h3>
+          <p class="text-warmwhite/70 text-sm">Statuario in lappato finish</p>
+        </div>
+      </div>
+
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e531fbe681-7139a408345d2141696a.png"
+          alt="living room with marble tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">LIVING SPACE</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Statement Floor</h3>
+          <p class="text-warmwhite/70 text-sm">Carrara Grey in soft-matt finish</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="concrete-look" class="bg-warmwhite py-24">
+  <div class="max-w-[1200px] mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+          <h2 class="font-serif text-3xl tracking-wide">CONCRETE LOOK TILES</h2>
+        </div>
+        <p class="text-lg text-charcoal/80 mb-6 leading-relaxed">
+          Industrial refinement meets contemporary design. Our concrete effect tiles capture the raw, architectural character of poured concrete with precision and subtlety.
+        </p>
+        <p class="text-charcoal/70 mb-6 leading-relaxed">
+          From smooth, polished surfaces to textured, weathered finishes, each series offers the aesthetic of industrial concrete without the weight or maintenance concerns.
+        </p>
+        <p class="text-charcoal/70 leading-relaxed">
+          Perfect for urban lofts, commercial spaces, and modern interiors seeking an honest, material-driven aesthetic. Available in neutral greys and warm cement tones.
+        </p>
+      </div>
+      <div class="relative h-[500px] bg-stone/20">
+        <img class="w-full h-full object-cover"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d871f48289-8388efa7867760be69a3.png"
+          alt="concrete look tiles close-up">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="concrete-application" class="bg-stone/20 py-24">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="mb-16 text-center">
+      <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+        <h2 class="font-serif text-3xl tracking-wide">CONCRETE IN APPLICATION</h2>
+      </div>
+      <p class="text-charcoal/70 max-w-2xl mx-auto">
+        Industrial character in refined spaces
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8e935fe237-bdd5add4e939958e1ba2.png"
+          alt="office with concrete tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">OFFICE</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Urban Workspace</h3>
+          <p class="text-warmwhite/70 text-sm">Cemento Grigio in matt finish</p>
+        </div>
+      </div>
+
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1289428184-7ca4fcefc8ce4be7442f.png"
+          alt="kitchen with concrete tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">KITCHEN</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Industrial Chic</h3>
+          <p class="text-warmwhite/70 text-sm">Beton Dark in structured finish</p>
+        </div>
+      </div>
+
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/bf1c60705a-b48d1d9d78e9c3f81e28.png"
+          alt="retail with concrete tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">RETAIL</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Material Honesty</h3>
+          <p class="text-warmwhite/70 text-sm">Cemento Chiaro in natural finish</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="wood-look" class="bg-warmwhite py-24">
+  <div class="max-w-[1200px] mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="relative h-[500px] bg-stone/20 order-2 lg:order-1">
+        <img class="w-full h-full object-cover"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/31ac9358c7-f8d687a59913e147eb47.png"
+          alt="wood look tiles close-up">
+      </div>
+      <div class="order-1 lg:order-2">
+        <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+          <h2 class="font-serif text-3xl tracking-wide">WOOD LOOK TILES</h2>
+        </div>
+        <p class="text-lg text-charcoal/80 mb-6 leading-relaxed">
+          The warmth and character of natural timber, reimagined in durable ceramic and porcelain. Our wood effect tiles capture authentic grain patterns and rich tonal variations.
+        </p>
+        <p class="text-charcoal/70 mb-6 leading-relaxed">
+          From light oak and ash to deep walnut and weathered reclaimed wood aesthetics, each series offers the beauty of timber without concerns of moisture, scratching, or maintenance.
+        </p>
+        <p class="text-charcoal/70 leading-relaxed">
+          Ideal for residential and hospitality interiors. Suitable for wet rooms, high-traffic areas, and underfloor heating. Available in plank formats with subtle texture.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="wood-application" class="bg-stone/20 py-24">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="mb-16 text-center">
+      <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+        <h2 class="font-serif text-3xl tracking-wide">WOOD IN APPLICATION</h2>
+      </div>
+      <p class="text-charcoal/70 max-w-2xl mx-auto">
+        Natural warmth in contemporary settings
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ea44720aae-36a05e8947c5abcd07de.png"
+          alt="bedroom with wood tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">BEDROOM</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Nordic Calm</h3>
+          <p class="text-warmwhite/70 text-sm">Oak Naturale in matt finish</p>
+        </div>
+      </div>
+
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/e1d6aea4f7-da0e19624f6af166d85b.png"
+          alt="living room with wood tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">LIVING SPACE</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Warm Welcome</h3>
+          <p class="text-warmwhite/70 text-sm">Walnut Scuro in natural finish</p>
+        </div>
+      </div>
+
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/d8c36a35d4-d73e7de706be7b0dfa3d.png"
+          alt="hotel room with wood tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">HOSPITALITY</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Refined Comfort</h3>
+          <p class="text-warmwhite/70 text-sm">Ash Grey in soft texture</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="design-look" class="bg-warmwhite py-24">
+  <div class="max-w-[1200px] mx-auto px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div>
+        <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-8">
+          <h2 class="font-serif text-3xl tracking-wide">DESIGN TILES</h2>
+        </div>
+        <p class="text-lg text-charcoal/80 mb-6 leading-relaxed">
+          Unconventional surfaces for creative interiors. Our design collection features geometric patterns, terrazzo effects, and contemporary interpretations of traditional tile motifs.
+        </p>
+        <p class="text-charcoal/70 mb-6 leading-relaxed">
+          Each series offers distinctive visual character — from subtle textured neutrals to bold graphic statements. Designed for feature walls, accent floors, and spaces that celebrate material experimentation.
+        </p>
+        <p class="text-charcoal/70 leading-relaxed">
+          Ideal for hospitality, retail, and residential projects seeking individuality. Available in various formats and finishes to suit both restrained and expressive design visions.
+        </p>
+      </div>
+      <div class="relative h-[500px] bg-stone/20">
+        <img class="w-full h-full object-cover"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/933595d2e8-33dc8e4f978316467486.png"
+          alt="design tiles close-up">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="design-application" class="bg-stone/20 py-24">
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="mb-16 text-center">
+      <div class="bg-charcoal text-warmwhite inline-block px-8 py-4 mb-4">
+        <h2 class="font-serif text-3xl tracking-wide">DESIGN IN APPLICATION</h2>
+      </div>
+      <p class="text-charcoal/70 max-w-2xl mx-auto">
+        Creative expression through surface
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/9c20a450a1-c2b88060295971c4206c.png"
+          alt="cafe with design tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">HOSPITALITY</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Playful Character</h3>
+          <p class="text-warmwhite/70 text-sm">Terrazzo Venezia in polished finish</p>
+        </div>
+      </div>
+
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/5924d3dea5-db5904d60f22f5cde396.png"
+          alt="bathroom with geometric tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">BATHROOM</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Graphic Impact</h3>
+          <p class="text-warmwhite/70 text-sm">Geometrica Nero in matt finish</p>
+        </div>
+      </div>
+
+      <div class="group relative h-[450px] overflow-hidden">
+        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b289de1e23-d7c08c8f50103ebab51c.png"
+          alt="retail with decorative tiles">
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-8">
+          <p class="text-warmwhite/80 text-sm mb-2">RETAIL</p>
+          <h3 class="font-serif text-3xl text-warmwhite mb-3">Statement Wall</h3>
+          <p class="text-warmwhite/70 text-sm">Decoro Moderno in textured finish</p>
         </div>
       </div>
     </div>
@@ -354,7 +659,7 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-      <div id="tech-formats-stone" class="bg-stone/10 p-8 text-center">
+      <div class="bg-stone/10 p-8 text-center">
         <i class="fa-solid fa-ruler-combined text-3xl text-charcoal mb-6"></i>
         <h3 class="font-serif text-xl mb-4">Available Formats</h3>
         <ul class="space-y-2 text-charcoal/70 text-sm">
@@ -366,7 +671,7 @@
         </ul>
       </div>
 
-      <div id="tech-finishes-stone" class="bg-stone/10 p-8 text-center">
+      <div class="bg-stone/10 p-8 text-center">
         <i class="fa-solid fa-paint-roller text-3xl text-charcoal mb-6"></i>
         <h3 class="font-serif text-xl mb-4">Finish Options</h3>
         <ul class="space-y-2 text-charcoal/70 text-sm">
@@ -378,7 +683,7 @@
         </ul>
       </div>
 
-      <div id="tech-thickness-stone" class="bg-stone/10 p-8 text-center">
+      <div class="bg-stone/10 p-8 text-center">
         <i class="fa-solid fa-layer-group text-3xl text-charcoal mb-6"></i>
         <h3 class="font-serif text-xl mb-4">Thickness</h3>
         <ul class="space-y-2 text-charcoal/70 text-sm">
@@ -389,7 +694,7 @@
         </ul>
       </div>
 
-      <div id="tech-applications-stone" class="bg-stone/10 p-8 text-center">
+      <div class="bg-stone/10 p-8 text-center">
         <i class="fa-solid fa-check-circle text-3xl text-charcoal mb-6"></i>
         <h3 class="font-serif text-xl mb-4">Applications</h3>
         <ul class="space-y-2 text-charcoal/70 text-sm">
@@ -416,10 +721,10 @@
     </div>
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-      <a href="products.html" id="related-marble" class="group relative h-[320px] overflow-hidden">
+      <a href="#marble-look" data-look="Marble" class="look-link group relative h-[320px] overflow-hidden">
         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7f1675ffa2-94eccbd442f80ce24c18.png"
-          alt="white marble texture tiles, elegant veining, luxury surface">
+          alt="marble look">
         <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/60 transition-colors"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
           <h3 class="font-serif text-2xl mb-2">Marble</h3>
@@ -428,10 +733,10 @@
         </div>
       </a>
 
-      <a href="products.html" id="related-concrete" class="group relative h-[320px] overflow-hidden">
+      <a href="#concrete-look" data-look="Concrete" class="look-link group relative h-[320px] overflow-hidden">
         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           src="https://storage.googleapis.com/uxpilot-auth.appspot.com/7bf0a58c0e-37f0be09167d66fe10c2.png"
-          alt="concrete texture porcelain tiles, industrial modern surface">
+          alt="concrete look">
         <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/60 transition-colors"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
           <h3 class="font-serif text-2xl mb-2">Concrete</h3>
@@ -440,10 +745,10 @@
         </div>
       </a>
 
-      <a href="products.html" id="related-wood" class="group relative h-[320px] overflow-hidden">
+      <a href="#wood-look" data-look="Wood" class="look-link group relative h-[320px] overflow-hidden">
         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           src="https://storage.googleapis.com/uxpilot-auth.appspot.com/4ed516e55c-43b519be9db59c66f22d.png"
-          alt="wood effect ceramic tiles, natural oak texture, warm timber finish">
+          alt="wood look">
         <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/60 transition-colors"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
           <h3 class="font-serif text-2xl mb-2">Wood</h3>
@@ -452,10 +757,10 @@
         </div>
       </a>
 
-      <a href="products.html" id="related-design" class="group relative h-[320px] overflow-hidden">
+      <a href="#design-look" data-look="Design" class="look-link group relative h-[320px] overflow-hidden">
         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
           src="https://storage.googleapis.com/uxpilot-auth.appspot.com/933595d2e8-b9ec178951f77d6392db.png"
-          alt="contemporary geometric tiles, modern pattern design, unconventional surface">
+          alt="design look">
         <div class="absolute inset-0 bg-charcoal/40 group-hover:bg-charcoal/60 transition-colors"></div>
         <div class="absolute inset-0 flex flex-col items-center justify-center text-warmwhite">
           <h3 class="font-serif text-2xl mb-2">Design</h3>
@@ -471,7 +776,7 @@
   <div class="max-w-[1000px] mx-auto px-8 text-center">
     <h2 class="font-serif text-4xl mb-6">Request Physical Samples</h2>
     <p class="text-xl text-warmwhite/80 mb-12 leading-relaxed max-w-2xl mx-auto">
-      Experience the texture, finish, and quality of our stone look tiles firsthand. Order samples for your project.
+      Experience the texture, finish, and quality of our surfaces firsthand. Order samples for your project.
     </p>
     <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
       <a href="contact.html" class="bg-warmwhite text-charcoal px-10 py-4 text-sm tracking-wider hover:bg-stone transition-colors">
@@ -487,7 +792,7 @@
 <section id="support-section" class="bg-warmwhite py-24">
   <div class="max-w-[1400px] mx-auto px-8">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-      <div id="support-technical" class="text-center">
+      <div class="text-center">
         <div class="w-16 h-16 mx-auto mb-6 bg-charcoal flex items-center justify-center">
           <i class="fa-solid fa-file-lines text-warmwhite text-2xl"></i>
         </div>
@@ -500,7 +805,7 @@
         </a>
       </div>
 
-      <div id="support-consultation" class="text-center">
+      <div class="text-center">
         <div class="w-16 h-16 mx-auto mb-6 bg-charcoal flex items-center justify-center">
           <i class="fa-solid fa-comments text-warmwhite text-2xl"></i>
         </div>
@@ -513,13 +818,13 @@
         </a>
       </div>
 
-      <div id="support-showroom" class="text-center">
+      <div class="text-center">
         <div class="w-16 h-16 mx-auto mb-6 bg-charcoal flex items-center justify-center">
           <i class="fa-solid fa-location-dot text-warmwhite text-2xl"></i>
         </div>
         <h3 class="font-serif text-xl mb-4">Visit Showroom</h3>
         <p class="text-charcoal/70 mb-6 leading-relaxed">
-          See full-scale displays of our stone look tiles and explore finishes in person at our showrooms.
+          See full-scale displays of our surfaces and explore finishes in person at our showrooms.
         </p>
         <a href="showrooms.html" class="text-sm tracking-wider border-b border-charcoal pb-1 hover:text-sage transition-colors">
           FIND LOCATION
@@ -530,74 +835,70 @@
 </section>
 
 <footer id="footer" class="bg-warmwhite border-t border-stone/30 py-16">
-    <div class="max-w-[1600px] mx-auto px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
-            <div class="lg:col-span-2">
-                <a href="index.html" class="flex items-center gap-3 mb-6">
-                    <img 
-                        src="images/er_icon_2.svg" 
-                        alt="Enzo Rossetti logo"
-                        class="w-8 h-8"
-                    />
-                    <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
-                </a>
-                <p class="text-charcoal/70 mb-6 max-w-sm leading-relaxed">
-                    Italian-inspired ceramic and porcelain tiles for contemporary architecture and interior design.
-                </p>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
-                        <i class="fa-brands fa-pinterest"></i>
-                    </a>
-                    <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div>
-                <h4 class="font-serif text-lg mb-6">Collections</h4>
-                <ul class="space-y-3 text-charcoal/70 text-sm">
-                    <li><a href="casa-terra.html" class="hover:text-charcoal transition-colors">Casa Terra</a></li>
-                    <li><a href="casa-rossetti.html" class="hover:text-charcoal transition-colors">Casa Rossetti</a></li>
-                    <li><a href="products.html" class="hover:text-charcoal transition-colors">All Products</a></li>
-                    <li><a href="collections.html" class="hover:text-charcoal transition-colors">Collections Overview</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-serif text-lg mb-6">Resources</h4>
-                <ul class="space-y-3 text-charcoal/70 text-sm">
-                    <li><a href="professionals.html" class="hover:text-charcoal transition-colors">Professionals</a></li>
-                    <li><a href="inspiration.html" class="hover:text-charcoal transition-colors">Inspiration</a></li>
-                    <li><a href="professionals.html#installation" class="hover:text-charcoal transition-colors">Technical Guides</a></li>
-                    <li><a href="professionals.html#downloads" class="hover:text-charcoal transition-colors">Downloads</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-serif text-lg mb-6">Company</h4>
-                <ul class="space-y-3 text-charcoal/70 text-sm">
-                    <li><a href="about.html" class="hover:text-charcoal transition-colors">About Us</a></li>
-                    <li><a href="contact.html" class="hover:text-charcoal transition-colors">Contact</a></li>
-                    <li><a href="showrooms.html" class="hover:text-charcoal transition-colors">Showrooms</a></li>
-                    <li><a href="dealers.html" class="hover:text-charcoal transition-colors">Become a Dealer</a></li>
-                    <li><a href="careers.html" class="hover:text-charcoal transition-colors">Careers</a></li>
-                </ul>
-            </div>
+  <div class="max-w-[1600px] mx-auto px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+      <div class="lg:col-span-2">
+        <a href="index.html" class="flex items-center gap-3 mb-6">
+          <img src="images/er_icon_2.svg" alt="Enzo Rossetti logo" class="w-8 h-8" />
+          <span class="font-serif text-2xl tracking-wide">ENZO ROSSETTI</span>
+        </a>
+        <p class="text-charcoal/70 mb-6 max-w-sm leading-relaxed">
+          Italian-inspired ceramic and porcelain tiles for contemporary architecture and interior design.
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="Pinterest">
+            <i class="fa-brands fa-pinterest"></i>
+          </a>
+          <a href="#" class="w-10 h-10 border border-charcoal/20 flex items-center justify-center hover:border-charcoal hover:bg-charcoal hover:text-warmwhite transition-all" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
         </div>
+      </div>
 
-        <div class="border-t border-stone/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-charcoal/60">
-            <p>&copy; 2025 Enzo Rossetti. All rights reserved.</p>
-            <div class="flex gap-6">
-                <a href="privacy.html" class="hover:text-charcoal transition-colors">Privacy Policy</a>
-                <a href="terms.html" class="hover:text-charcoal transition-colors">Terms of Use</a>
-                <a href="cookies.html" class="hover:text-charcoal transition-colors">Cookie Settings</a>
-            </div>
-        </div>
+      <div>
+        <h4 class="font-serif text-lg mb-6">Collections</h4>
+        <ul class="space-y-3 text-charcoal/70 text-sm">
+          <li><a href="casa-terra.html" class="hover:text-charcoal transition-colors">Casa Terra</a></li>
+          <li><a href="casa-rossetti.html" class="hover:text-charcoal transition-colors">Casa Rossetti</a></li>
+          <li><a href="products.html" class="hover:text-charcoal transition-colors">All Products</a></li>
+          <li><a href="collections.html" class="hover:text-charcoal transition-colors">Collections Overview</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-serif text-lg mb-6">Resources</h4>
+        <ul class="space-y-3 text-charcoal/70 text-sm">
+          <li><a href="professionals.html" class="hover:text-charcoal transition-colors">Professionals</a></li>
+          <li><a href="inspiration.html" class="hover:text-charcoal transition-colors">Inspiration</a></li>
+          <li><a href="professionals.html#installation" class="hover:text-charcoal transition-colors">Technical Guides</a></li>
+          <li><a href="professionals.html#downloads" class="hover:text-charcoal transition-colors">Downloads</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-serif text-lg mb-6">Company</h4>
+        <ul class="space-y-3 text-charcoal/70 text-sm">
+          <li><a href="about.html" class="hover:text-charcoal transition-colors">About Us</a></li>
+          <li><a href="contact.html" class="hover:text-charcoal transition-colors">Contact</a></li>
+          <li><a href="showrooms.html" class="hover:text-charcoal transition-colors">Showrooms</a></li>
+          <li><a href="dealers.html" class="hover:text-charcoal transition-colors">Become a Dealer</a></li>
+          <li><a href="careers.html" class="hover:text-charcoal transition-colors">Careers</a></li>
+        </ul>
+      </div>
     </div>
+
+    <div class="border-t border-stone/30 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-charcoal/60">
+      <p>&copy; 2025 Enzo Rossetti. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="privacy.html" class="hover:text-charcoal transition-colors">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-charcoal transition-colors">Terms of Use</a>
+        <a href="cookies.html" class="hover:text-charcoal transition-colors">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script>
@@ -981,11 +1282,10 @@
 
   function renderProducts(items) {
     productsContainer.innerHTML = items.map(productCard).join("");
-    if (state.view === "list") {
-      productsContainer.className = "grid grid-cols-1 gap-10";
-    } else {
-      productsContainer.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8";
-    }
+    productsContainer.className =
+      state.view === "list"
+        ? "grid grid-cols-1 gap-10"
+        : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8";
   }
 
   function pageBtn(label, onClick, opts = {}) {
@@ -1016,7 +1316,6 @@
       window.scrollTo({ top: document.getElementById("product-grid").offsetTop - 120, behavior: "smooth" });
     }, { disabled: state.page === 1 }));
 
-    // smart window
     const windowSize = 5;
     let start = Math.max(1, state.page - Math.floor(windowSize / 2));
     let end = Math.min(totalPages, start + windowSize - 1);
@@ -1096,6 +1395,25 @@
     renderPagination(totalPages);
   }
 
+  function setLookFilter(look) {
+    state.filters.look = look || "";
+    state.page = 1;
+    syncSelectsFromState();
+    render();
+  }
+
+  function handleHashDeepLink() {
+    const h = (location.hash || "").replace("#", "").trim().toLowerCase();
+    const map = {
+      "stone-look": "Stone",
+      "marble-look": "Marble",
+      "concrete-look": "Concrete",
+      "wood-look": "Wood",
+      "design-look": "Design"
+    };
+    if (map[h]) setLookFilter(map[h]);
+  }
+
   // ---------- Events ----------
   [lookSelect, roomSelect, colourSelect, formatSelect].forEach(sel => {
     sel.addEventListener("change", () => {
@@ -1121,7 +1439,6 @@
   tabBtns.forEach(btn => {
     btn.addEventListener("click", () => {
       setActiveTab(btn.dataset.tab);
-      // just UI selection + small UX help
       document.getElementById("filter-system").scrollIntoView({ behavior: "smooth", block: "start" });
       render();
     });
@@ -1141,71 +1458,44 @@
     render();
   });
 
-  // quick “search” placeholder
-  document.getElementById("searchBtn").addEventListener("click", () => {
-    document.getElementById("filter-system").scrollIntoView({ behavior: "smooth", block: "start" });
+  // Explore other looks: deep-link + set look filter
+  document.querySelectorAll(".look-link").forEach(a => {
+    a.addEventListener("click", (e) => {
+      const look = a.getAttribute("data-look");
+      if (look) setLookFilter(look);
+      // allow normal anchor scroll, but make sure filter renders first
+      setTimeout(() => {
+        const targetId = a.getAttribute("href");
+        const el = targetId ? document.querySelector(targetId) : null;
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 0);
+      e.preventDefault();
+      history.replaceState(null, "", a.getAttribute("href"));
+    });
   });
 
   // ---------- Init ----------
   setActiveTab("look");
   syncSelectsFromState();
   render();
+  handleHashDeepLink();
+  window.addEventListener("hashchange", handleHashDeepLink);
+
+  // Mobile menu
+  const mobileBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  mobileBtn.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden');
+    mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+  mobileMenu?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      mobileBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
 </script>
-<script>
-    // Sticky header shadow
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) header.classList.add('shadow-soft');
-      else header.classList.remove('shadow-soft');
-    });
-
-    // Mobile menu
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileBtn.addEventListener('click', () => {
-      const isOpen = !mobileMenu.classList.contains('hidden');
-      mobileMenu.classList.toggle('hidden');
-      mobileBtn.setAttribute('aria-expanded', String(!isOpen));
-    });
-
-    // Close mobile menu when clicking a link
-    mobileMenu?.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileBtn.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Samples modal
-    const modal = document.getElementById('samplesModal');
-    const closeBtn = document.getElementById('closeSamples');
-    const openers = document.querySelectorAll('[data-open-samples]');
-
-    function openModal() {
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-      closeBtn.focus();
-    }
-
-    function closeModal() {
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    openers.forEach(btn => btn.addEventListener('click', openModal));
-    closeBtn.addEventListener('click', closeModal);
-
-    // Click outside to close
-    modal.addEventListener('click', (e) => {
-      const card = modal.querySelector('.bg-warmwhite');
-      if (!card.contains(e.target)) closeModal();
-    });
-
-    // ESC to close
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
-    });
-  </script>
 
 </body>
 </html>
